@@ -1,0 +1,68 @@
+[
+  {
+    "id": "chef-marco",
+    "name": "Chef Marco Santini",
+    "title": "Head of Culinary Arts",
+    "bio": "A classically trained French chef with 20 years of experience across Michelin-starred restaurants in Paris, Milan, and Dubai. Marco brings rigorous technique and infectious passion to every class.",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&q=80",
+    "specialties": ["French Cuisine", "Kitchen Management", "Plating & Presentation"],
+    "courses": ["cul-001"],
+    "credentials": ["Le Cordon Bleu, Paris", "Former Head Chef, Hotel Georges V"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  },
+  {
+    "id": "chef-sophie",
+    "name": "Chef Sophie Laurent",
+    "title": "Pastry & Baking Specialist",
+    "bio": "Sophie trained at the École Nationale Supérieure de Pâtisserie and spent a decade perfecting her craft in world-class patisseries. She makes the complex world of pastry approachable and delicious.",
+    "image": "https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=400&q=80",
+    "specialties": ["Artisan Bread", "Chocolate Work", "Wedding Cakes"],
+    "courses": ["cul-002"],
+    "credentials": ["ENSP Graduate", "World Pastry Champion Finalist 2019"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  },
+  {
+    "id": "barista-elena",
+    "name": "Elena Vasquez",
+    "title": "Coffee Arts & Beverage Lead",
+    "bio": "A certified Q Grader and multiple latte art competition winner, Elena has traveled across coffee-producing regions and brings that depth of knowledge into every session.",
+    "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80",
+    "specialties": ["Specialty Coffee", "Latte Art", "Sensory Training"],
+    "courses": ["fd-001"],
+    "credentials": ["Q Grader Certified", "SCAA Trainer", "3x Latte Art Champion"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  },
+  {
+    "id": "mixologist-james",
+    "name": "James Okafor",
+    "title": "Mixology & Bar Arts Instructor",
+    "bio": "James has helmed bars in London, New York, and Lagos, earning recognition for his inventive West African-inspired cocktails. He teaches with flair and precision.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+    "specialties": ["Craft Cocktails", "Spirits Pairing", "Bar Management"],
+    "courses": ["fd-002"],
+    "credentials": ["Tales of the Cocktail Speaker", "Brand Ambassador — Hennessy"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  },
+  {
+    "id": "artist-nadia",
+    "name": "Nadia Khalil",
+    "title": "Beauty & Makeup Lead Artist",
+    "bio": "With credits spanning Vogue Arabia, Dubai Fashion Week, and major film productions, Nadia is one of the region's most respected makeup artists. She teaches the art and business of beauty.",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80",
+    "specialties": ["Bridal Makeup", "Editorial", "Special Effects"],
+    "courses": ["bm-001", "bm-002"],
+    "credentials": ["Vogue Arabia Contributor", "5x Award-winning MUA"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  },
+  {
+    "id": "designer-yuki",
+    "name": "Yuki Tanaka",
+    "title": "Fashion Design & Styling Director",
+    "bio": "After graduating from Central Saint Martins and working with Comme des Garçons and Dries Van Noten, Yuki now channels her expertise into nurturing the next generation of designers.",
+    "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
+    "specialties": ["Avant-garde Design", "Pattern Making", "Personal Styling"],
+    "courses": ["fa-001", "fa-002"],
+    "credentials": ["CSM Graduate", "Former Designer at Comme des Garçons"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  }
+]

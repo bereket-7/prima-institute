@@ -1,0 +1,50 @@
+[
+  {
+    "id": "culinary",
+    "slug": "culinary",
+    "label": "Culinary Arts",
+    "headline": "Craft. Technique. Passion.",
+    "description": "Train under world-class chefs and master the foundations of professional cooking — from classical techniques to international cuisines.",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    "color": "#8B5E3C",
+    "accent": "#D4956A",
+    "icon": "ChefHat",
+    "stats": { "courses": 4, "students": 320, "instructors": 2 }
+  },
+  {
+    "id": "food-drinks",
+    "slug": "food-drinks",
+    "label": "Food & Drinks",
+    "headline": "Taste. Create. Serve.",
+    "description": "Explore the world of specialty coffee, cocktails, food styling, and beverage management. For hospitality professionals and passionate enthusiasts alike.",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+    "color": "#5B6B4A",
+    "accent": "#8FAF6E",
+    "icon": "Coffee",
+    "stats": { "courses": 3, "students": 210, "instructors": 2 }
+  },
+  {
+    "id": "beauty-makeup",
+    "slug": "beauty-makeup",
+    "label": "Beauty & Makeup",
+    "headline": "Enhance. Express. Transform.",
+    "description": "Professional makeup artistry programs covering bridal, editorial, skincare, and special effects — taught by award-winning industry artists.",
+    "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80",
+    "color": "#9B5E6E",
+    "accent": "#D4899A",
+    "icon": "Sparkles",
+    "stats": { "courses": 4, "students": 280, "instructors": 1 }
+  },
+  {
+    "id": "fashion",
+    "slug": "fashion",
+    "label": "Fashion Design",
+    "headline": "Sketch. Construct. Style.",
+    "description": "From pencil sketches to finished garments, our fashion design programs give you the technical skills and creative confidence to build a career in fashion.",
+    "image": "https://images.unsplash.com/photo-1558171813-8ef45e8b02dc?w=800&q=80",
+    "color": "#4A5568",
+    "accent": "#718096",
+    "icon": "Scissors",
+    "stats": { "courses": 3, "students": 190, "instructors": 1 }
+  }
+]

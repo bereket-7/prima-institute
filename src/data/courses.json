@@ -1,0 +1,243 @@
+[
+  {
+    "id": "cul-001",
+    "slug": "professional-culinary-arts",
+    "title": "Professional Culinary Arts",
+    "subtitle": "Master the Art of Professional Cooking",
+    "category": "culinary",
+    "level": "Beginner to Advanced",
+    "duration": "6 Months",
+    "sessions": 48,
+    "price": 2400,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80",
+      "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=800&q=80"
+    ],
+    "instructor": "chef-marco",
+    "featured": true,
+    "badge": "Most Popular",
+    "description": "A comprehensive program covering knife skills, classical cooking techniques, plating, and kitchen management. Graduate ready for professional kitchen environments.",
+    "syllabus": [
+      { "module": 1, "title": "Kitchen Fundamentals & Safety", "weeks": 2 },
+      { "module": 2, "title": "Knife Skills & Mise en Place", "weeks": 3 },
+      { "module": 3, "title": "Classical French Techniques", "weeks": 4 },
+      { "module": 4, "title": "International Cuisines", "weeks": 6 },
+      { "module": 5, "title": "Pastry & Baking Basics", "weeks": 4 },
+      { "module": 6, "title": "Menu Design & Kitchen Management", "weeks": 5 }
+    ],
+    "outcomes": [
+      "Master 50+ core cooking techniques",
+      "Create professional-level plating",
+      "Understand nutrition and dietary requirements",
+      "Manage a professional kitchen"
+    ]
+  },
+  {
+    "id": "cul-002",
+    "slug": "pastry-and-baking",
+    "title": "Pastry & Baking Mastery",
+    "subtitle": "From Croissants to Wedding Cakes",
+    "category": "culinary",
+    "level": "Beginner",
+    "duration": "3 Months",
+    "sessions": 24,
+    "price": 1200,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=600&q=80",
+    "instructor": "chef-sophie",
+    "featured": false,
+    "badge": "New",
+    "description": "Dive deep into the science and artistry of pastry — from laminated doughs to sugar work.",
+    "syllabus": [
+      { "module": 1, "title": "Baking Science & Ingredients", "weeks": 2 },
+      { "module": 2, "title": "Breads & Laminated Doughs", "weeks": 3 },
+      { "module": 3, "title": "Cakes, Tarts & Pastries", "weeks": 4 },
+      { "module": 4, "title": "Chocolate & Sugar Arts", "weeks": 3 }
+    ],
+    "outcomes": [
+      "Bake 30+ pastry varieties",
+      "Work with chocolate and sugar",
+      "Design celebration cakes",
+      "Run a home bakery business"
+    ]
+  },
+  {
+    "id": "fd-001",
+    "slug": "barista-and-coffee-arts",
+    "title": "Barista & Coffee Arts",
+    "subtitle": "The Complete Coffee Professional",
+    "category": "food-drinks",
+    "level": "Beginner",
+    "duration": "6 Weeks",
+    "sessions": 12,
+    "price": 480,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+    "instructor": "barista-elena",
+    "featured": true,
+    "badge": "Quick Course",
+    "description": "From bean origin to latte art, this intensive course prepares you for café and specialty coffee environments.",
+    "syllabus": [
+      { "module": 1, "title": "Coffee Origins & Varieties", "weeks": 1 },
+      { "module": 2, "title": "Espresso Techniques", "weeks": 2 },
+      { "module": 3, "title": "Milk Steaming & Latte Art", "weeks": 2 },
+      { "module": 4, "title": "Menu Creation & Bar Management", "weeks": 1 }
+    ],
+    "outcomes": [
+      "Pull perfect espresso shots",
+      "Create latte art designs",
+      "Understand coffee origins",
+      "Build a café beverage menu"
+    ]
+  },
+  {
+    "id": "fd-002",
+    "slug": "cocktail-and-mixology",
+    "title": "Cocktail & Mixology",
+    "subtitle": "Craft Cocktails for the Modern Bar",
+    "category": "food-drinks",
+    "level": "Beginner to Intermediate",
+    "duration": "8 Weeks",
+    "sessions": 16,
+    "price": 640,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&q=80",
+    "instructor": "mixologist-james",
+    "featured": false,
+    "badge": "",
+    "description": "A hands-on exploration of spirits, syrups, bitters, and bar techniques to create classic and signature cocktails.",
+    "syllabus": [
+      { "module": 1, "title": "Spirits & Flavor Profiles", "weeks": 2 },
+      { "module": 2, "title": "Classic Cocktail Recipes", "weeks": 3 },
+      { "module": 3, "title": "Signature Cocktail Design", "weeks": 2 },
+      { "module": 4, "title": "Bar Management & Presentation", "weeks": 1 }
+    ],
+    "outcomes": [
+      "Mix 40+ classic cocktails",
+      "Design your own signature drinks",
+      "Understand spirits pairing",
+      "Manage a professional bar"
+    ]
+  },
+  {
+    "id": "bm-001",
+    "slug": "professional-makeup-artistry",
+    "title": "Professional Makeup Artistry",
+    "subtitle": "Bridal, Editorial & Film Makeup",
+    "category": "beauty-makeup",
+    "level": "Beginner to Advanced",
+    "duration": "4 Months",
+    "sessions": 32,
+    "price": 1800,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
+    "instructor": "artist-nadia",
+    "featured": true,
+    "badge": "Most Popular",
+    "description": "A full professional program covering skin prep, colour theory, bridal, editorial, film/TV, and special effects makeup.",
+    "syllabus": [
+      { "module": 1, "title": "Skin Types & Prep", "weeks": 2 },
+      { "module": 2, "title": "Colour Theory & Foundation Matching", "weeks": 3 },
+      { "module": 3, "title": "Bridal & Evening Looks", "weeks": 4 },
+      { "module": 4, "title": "Editorial & High Fashion", "weeks": 4 },
+      { "module": 5, "title": "Special Effects & Prosthetics", "weeks": 3 }
+    ],
+    "outcomes": [
+      "Work professionally in bridal & editorial",
+      "Understand skin undertones and matching",
+      "Build a professional kit",
+      "Create a portfolio"
+    ]
+  },
+  {
+    "id": "bm-002",
+    "slug": "skincare-and-aesthetics",
+    "title": "Skincare & Facial Aesthetics",
+    "subtitle": "Science-Based Skincare Expertise",
+    "category": "beauty-makeup",
+    "level": "Beginner",
+    "duration": "2 Months",
+    "sessions": 16,
+    "price": 900,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
+    "instructor": "artist-nadia",
+    "featured": false,
+    "badge": "New",
+    "description": "Understand skin biology, active ingredients, facial massage, and create customized skincare routines.",
+    "syllabus": [
+      { "module": 1, "title": "Skin Anatomy & Conditions", "weeks": 2 },
+      { "module": 2, "title": "Active Ingredients & Formulations", "weeks": 2 },
+      { "module": 3, "title": "Facial Techniques & Massage", "weeks": 3 },
+      { "module": 4, "title": "Building Skincare Routines", "weeks": 1 }
+    ],
+    "outcomes": [
+      "Identify skin types and conditions",
+      "Recommend targeted treatments",
+      "Perform professional facials",
+      "Advise on ingredient layering"
+    ]
+  },
+  {
+    "id": "fa-001",
+    "slug": "fashion-design-fundamentals",
+    "title": "Fashion Design Fundamentals",
+    "subtitle": "From Sketch to Finished Garment",
+    "category": "fashion",
+    "level": "Beginner",
+    "duration": "5 Months",
+    "sessions": 40,
+    "price": 2200,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1558171813-8ef45e8b02dc?w=600&q=80",
+    "instructor": "designer-yuki",
+    "featured": true,
+    "badge": "Most Popular",
+    "description": "A foundational program in fashion design: sketching, pattern making, fabric selection, garment construction, and styling.",
+    "syllabus": [
+      { "module": 1, "title": "Fashion History & Aesthetics", "weeks": 2 },
+      { "module": 2, "title": "Fashion Illustration & Sketching", "weeks": 4 },
+      { "module": 3, "title": "Pattern Making & Draping", "weeks": 5 },
+      { "module": 4, "title": "Fabric & Textiles", "weeks": 3 },
+      { "module": 5, "title": "Garment Construction", "weeks": 5 },
+      { "module": 6, "title": "Portfolio & Styling Presentation", "weeks": 1 }
+    ],
+    "outcomes": [
+      "Create technical fashion illustrations",
+      "Draft and cut patterns",
+      "Construct finished garments",
+      "Build a fashion portfolio"
+    ]
+  },
+  {
+    "id": "fa-002",
+    "slug": "personal-styling",
+    "title": "Personal Styling & Image Consulting",
+    "subtitle": "Style People. Transform Lives.",
+    "category": "fashion",
+    "level": "Beginner",
+    "duration": "6 Weeks",
+    "sessions": 12,
+    "price": 550,
+    "currency": "USD",
+    "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80",
+    "instructor": "designer-yuki",
+    "featured": false,
+    "badge": "Quick Course",
+    "description": "Learn body proportion analysis, colour seasonality, wardrobe editing, and how to build a personal styling business.",
+    "syllabus": [
+      { "module": 1, "title": "Body Shapes & Proportions", "weeks": 1 },
+      { "module": 2, "title": "Colour Analysis & Seasonality", "weeks": 2 },
+      { "module": 3, "title": "Wardrobe Auditing & Capsule Wardrobes", "weeks": 2 },
+      { "module": 4, "title": "Building a Styling Business", "weeks": 1 }
+    ],
+    "outcomes": [
+      "Analyse body shapes and proportions",
+      "Conduct professional colour analysis",
+      "Build complete capsule wardrobes",
+      "Launch a styling consultancy"
+    ]
+  }
+]

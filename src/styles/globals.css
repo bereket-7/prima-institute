@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────────── */
+:root {
+  --prima-cream:        #F5EFE6;
+  --prima-ivory:        #FAF7F2;
+  --prima-gold:         #C9A84C;
+  --prima-gold-light:   #E8C96A;
+  --prima-charcoal:     #1C1C1E;
+  --prima-charcoal-soft:#2E2E32;
+  --prima-muted:        #7A7068;
+  --prima-blush:        #E8D5C4;
+  --prima-sage:         #8A9E8A;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-accent:  'Cormorant Garamond', serif;
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-gold: 0 4px 24px rgba(201, 168, 76, 0.25);
+  --shadow-soft: 0 8px 40px rgba(28, 28, 30, 0.12);
+}
+
+/* ─── Base Reset ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--prima-ivory);
+  color: var(--prima-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--prima-ivory); }
+::-webkit-scrollbar-thumb  { background: var(--prima-gold); border-radius: 3px; }
+
+/* ─── Utility Classes ────────────────────────────────────────── */
+.container-prima {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-prima { padding: 0 3rem; }
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C9A84C, #E8C96A, #C9A84C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.divider-gold {
+  width: 60px;
+  height: 2px;
+  background: var(--prima-gold);
+  display: block;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: var(--prima-gold);
+  color: var(--prima-charcoal);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+  background: var(--prima-gold-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: var(--prima-charcoal);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--prima-charcoal);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-outline:hover {
+  background: var(--prima-charcoal);
+  color: var(--prima-cream);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: var(--prima-gold);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--prima-gold);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-outline-gold:hover {
+  background: var(--prima-gold);
+  color: var(--prima-charcoal);
+}
+
+/* ─── Section Spacing ────────────────────────────────────────── */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (min-width: 1024px) {
+  .section-padding { padding: 7rem 0; }
+}
+
+/* ─── Card Hover Effect ──────────────────────────────────────── */
+.card-hover {
+  transition: var(--transition-smooth);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ─── Image Overlay ──────────────────────────────────────────── */
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(28,28,30,0.7) 100%);
+  transition: opacity 0.3s ease;
+}
+.img-overlay:hover::after {
+  opacity: 0.85;
+}
+
+/* ─── Gold Accent Line ────────────────────────────────────────── */
+.gold-line {
+  position: relative;
+}
+.gold-line::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--prima-gold);
+}
+
+/* ─── Page Transition ────────────────────────────────────────── */
+.page-enter {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
