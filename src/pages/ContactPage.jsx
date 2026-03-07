@@ -115,7 +115,7 @@ export default function ContactPage() {
                   {[
                     { icon: MapPin, title: 'Address', content: 'Gerji Roba, Bole Sub City\nAddis Ababa, Ethiopia' },
                     { icon: Phone, title: 'Phone', content: '+251 911 408040' },
-                    { icon: Mail, title: 'Email', content: 'hello@primainstitute.et' },
+                    { icon: Mail, title: 'Email', content: 'Ethioprima@gmail.com' },
                     { icon: Clock, title: 'Office Hours', content: 'Mon – Fri: 9:00 AM – 6:00 PM\nSat: 10:00 AM – 2:00 PM' },
                   ].map(({ icon: Icon, title, content }) => (
                     <div key={title} className="flex gap-4">
