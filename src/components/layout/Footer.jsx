@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react'
+import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 // TikTok icon as SVG since it's not in lucide-react
@@ -37,37 +37,40 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-prima-charcoal dark:bg-prima-charcoal text-prima-cream dark:text-prima-cream">
+    <footer className="bg-gradient-to-b from-prima-charcoal to-black dark:from-prima-charcoal dark:to-black text-prima-cream relative overflow-hidden">
+      {/* Decorative gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-prima-gold/5 via-transparent to-transparent pointer-events-none" />
+
       {/* ── Main Footer ──────────────────────────────────────────── */}
-      <div className="container-prima py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container-prima py-16 lg:py-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
 
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
-              <span className="font-display font-bold text-3xl text-white block">Prima</span>
+            <div className="mb-6 group">
+              <span className="font-display font-bold text-3xl text-white block group-hover:text-prima-gold transition-colors duration-300">Prima</span>
               <span className="font-accent text-prima-gold text-xs tracking-[0.3em] uppercase">Institute</span>
             </div>
-            <p className="text-prima-muted text-sm leading-relaxed mb-6 font-body">
+            <p className="text-prima-muted text-sm leading-relaxed mb-8 font-body">
               {t('footer.tagline')}
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {[
                 { icon: Instagram, href: '#', label: 'Instagram' },
                 { icon: TikTokIcon, href: '#', label: 'TikTok' },
                 { icon: TelegramIcon, href: 'https://t.me/primainstitute', label: 'Telegram' },
+                { icon: Facebook, href: 'https://www.facebook.com/share/1C8dbmNpXk/?mibextid=wwXIfr', label: 'Facebook' },
                 { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Youtube, href: '#', label: 'YouTube' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
-                  target={label === 'Telegram' ? '_blank' : undefined}
-                  rel={label === 'Telegram' ? 'noopener noreferrer' : undefined}
-                  className="w-9 h-9 border border-prima-charcoal-soft flex items-center justify-center text-prima-muted hover:text-prima-gold hover:border-prima-gold transition-all"
+                  target={['Telegram', 'Facebook'].includes(label) ? '_blank' : undefined}
+                  rel={['Telegram', 'Facebook'].includes(label) ? 'noopener noreferrer' : undefined}
+                  className="w-10 h-10 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-prima-muted hover:text-prima-charcoal hover:bg-prima-gold hover:border-prima-gold hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-prima-gold/20"
                 >
-                  <Icon size={16} />
+                  <Icon size={18} />
                 </a>
               ))}
             </div>
@@ -75,17 +78,18 @@ export default function Footer() {
 
           {/* Courses */}
           <div>
-            <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6">
+            <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6 relative inline-block">
               {t('footer.disciplines')}
+              <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-prima-gold" />
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mt-8">
               {FOOTER_COURSES.map((item) => (
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body flex items-center gap-2"
+                    className="text-prima-muted text-sm hover:text-white transition-all duration-200 font-body flex items-center gap-3 group hover:translate-x-1"
                   >
-                    <span className="w-1 h-1 bg-prima-gold rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-prima-gold/50 rounded-full group-hover:bg-prima-gold group-hover:scale-150 transition-all duration-200" />
                     {item.label}
                   </Link>
                 </li>
@@ -95,17 +99,18 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6">
+            <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6 relative inline-block">
               {t('footer.quickLinks')}
+              <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-prima-gold" />
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mt-8">
               {FOOTER_LINKS.map((item) => (
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body flex items-center gap-2"
+                    className="text-prima-muted text-sm hover:text-white transition-all duration-200 font-body flex items-center gap-3 group hover:translate-x-1"
                   >
-                    <span className="w-1 h-1 bg-prima-gold rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-prima-gold/50 rounded-full group-hover:bg-prima-gold group-hover:scale-150 transition-all duration-200" />
                     {item.label}
                   </Link>
                 </li>
@@ -115,39 +120,40 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6">
+            <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6 relative inline-block">
               {t('footer.getInTouch')}
+              <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-prima-gold" />
             </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-prima-gold mt-0.5 shrink-0" />
-                <span className="text-prima-muted text-sm font-body">
+            <ul className="space-y-4 mt-8">
+              <li className="flex items-start gap-3 group">
+                <MapPin size={18} className="text-prima-gold mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-prima-muted text-sm font-body group-hover:text-white transition-colors duration-200">
                   {t('footer.address')}
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={16} className="text-prima-gold shrink-0" />
-                <a href="tel:+251911408040" className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body">
+              <li className="flex items-center gap-3 group">
+                <Phone size={18} className="text-prima-gold shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                <a href="tel:+251911408040" className="text-prima-muted text-sm hover:text-white transition-colors duration-200 font-body">
                   +251 911 408040
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={16} className="text-prima-gold shrink-0" />
-                <a href="mailto:hello@primainstitute.et" className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body">
+              <li className="flex items-center gap-3 group">
+                <Mail size={18} className="text-prima-gold shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                <a href="mailto:hello@primainstitute.et" className="text-prima-muted text-sm hover:text-white transition-colors duration-200 font-body">
                   hello@primainstitute.et
                 </a>
               </li>
             </ul>
 
-            <div className="mt-8 p-4 border border-prima-charcoal-soft">
-              <p className="text-xs text-prima-muted font-body mb-3">{t('footer.subscribe')}</p>
-              <div className="flex">
+            <div className="mt-8 p-5 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-prima-gold/50 transition-all duration-300">
+              <p className="text-xs text-white font-semibold font-body mb-4 uppercase tracking-wider">{t('footer.subscribe')}</p>
+              <div className="flex rounded-lg overflow-hidden shadow-lg">
                 <input
                   type="email"
                   placeholder={t('footer.emailPlaceholder')}
-                  className="flex-1 bg-prima-charcoal-soft text-prima-cream text-sm px-3 py-2 border border-prima-charcoal-soft focus:outline-none focus:border-prima-gold transition-colors placeholder:text-prima-muted"
+                  className="flex-1 bg-white/10 text-prima-cream text-sm px-4 py-3 border-0 focus:outline-none focus:bg-white/15 transition-all placeholder:text-prima-muted/70"
                 />
-                <button className="bg-prima-gold text-prima-charcoal text-xs font-semibold px-4 hover:bg-prima-gold-light transition-colors">
+                <button className="bg-prima-gold text-prima-charcoal text-sm font-bold px-6 hover:bg-prima-gold-light hover:scale-105 transition-all duration-200 shadow-lg">
                   →
                 </button>
               </div>
@@ -157,15 +163,16 @@ export default function Footer() {
       </div>
 
       {/* ── Bottom Bar ───────────────────────────────────────────── */}
-      <div className="border-t border-prima-charcoal-soft">
-        <div className="container-prima py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="border-t border-white/10 bg-black/30 backdrop-blur-sm relative z-10">
+        <div className="container-prima py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-prima-muted text-xs font-body">
             © {new Date().getFullYear()} {t('footer.copyright')}
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-8">
             {[t('footer.privacy'), t('footer.terms'), t('footer.cookies')].map((item) => (
-              <a key={item} href="#" className="text-prima-muted text-xs hover:text-prima-gold transition-colors font-body">
+              <a key={item} href="#" className="text-prima-muted text-xs hover:text-prima-gold transition-all duration-200 font-body relative group">
                 {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-prima-gold group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </div>
