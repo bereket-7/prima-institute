@@ -3,31 +3,35 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { useStore } from '../../store/useStore'
 import ThemeToggle from '../ui/ThemeToggle'
-
-const NAV_LINKS = [
-  { label: 'Home', to: '/' },
-  {
-    label: 'Courses',
-    to: '/courses',
-    dropdown: [
-      { label: 'All Courses', to: '/courses' },
-      { label: 'Culinary Arts', to: '/categories/culinary' },
-      { label: 'Food & Drinks', to: '/categories/food-drinks' },
-      { label: 'Beauty & Makeup', to: '/categories/beauty-makeup' },
-      { label: 'Fashion Design', to: '/categories/fashion' },
-    ],
-  },
-  { label: 'Instructors', to: '/instructors' },
-  { label: 'Gallery', to: '/gallery' },
-  { label: 'Blog', to: '/blog' },
-  { label: 'About', to: '/about' },
-]
+import LanguageToggle from '../ui/LanguageToggle'
+import { useTranslation } from 'react-i18next'
 
 export default function Navbar() {
+  const { t } = useTranslation()
   const [scrolled, setScrolled]     = useState(false)
   const [dropdown, setDropdown]     = useState(null)
   const { mobileMenuOpen, setMobileMenuOpen } = useStore()
   const location = useLocation()
+
+  const NAV_LINKS = [
+    { label: t('nav.home'), to: '/' },
+    {
+      label: t('nav.courses'),
+      to: '/courses',
+      dropdown: [
+        { label: t('nav.allCourses'), to: '/courses' },
+        { label: t('categories.culinary'), to: '/categories/culinary' },
+        { label: t('categories.foodDrinks'), to: '/categories/food-drinks' },
+        { label: t('categories.beauty'), to: '/categories/beauty-makeup' },
+        { label: t('categories.fashion'), to: '/categories/fashion' },
+        { label: t('categories.computer'), to: '/categories/computer' },
+      ],
+    },
+    { label: t('nav.instructors'), to: '/instructors' },
+    { label: t('nav.gallery'), to: '/gallery' },
+    { label: t('nav.blog'), to: '/blog' },
+    { label: t('nav.about'), to: '/about' },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -123,13 +127,14 @@ export default function Navbar() {
           </nav>
 
           {/* ── CTA Button ─────────────────────────────────────── */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageToggle />
             <ThemeToggle />
-            <Link to="/contact" className={`text-sm font-medium transition-colors ${scrolled || !isHome ? 'text-prima-charcoal hover:text-prima-gold' : 'text-white/90 hover:text-white'}`}>
-              Contact
+            <Link to="/contact" className={`text-sm font-medium transition-colors ${scrolled || !isHome ? 'text-prima-charcoal dark:text-prima-cream hover:text-prima-gold' : 'text-white/90 hover:text-white'}`}>
+              {t('nav.contact')}
             </Link>
             <Link to="/enroll" className="btn-primary text-xs py-2.5 px-5">
-              Enroll Now
+              {t('nav.enrollNow')}
             </Link>
           </div>
 
@@ -176,10 +181,11 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <div className="flex items-center gap-4 mt-4">
+            <div className="flex items-center gap-3 mt-4">
+              <LanguageToggle />
               <ThemeToggle />
               <Link to="/enroll" className="btn-primary flex-1 justify-center">
-                Enroll Now
+                {t('nav.enrollNow')}
               </Link>
             </div>
           </nav>
