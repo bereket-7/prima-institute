@@ -1,10 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import categories from '../data/categories.json'
-import courses from '../data/courses.json'
-import CourseCard from '../components/ui/CourseCard'
-import SectionHeader from '../components/ui/SectionHeader'
-import { useStore } from '../store/useStore'
+import categories from '../../data/categories.json'
+import courses from '../../data/courses.json'
+import CourseCard from '../../components/ui/CourseCard'
+import SectionHeader from '../../components/ui/SectionHeader'
+import { useStore } from '../../store/useStore'
 
 export default function CategoryPage() {
   const { slug } = useParams()
