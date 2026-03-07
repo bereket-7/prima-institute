@@ -18,7 +18,7 @@ export default function HomePage() {
   const STATS = [
     { value: '2,000+', label: t('stats.graduates'), icon: Users },
     { value: '25', label: t('stats.courses'), icon: BookOpen },
-    { value: '6', label: t('stats.instructors'), icon: Award },
+    { value: '10', label: t('stats.instructors'), icon: Award },
     { value: '5.0', label: t('stats.rating'), icon: Star },
   ]
 
