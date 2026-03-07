@@ -57,8 +57,8 @@ export default function Footer() {
             <div className="flex gap-3">
               {[
                 { icon: Instagram, href: '#', label: 'Instagram' },
-                { icon: TikTokIcon, href: '#', label: 'TikTok' },
-                { icon: TelegramIcon, href: 'https://t.me/primainstitute', label: 'Telegram' },
+                { icon: TikTokIcon, href: 'https://www.tiktok.com/@primaaddis', label: 'TikTok' },
+                { icon: TelegramIcon, href: 'https://t.me/Yihee', label: 'Telegram' },
                 { icon: Facebook, href: 'https://www.facebook.com/share/1C8dbmNpXk/?mibextid=wwXIfr', label: 'Facebook' },
                 { icon: Linkedin, href: '#', label: 'LinkedIn' },
               ].map(({ icon: Icon, href, label }) => (
@@ -66,8 +66,8 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  target={['Telegram', 'Facebook'].includes(label) ? '_blank' : undefined}
-                  rel={['Telegram', 'Facebook'].includes(label) ? 'noopener noreferrer' : undefined}
+                  target={['Telegram', 'Facebook', 'TikTok'].includes(label) ? '_blank' : undefined}
+                  rel={['Telegram', 'Facebook', 'TikTok'].includes(label) ? 'noopener noreferrer' : undefined}
                   className="w-10 h-10 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-prima-muted hover:text-prima-charcoal hover:bg-prima-gold hover:border-prima-gold hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-prima-gold/20"
                 >
                   <Icon size={18} />
