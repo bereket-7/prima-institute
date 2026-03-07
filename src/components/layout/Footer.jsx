@@ -139,8 +139,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 group">
                 <Mail size={18} className="text-prima-gold shrink-0 group-hover:scale-110 transition-transform duration-200" />
-                <a href="mailto:hello@primainstitute.et" className="text-prima-muted text-sm hover:text-white transition-colors duration-200 font-body">
-                  hello@primainstitute.et
+                <a href="mailto:Ethioprima@gmail.com" className="text-prima-muted text-sm hover:text-white transition-colors duration-200 font-body">
+                  Ethioprima@gmail.com
                 </a>
               </li>
             </ul>
