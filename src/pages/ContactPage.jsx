@@ -113,9 +113,9 @@ export default function ContactPage() {
                 <h2 className="font-display text-2xl font-semibold text-prima-charcoal mb-8">Find Us</h2>
                 <div className="space-y-6">
                   {[
-                    { icon: MapPin, title: 'Address', content: '12 Artisan Quarter, Dubai Design District\nDubai, UAE' },
-                    { icon: Phone, title: 'Phone', content: '+971 4 123 4567' },
-                    { icon: Mail, title: 'Email', content: 'hello@primainstitute.ae' },
+                    { icon: MapPin, title: 'Address', content: 'Gerji Roba, Bole Sub City\nAddis Ababa, Ethiopia' },
+                    { icon: Phone, title: 'Phone', content: '+251 911 408040' },
+                    { icon: Mail, title: 'Email', content: 'hello@primainstitute.et' },
                     { icon: Clock, title: 'Office Hours', content: 'Mon – Fri: 9:00 AM – 6:00 PM\nSat: 10:00 AM – 2:00 PM' },
                   ].map(({ icon: Icon, title, content }) => (
                     <div key={title} className="flex gap-4">
@@ -136,7 +136,7 @@ export default function ContactPage() {
                 <div className="text-center">
                   <MapPin size={32} className="text-prima-gold mx-auto mb-3" />
                   <p className="text-prima-muted text-sm font-body">Embed Google Map here</p>
-                  <p className="text-prima-muted text-xs font-body">Dubai Design District, UAE</p>
+                  <p className="text-prima-muted text-xs font-body">Gerji Roba, Addis Ababa, Ethiopia</p>
                 </div>
               </div>
             </div>
