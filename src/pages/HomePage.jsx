@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, ChefHat, Coffee, Sparkles, Scissors, Award, Users, BookOpen, Star } from 'lucide-react'
+import { ArrowRight, ChefHat, Coffee, Sparkles, Scissors, Monitor, Award, Users, BookOpen, Star } from 'lucide-react'
 import courses from '../data/courses.json'
 import categories from '../data/categories.json'
 import testimonials from '../data/testimonials.json'
@@ -14,7 +14,7 @@ const STATS = [
   { value: '4.9', label: 'Average Rating', icon: Star },
 ]
 
-const CATEGORY_ICONS = { culinary: ChefHat, 'food-drinks': Coffee, 'beauty-makeup': Sparkles, fashion: Scissors }
+const CATEGORY_ICONS = { culinary: ChefHat, 'food-drinks': Coffee, 'beauty-makeup': Sparkles, fashion: Scissors, computer: Monitor }
 
 export default function HomePage() {
   const { openEnrollModal } = useStore()

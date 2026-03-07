@@ -64,9 +64,7 @@
     "courses": ["fa-001", "fa-002"],
     "credentials": ["CSM Graduate", "Former Designer at Comme des Garçons"],
     "social": { "instagram": "#", "linkedin": "#" }
-  }
-]
-,
+  },
   {
     "id": "tech-instructor-1",
     "name": "David Chen",
@@ -89,3 +87,4 @@
     "credentials": ["Full-Stack Developer", "Adobe Certified Expert", "Computer Science Degree - MIT"],
     "social": { "instagram": "#", "linkedin": "#" }
   }
+]
