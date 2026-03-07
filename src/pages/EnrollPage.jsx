@@ -12,7 +12,7 @@ export default function EnrollPage() {
   const [step, setStep] = useState(0)
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({
-    firstName: '', lastName: '', email: '', phone: '', nationality: '',
+    firstName: '', lastName: '', email: '', phone: '',
     courseId: '', startDate: '', paymentPlan: 'full',
     message: '', terms: false,
   })
@@ -92,10 +92,10 @@ export default function EnrollPage() {
                   ))}
                 </div>
                 <div className="space-y-5">
-                  {[['email', 'Email Address', 'email'], ['phone', 'Phone Number', 'tel'], ['nationality', 'Nationality', 'text']].map(([name, label, type]) => (
+                  {[['email', 'Email Address', 'email'], ['phone', 'Phone Number', 'tel']].map(([name, label, type]) => (
                     <div key={name}>
                       <label className="block text-xs font-semibold tracking-widest uppercase text-prima-charcoal mb-2 font-body">{label} *</label>
-                      <input type={type} name={name} value={form[name]} onChange={handleChange} required={name !== 'nationality'} className="w-full border border-prima-blush px-4 py-3 text-sm font-body focus:outline-none focus:border-prima-gold transition-colors" />
+                      <input type={type} name={name} value={form[name]} onChange={handleChange} required className="w-full border border-prima-blush px-4 py-3 text-sm font-body focus:outline-none focus:border-prima-gold transition-colors" />
                     </div>
                   ))}
                 </div>
