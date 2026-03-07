@@ -131,13 +131,18 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="aspect-video bg-prima-cream border border-prima-blush flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={32} className="text-prima-gold mx-auto mb-3" />
-                  <p className="text-prima-muted text-sm font-body">Embed Google Map here</p>
-                  <p className="text-prima-muted text-xs font-body">Gerji Roba, Addis Ababa, Ethiopia</p>
-                </div>
+              {/* Map */}
+              <div className="rounded-lg overflow-hidden shadow-lg border border-prima-blush">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5577!2d38.7633!3d9.0192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnMDkuMSJOIDM4wrA0NSc0Ny45IkU!5e0!3m2!1sen!2set!4v1234567890"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Prima Institute Location"
+                />
               </div>
             </div>
           </div>
