@@ -81,9 +81,9 @@ export default function EnrollPage() {
           <form onSubmit={handleSubmit}>
             {/* Step 0: Personal Info */}
             {step === 0 && (
-              <div className="bg-white border border-prima-blush p-8">
-                <h2 className="font-display text-2xl font-semibold text-prima-charcoal mb-8">Personal Information</h2>
-                <div className="grid grid-cols-2 gap-5 mb-5">
+              <div className="bg-white border border-prima-blush p-4 sm:p-6 md:p-8">
+                <h2 className="font-display text-xl sm:text-2xl font-semibold text-prima-charcoal mb-6 sm:mb-8">Personal Information</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-5">
                   {[['firstName', 'First Name', 'text'], ['lastName', 'Last Name', 'text']].map(([name, label, type]) => (
                     <div key={name}>
                       <label className="block text-xs font-semibold tracking-widest uppercase text-prima-charcoal mb-2 font-body">{label} *</label>
@@ -107,9 +107,9 @@ export default function EnrollPage() {
 
             {/* Step 1: Course Selection */}
             {step === 1 && (
-              <div className="bg-white border border-prima-blush p-8">
-                <h2 className="font-display text-2xl font-semibold text-prima-charcoal mb-8">Select Your Course</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              <div className="bg-white border border-prima-blush p-4 sm:p-6 md:p-8">
+                <h2 className="font-display text-xl sm:text-2xl font-semibold text-prima-charcoal mb-6 sm:mb-8">Select Your Course</h2>
+                <div className="grid grid-cols-1 gap-4 mb-8">
                   {courses.map((course) => (
                     <label
                       key={course.id}
@@ -147,7 +147,7 @@ export default function EnrollPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-4 mt-8">
+                <div className="flex flex-col sm:flex-row gap-4 mt-8">
                   <button type="button" onClick={() => setStep(0)} className="btn-outline">Back</button>
                   <button type="button" onClick={() => setStep(2)} className="btn-primary" disabled={!form.courseId}>
                     Review Application <ChevronRight size={16} />
@@ -158,8 +158,8 @@ export default function EnrollPage() {
 
             {/* Step 2: Review */}
             {step === 2 && (
-              <div className="bg-white border border-prima-blush p-8">
-                <h2 className="font-display text-2xl font-semibold text-prima-charcoal mb-8">Review Your Application</h2>
+              <div className="bg-white border border-prima-blush p-4 sm:p-6 md:p-8">
+                <h2 className="font-display text-xl sm:text-2xl font-semibold text-prima-charcoal mb-6 sm:mb-8">Review Your Application</h2>
                 <div className="space-y-6 mb-8">
                   <div className="p-5 bg-prima-ivory border border-prima-blush">
                     <p className="text-xs font-semibold tracking-widest uppercase text-prima-muted mb-3 font-body">Applicant</p>
@@ -180,7 +180,7 @@ export default function EnrollPage() {
                     I agree to the <a href="#" className="text-prima-gold underline">Terms and Conditions</a> and <a href="#" className="text-prima-gold underline">Privacy Policy</a> of Prima Institute.
                   </span>
                 </label>
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <button type="button" onClick={() => setStep(1)} className="btn-outline">Back</button>
                   <button type="submit" className="btn-primary" disabled={!form.terms}>
                     Submit Application
