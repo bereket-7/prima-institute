@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import CoursesPage from './pages/CoursesPage'
@@ -11,8 +12,16 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import EnrollPage from './pages/EnrollPage'
 import NotFoundPage from './pages/NotFoundPage'
+import { useStore } from './store/useStore'
 
 export default function App() {
+  const { theme, setTheme } = useStore()
+
+  useEffect(() => {
+    // Initialize theme on mount
+    setTheme(theme)
+  }, [])
+
   return (
     <BrowserRouter>
       <Routes>

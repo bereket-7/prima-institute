@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { useStore } from '../../store/useStore'
+import ThemeToggle from '../ui/ThemeToggle'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -45,7 +46,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled || !isHome
-          ? 'bg-prima-ivory/95 backdrop-blur-sm shadow-sm border-b border-prima-blush'
+          ? 'bg-prima-ivory/95 dark:bg-prima-charcoal/95 backdrop-blur-sm shadow-sm border-b border-prima-blush dark:border-prima-blush'
           : 'bg-transparent'
       }`}
     >
@@ -123,6 +124,7 @@ export default function Navbar() {
 
           {/* ── CTA Button ─────────────────────────────────────── */}
           <div className="hidden lg:flex items-center gap-4">
+            <ThemeToggle />
             <Link to="/contact" className={`text-sm font-medium transition-colors ${scrolled || !isHome ? 'text-prima-charcoal hover:text-prima-gold' : 'text-white/90 hover:text-white'}`}>
               Contact
             </Link>
@@ -144,7 +146,7 @@ export default function Navbar() {
 
       {/* ── Mobile Menu ──────────────────────────────────────────── */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-prima-ivory border-t border-prima-blush">
+        <div className="lg:hidden bg-prima-ivory dark:bg-prima-charcoal border-t border-prima-blush dark:border-prima-blush">
           <nav className="container-prima py-6 flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <div key={link.label}>
@@ -152,8 +154,8 @@ export default function Navbar() {
                   to={link.to}
                   end={link.to === '/'}
                   className={({ isActive }) =>
-                    `block py-3 px-2 text-base font-medium border-b border-prima-blush/50 transition-colors ${
-                      isActive ? 'text-prima-gold' : 'text-prima-charcoal hover:text-prima-gold'
+                    `block py-3 px-2 text-base font-medium border-b border-prima-blush/50 dark:border-prima-blush/30 transition-colors ${
+                      isActive ? 'text-prima-gold' : 'text-prima-charcoal dark:text-prima-cream hover:text-prima-gold'
                     }`
                   }
                 >
@@ -165,7 +167,7 @@ export default function Navbar() {
                       <Link
                         key={item.to}
                         to={item.to}
-                        className="block py-2 text-sm text-prima-muted hover:text-prima-gold transition-colors"
+                        className="block py-2 text-sm text-prima-muted dark:text-prima-muted hover:text-prima-gold transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -174,9 +176,12 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <Link to="/enroll" className="btn-primary mt-4 justify-center">
-              Enroll Now
-            </Link>
+            <div className="flex items-center gap-4 mt-4">
+              <ThemeToggle />
+              <Link to="/enroll" className="btn-primary flex-1 justify-center">
+                Enroll Now
+              </Link>
+            </div>
           </nav>
         </div>
       )}
