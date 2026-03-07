@@ -1,18 +1,21 @@
 import { Instagram, Linkedin } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import instructors from '../data/instructors.json'
 import courses from '../data/courses.json'
 import SectionHeader from '../components/ui/SectionHeader'
 
 export default function InstructorsPage() {
+  const { t } = useTranslation()
+  
   return (
     <>
       <div className="bg-prima-charcoal pt-28 pb-16">
         <div className="container-prima">
-          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">Faculty</span>
-          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">Our Instructors</h1>
+          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">{t('instructors.eyebrow')}</span>
+          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">{t('instructors.title')}</h1>
           <p className="text-white/60 font-body max-w-xl">
-            Every instructor at Prima is an active professional in their field — not just a teacher, but a practitioner.
+            {t('instructors.subtitle')}
           </p>
         </div>
       </div>
@@ -51,7 +54,7 @@ export default function InstructorsPage() {
                       {instructor.bio.slice(0, 160)}…
                     </p>
                     <div className="mb-5">
-                      <p className="text-prima-charcoal text-xs font-semibold tracking-widest uppercase mb-2">Specialties</p>
+                      <p className="text-prima-charcoal text-xs font-semibold tracking-widest uppercase mb-2">{t('instructors.specialties')}</p>
                       <div className="flex flex-wrap gap-2">
                         {instructor.specialties.map((s) => (
                           <span key={s} className="bg-prima-cream text-prima-charcoal text-[10px] font-body px-2.5 py-1">
@@ -61,7 +64,7 @@ export default function InstructorsPage() {
                       </div>
                     </div>
                     <div>
-                      <p className="text-prima-charcoal text-xs font-semibold tracking-widest uppercase mb-2">Teaching</p>
+                      <p className="text-prima-charcoal text-xs font-semibold tracking-widest uppercase mb-2">{t('instructors.teaching')}</p>
                       <div className="space-y-1.5">
                         {instructorCourses.map((c) => (
                           <Link
