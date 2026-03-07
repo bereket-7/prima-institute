@@ -69,7 +69,7 @@
     "browseCourses": "Browse All Courses"
   },
   "footer": {
-    "tagline": "Where creativity meets craft. Transforming passionate learners into industry-ready professionals since 2015.",
+    "tagline": "Where creativity meets craft. Transforming passionate learners into industry-ready professionals since 2011.",
     "disciplines": "Disciplines",
     "quickLinks": "Quick Links",
     "getInTouch": "Get in Touch",
@@ -152,5 +152,46 @@
     "students": "students",
     "weeks": "weeks",
     "module": "Module"
+  },
+  "instructors": {
+    "eyebrow": "Faculty",
+    "title": "Our Instructors",
+    "subtitle": "Every instructor at Prima is an active professional in their field — not just a teacher, but a practitioner.",
+    "specialties": "Specialties",
+    "teaching": "Teaching"
+  },
+  "about": {
+    "eyebrow": "Our Story",
+    "heroTitle": "Building the Creatives",
+    "heroTitleAccent": "of Tomorrow",
+    "heroSubtitle": "Prima Institute was founded on a simple belief: that rigorous, hands-on training by real industry professionals produces extraordinary graduates.",
+    "missionTitle": "We Exist to Transform Passion Into Profession",
+    "missionPara1": "Since 2015, Prima Institute has been the creative home for aspiring chefs, baristas, makeup artists, fashion designers, and tech professionals across Ethiopia and beyond.",
+    "missionPara2": "Our programmes combine classical foundations with modern industry practice. Students learn from instructors who are still active in the field — chefs who cook in top restaurants, makeup artists who work at fashion events, designers who build real collections.",
+    "missionPara3": "We keep our classes small intentionally. With a maximum of 15 students per cohort, every student receives genuine mentorship, not just instruction.",
+    "exploreCourses": "Explore Our Programmes",
+    "valuesEyebrow": "What Drives Us",
+    "valuesTitle": "Our Core Values",
+    "value1Title": "Craft Over Certificate",
+    "value1Desc": "We measure success by what our graduates can do, not the paper they hold. Skills and portfolio are our metrics.",
+    "value2Title": "Industry as Classroom",
+    "value2Desc": "Our curriculum is built with working professionals, ensuring everything taught is directly applicable on day one.",
+    "value3Title": "Diversity of Perspective",
+    "value3Desc": "Our instructors and students come from across the globe. Different backgrounds create richer learning environments.",
+    "value4Title": "Lifelong Community",
+    "value4Desc": "Graduation is not the end. Our alumni network, mentorship programmes, and industry events keep the Prima family connected.",
+    "timelineEyebrow": "Our Journey",
+    "timelineTitle": "A Decade of Excellence",
+    "milestone1": "Prima Institute founded with a single Culinary Arts cohort of 8 students.",
+    "milestone2": "Expanded into Food & Drinks with launch of Barista and Mixology programmes.",
+    "milestone3": "Beauty & Makeup division launched; Nadia Khalil joins as Lead Artist.",
+    "milestone4": "Fashion Design programme introduced. Yuki Tanaka joins as Design Director.",
+    "milestone5": "Passed 2,000 graduates. New studio campus opens in Addis Ababa.",
+    "milestone6": "Launched scholarship programme and Computer Training division for aspiring students.",
+    "ctaTitle": "Ready to Start Your",
+    "ctaTitleAccent": "Creative Journey?",
+    "ctaSubtitle": "Join thousands of successful graduates who transformed their passion into a thriving career at Prima Institute.",
+    "ctaApply": "Apply Now",
+    "ctaContact": "Contact Us"
   }
 }
