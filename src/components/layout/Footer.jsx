@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom'
 import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react'
 
+// TikTok icon as SVG since it's not in lucide-react
+const TikTokIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+)
+
 const FOOTER_COURSES = [
   { label: 'Culinary Arts', to: '/categories/culinary' },
   { label: 'Food & Drinks', to: '/categories/food-drinks' },
@@ -36,6 +43,7 @@ export default function Footer() {
             <div className="flex gap-4">
               {[
                 { icon: Instagram, href: '#', label: 'Instagram' },
+                { icon: TikTokIcon, href: '#', label: 'TikTok' },
                 { icon: Linkedin, href: '#', label: 'LinkedIn' },
                 { icon: Youtube, href: '#', label: 'YouTube' },
               ].map(({ icon: Icon, href, label }) => (
@@ -100,19 +108,19 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-prima-gold mt-0.5 shrink-0" />
                 <span className="text-prima-muted text-sm font-body">
-                  12 Artisan Quarter, Dubai Design District, UAE
+                  Gerji Roba, Bole Sub City, Addis Ababa, Ethiopia
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-prima-gold shrink-0" />
-                <a href="tel:+97141234567" className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body">
-                  +971 4 123 4567
+                <a href="tel:+251911408040" className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body">
+                  +251 911 408040
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-prima-gold shrink-0" />
-                <a href="mailto:hello@primainstitute.ae" className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body">
-                  hello@primainstitute.ae
+                <a href="mailto:hello@primainstitute.et" className="text-prima-muted text-sm hover:text-prima-gold transition-colors font-body">
+                  hello@primainstitute.et
                 </a>
               </li>
             </ul>
