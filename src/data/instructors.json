@@ -66,3 +66,26 @@
     "social": { "instagram": "#", "linkedin": "#" }
   }
 ]
+,
+  {
+    "id": "tech-instructor-1",
+    "name": "David Chen",
+    "title": "Computer Applications & Office Suite Specialist",
+    "bio": "With 15 years of corporate training experience and Microsoft Certified Trainer credentials, David has helped thousands of professionals master essential computer skills and boost their productivity.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    "specialties": ["Microsoft Office Suite", "Business Applications", "Digital Literacy"],
+    "courses": ["comp-001", "comp-002"],
+    "credentials": ["Microsoft Certified Trainer", "CompTIA A+ Certified", "15+ Years Corporate Training"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  },
+  {
+    "id": "tech-instructor-2",
+    "name": "Sarah Martinez",
+    "title": "Web Development & Programming Lead",
+    "bio": "A full-stack developer turned educator, Sarah has built applications for Fortune 500 companies and now shares her passion for coding with aspiring developers. She makes programming accessible and fun.",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+    "specialties": ["Web Development", "Python Programming", "UI/UX Design"],
+    "courses": ["comp-003", "comp-004", "comp-005"],
+    "credentials": ["Full-Stack Developer", "Adobe Certified Expert", "Computer Science Degree - MIT"],
+    "social": { "instagram": "#", "linkedin": "#" }
+  }
