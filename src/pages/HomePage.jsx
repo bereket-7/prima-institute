@@ -16,10 +16,10 @@ export default function HomePage() {
   const featured = courses.filter((c) => c.featured)
 
   const STATS = [
-    { value: '1,000+', label: t('stats.graduates'), icon: Users },
-    { value: '14', label: t('stats.courses'), icon: BookOpen },
+    { value: '2,000+', label: t('stats.graduates'), icon: Users },
+    { value: '25', label: t('stats.courses'), icon: BookOpen },
     { value: '6', label: t('stats.instructors'), icon: Award },
-    { value: '4.9', label: t('stats.rating'), icon: Star },
+    { value: '5.0', label: t('stats.rating'), icon: Star },
   ]
 
   return (
