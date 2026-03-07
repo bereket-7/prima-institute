@@ -60,14 +60,16 @@ export default function Navbar() {
           {/* ── Logo ───────────────────────────────────────────── */}
           <Link to="/" className="flex flex-col leading-none group">
             <span
-              className="font-display font-bold text-2xl tracking-tight"
-              style={{ color: scrolled || !isHome ? 'var(--prima-charcoal)' : 'white' }}
+              className={`font-display font-bold text-2xl tracking-tight transition-colors ${
+                scrolled || !isHome ? 'text-prima-charcoal dark:text-prima-cream' : 'text-white'
+              }`}
             >
               Prima
             </span>
             <span
-              className="font-accent text-xs tracking-[0.3em] uppercase"
-              style={{ color: scrolled || !isHome ? 'var(--prima-gold)' : 'var(--prima-gold-light)' }}
+              className={`font-accent text-xs tracking-[0.3em] uppercase transition-colors ${
+                scrolled || !isHome ? 'text-prima-gold' : 'text-prima-gold-light'
+              }`}
             >
               Institute
             </span>
@@ -86,7 +88,7 @@ export default function Navbar() {
                   <button
                     className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors ${
                       scrolled || !isHome
-                        ? 'text-prima-charcoal hover:text-prima-gold'
+                        ? 'text-prima-charcoal dark:text-prima-cream hover:text-prima-gold'
                         : 'text-white/90 hover:text-white'
                     }`}
                   >
@@ -116,7 +118,7 @@ export default function Navbar() {
                   end={link.to === '/'}
                   className={({ isActive }) =>
                     `text-sm font-medium tracking-wide transition-colors relative
-                    ${isActive ? 'text-prima-gold' : scrolled || !isHome ? 'text-prima-charcoal hover:text-prima-gold' : 'text-white/90 hover:text-white'}
+                    ${isActive ? 'text-prima-gold' : scrolled || !isHome ? 'text-prima-charcoal dark:text-prima-cream hover:text-prima-gold' : 'text-white/90 hover:text-white'}
                     ${isActive ? 'after:absolute after:bottom-[-4px] after:left-0 after:right-0 after:h-[1.5px] after:bg-prima-gold' : ''}`
                   }
                 >
@@ -141,7 +143,7 @@ export default function Navbar() {
           {/* ── Mobile Menu Toggle ─────────────────────────────── */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden p-2 transition-colors ${scrolled || !isHome ? 'text-prima-charcoal' : 'text-white'}`}
+            className={`lg:hidden p-2 transition-colors ${scrolled || !isHome ? 'text-prima-charcoal dark:text-prima-cream' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
