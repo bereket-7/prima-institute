@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 // TikTok icon as SVG since it's not in lucide-react
 const TikTokIcon = () => (
@@ -15,25 +16,28 @@ const TelegramIcon = () => (
   </svg>
 )
 
-const FOOTER_COURSES = [
-  { label: 'Culinary Arts', to: '/categories/culinary' },
-  { label: 'Food & Drinks', to: '/categories/food-drinks' },
-  { label: 'Beauty & Makeup', to: '/categories/beauty-makeup' },
-  { label: 'Fashion Design', to: '/categories/fashion' },
-]
-
-const FOOTER_LINKS = [
-  { label: 'About Us', to: '/about' },
-  { label: 'Our Instructors', to: '/instructors' },
-  { label: 'Gallery', to: '/gallery' },
-  { label: 'Blog', to: '/blog' },
-  { label: 'Contact', to: '/contact' },
-  { label: 'Enroll Now', to: '/enroll' },
-]
-
 export default function Footer() {
+  const { t } = useTranslation()
+  
+  const FOOTER_COURSES = [
+    { label: t('categories.culinary'), to: '/categories/culinary' },
+    { label: t('categories.foodDrinks'), to: '/categories/food-drinks' },
+    { label: t('categories.beauty'), to: '/categories/beauty-makeup' },
+    { label: t('categories.fashion'), to: '/categories/fashion' },
+    { label: t('categories.computer'), to: '/categories/computer' },
+  ]
+
+  const FOOTER_LINKS = [
+    { label: t('nav.about'), to: '/about' },
+    { label: t('nav.instructors'), to: '/instructors' },
+    { label: t('nav.gallery'), to: '/gallery' },
+    { label: t('nav.blog'), to: '/blog' },
+    { label: t('nav.contact'), to: '/contact' },
+    { label: t('nav.enrollNow'), to: '/enroll' },
+  ]
+
   return (
-    <footer className="bg-prima-charcoal text-prima-cream">
+    <footer className="bg-prima-charcoal dark:bg-prima-charcoal text-prima-cream dark:text-prima-cream">
       {/* ── Main Footer ──────────────────────────────────────────── */}
       <div className="container-prima py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -45,7 +49,7 @@ export default function Footer() {
               <span className="font-accent text-prima-gold text-xs tracking-[0.3em] uppercase">Institute</span>
             </div>
             <p className="text-prima-muted text-sm leading-relaxed mb-6 font-body">
-              Where creativity meets craft. Transforming passionate learners into industry-ready professionals since 2015.
+              {t('footer.tagline')}
             </p>
             <div className="flex gap-4">
               {[
@@ -72,7 +76,7 @@ export default function Footer() {
           {/* Courses */}
           <div>
             <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6">
-              Disciplines
+              {t('footer.disciplines')}
             </h4>
             <ul className="space-y-3">
               {FOOTER_COURSES.map((item) => (
@@ -92,7 +96,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6">
-              Quick Links
+              {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-3">
               {FOOTER_LINKS.map((item) => (
@@ -112,13 +116,13 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-display text-white text-sm font-semibold tracking-wider uppercase mb-6">
-              Get in Touch
+              {t('footer.getInTouch')}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-prima-gold mt-0.5 shrink-0" />
                 <span className="text-prima-muted text-sm font-body">
-                  Gerji Roba, Bole Sub City, Addis Ababa, Ethiopia
+                  {t('footer.address')}
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -136,11 +140,11 @@ export default function Footer() {
             </ul>
 
             <div className="mt-8 p-4 border border-prima-charcoal-soft">
-              <p className="text-xs text-prima-muted font-body mb-3">Subscribe for new course updates</p>
+              <p className="text-xs text-prima-muted font-body mb-3">{t('footer.subscribe')}</p>
               <div className="flex">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder={t('footer.emailPlaceholder')}
                   className="flex-1 bg-prima-charcoal-soft text-prima-cream text-sm px-3 py-2 border border-prima-charcoal-soft focus:outline-none focus:border-prima-gold transition-colors placeholder:text-prima-muted"
                 />
                 <button className="bg-prima-gold text-prima-charcoal text-xs font-semibold px-4 hover:bg-prima-gold-light transition-colors">
@@ -156,10 +160,10 @@ export default function Footer() {
       <div className="border-t border-prima-charcoal-soft">
         <div className="container-prima py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-prima-muted text-xs font-body">
-            © {new Date().getFullYear()} Prima Institute. All rights reserved.
+            © {new Date().getFullYear()} {t('footer.copyright')}
           </p>
           <div className="flex gap-6">
-            {['Privacy Policy', 'Terms of Service', 'Cookies'].map((item) => (
+            {[t('footer.privacy'), t('footer.terms'), t('footer.cookies')].map((item) => (
               <a key={item} href="#" className="text-prima-muted text-xs hover:text-prima-gold transition-colors font-body">
                 {item}
               </a>
