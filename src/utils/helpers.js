@@ -1,5 +1,5 @@
 // ─── Format currency ────────────────────────────────────────────
-export const formatPrice = (amount, currency = 'USD') =>
+export const formatPrice = (amount, currency = 'ETB') =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount)
 
 // ─── Class name merge ─────────────────────────────────────────────
@@ -11,6 +11,7 @@ export const CATEGORY_COLORS = {
   'food-drinks': { bg: 'bg-green-50',  text: 'text-green-800',  dot: 'bg-green-500'  },
   'beauty-makeup':{ bg: 'bg-pink-50',  text: 'text-pink-800',   dot: 'bg-pink-500'   },
   fashion:       { bg: 'bg-slate-50',  text: 'text-slate-800',  dot: 'bg-slate-500'  },
+  computer:      { bg: 'bg-blue-50',   text: 'text-blue-800',   dot: 'bg-blue-500'   },
 }
 
 // ─── Category labels ──────────────────────────────────────────────
@@ -19,6 +20,7 @@ export const CATEGORY_LABELS = {
   'food-drinks': 'Food & Drinks',
   'beauty-makeup':'Beauty & Makeup',
   fashion:       'Fashion Design',
+  computer:      'Computer Training',
 }
 
 // ─── Truncate text ────────────────────────────────────────────────
