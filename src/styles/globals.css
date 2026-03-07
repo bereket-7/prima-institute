@@ -23,6 +23,22 @@
   --shadow-soft: 0 8px 40px rgba(28, 28, 30, 0.12);
 }
 
+/* ─── Dark Mode Variables ────────────────────────────────────── */
+.dark {
+  --prima-cream:        #2E2E32;
+  --prima-ivory:        #1C1C1E;
+  --prima-gold:         #E8C96A;
+  --prima-gold-light:   #F5E5A8;
+  --prima-charcoal:     #F5EFE6;
+  --prima-charcoal-soft:#E8D5C4;
+  --prima-muted:        #B8AFA5;
+  --prima-blush:        #3A3A3E;
+  --prima-sage:         #A8BEA8;
+  
+  --shadow-gold: 0 4px 24px rgba(232, 201, 106, 0.15);
+  --shadow-soft: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
 /* ─── Base Reset ─────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -57,6 +73,9 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar        { width: 6px; }
 ::-webkit-scrollbar-track  { background: var(--prima-ivory); }
 ::-webkit-scrollbar-thumb  { background: var(--prima-gold); border-radius: 3px; }
+
+.dark ::-webkit-scrollbar-track  { background: #1C1C1E; }
+.dark ::-webkit-scrollbar-thumb  { background: var(--prima-gold); }
 
 /* ─── Utility Classes ────────────────────────────────────────── */
 .container-prima {
