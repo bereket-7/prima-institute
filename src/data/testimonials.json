@@ -1,62 +1,62 @@
 [
   {
     "id": "t1",
-    "name": "Amira Al-Hassan",
+    "name": "Meron Tadesse",
     "course": "Professional Culinary Arts",
     "category": "culinary",
     "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
     "rating": 5,
-    "text": "Prima completely transformed my relationship with food. Within six months I went from home cook to sous chef at a respected restaurant. The instructors genuinely care about your growth.",
-    "outcome": "Now Sous Chef at Zuma Dubai"
+    "text": "Prima completely transformed my relationship with food. Within six months I went from home cook to sous chef at a respected restaurant in Addis. The instructors genuinely care about your growth.",
+    "outcome": "Now Sous Chef at Yod Abyssinia"
   },
   {
     "id": "t2",
-    "name": "Kwame Asante",
+    "name": "Dawit Bekele",
     "course": "Cocktail & Mixology",
     "category": "food-drinks",
     "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     "rating": 5,
-    "text": "James is an exceptional teacher. The hands-on bar sessions and his storytelling around each spirit made the course unforgettable. I launched my pop-up bar within months.",
-    "outcome": "Launched 'Aso' Pop-up Bar"
+    "text": "The hands-on bar sessions and storytelling around each spirit made the course unforgettable. I launched my own cocktail bar in Bole within months of graduating.",
+    "outcome": "Launched 'Habesha Spirits' Bar"
   },
   {
     "id": "t3",
-    "name": "Sara Dimitriou",
+    "name": "Hanna Gebremedhin",
     "course": "Professional Makeup Artistry",
     "category": "beauty-makeup",
     "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     "rating": 5,
-    "text": "Nadia doesn't just teach makeup — she teaches professionalism. My portfolio opened doors I never imagined. I'm now working fashion weeks across the region.",
-    "outcome": "Freelance MUA — Dubai & Cairo Fashion Weeks"
+    "text": "Nadia doesn't just teach makeup — she teaches professionalism. My portfolio opened doors I never imagined. I'm now working with top Ethiopian celebrities and fashion events.",
+    "outcome": "Freelance MUA — Addis Fashion Week"
   },
   {
     "id": "t4",
-    "name": "Linh Nguyen",
+    "name": "Bethlehem Asfaw",
     "course": "Fashion Design Fundamentals",
     "category": "fashion",
     "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&q=80",
     "rating": 5,
-    "text": "The pattern-making module alone was worth the entire programme. Yuki has an incredible eye and helped me develop my own aesthetic language. Truly world-class teaching.",
-    "outcome": "Launched Womenswear Label 'Vỏ'"
+    "text": "The pattern-making module alone was worth the entire programme. Yuki helped me develop my own aesthetic language blending Ethiopian heritage with modern design. Truly world-class teaching.",
+    "outcome": "Launched 'Bethel Designs' Label"
   },
   {
     "id": "t5",
-    "name": "Tariq Mansour",
+    "name": "Samuel Tesfaye",
     "course": "Barista & Coffee Arts",
     "category": "food-drinks",
     "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
     "rating": 5,
-    "text": "Elena's passion for coffee is infectious. The sensory training sessions were eye-opening — I can never drink coffee the same way again. My café opened 3 months after graduating.",
-    "outcome": "Owner, Saffron Specialty Café"
+    "text": "Elena's passion for coffee is infectious. The sensory training sessions were eye-opening — I can never drink coffee the same way again. My specialty café opened 3 months after graduating.",
+    "outcome": "Owner, Bunna Specialty Café"
   },
   {
     "id": "t6",
-    "name": "Isabelle Moreau",
+    "name": "Selam Worku",
     "course": "Pastry & Baking Mastery",
     "category": "culinary",
     "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&q=80",
     "rating": 5,
-    "text": "Sophie's technical precision pushed me to levels I didn't think possible. The chocolate and sugar arts module was pure magic. Every week I was amazed at what I could create.",
-    "outcome": "Head Pastry Chef, Four Seasons Beirut"
+    "text": "The technical precision pushed me to levels I didn't think possible. The chocolate and sugar arts module was pure magic. Every week I was amazed at what I could create.",
+    "outcome": "Head Pastry Chef, Sheraton Addis"
   }
 ]
