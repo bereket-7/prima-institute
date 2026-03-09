@@ -97,8 +97,8 @@ export default function InstructorsPage() {
                       <div className="inline-flex items-center justify-center w-16 h-16 bg-prima-gold/10 text-prima-gold mb-4 group-hover:bg-prima-gold group-hover:text-prima-charcoal transition-all duration-300">
                         {area.icon}
                       </div>
-                      <h3 className="font-display text-2xl font-bold text-prima-charcoal dark:text-prima-cream mb-2">
-                        {category?.name}
+                      <h3 className="font-display text-2xl font-extrabold text-prima-charcoal dark:text-prima-cream mb-2">
+                        {category?.label}
                       </h3>
                       <p className="text-sm text-prima-muted dark:text-prima-muted">
                         {category?.description}
