@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { Clock, BookOpen, Users, CheckCircle, ChevronLeft, ArrowRight } from 'lucide-react'
 import courses from '../data/courses.json'
 import instructors from '../data/instructors.json'
-import { formatPrice, getInstructor } from '../utils/helpers'
+import { getInstructor } from '../utils/helpers'
 import { useStore } from '../store/useStore'
 
 export default function CourseDetailPage() {
@@ -50,11 +50,13 @@ export default function CourseDetailPage() {
                 <span className="flex items-center gap-2"><BookOpen size={14} className="text-prima-gold" />{course.sessions} sessions</span>
                 <span className="flex items-center gap-2"><Users size={14} className="text-prima-gold" />Max 12 students</span>
               </div>
-              <div className="flex gap-4 items-center">
-                <span className="font-display text-4xl font-bold text-white">{formatPrice(course.price)}</span>
+              <div className="flex gap-4">
                 <button onClick={() => openEnrollModal(course)} className="btn-primary py-3 px-8">
                   Enroll Now <ArrowRight size={16} />
                 </button>
+                <Link to="/contact" className="btn-outline-gold py-3 px-8">
+                  Contact Us
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -127,14 +129,12 @@ export default function CourseDetailPage() {
 
               {/* Enroll CTA */}
               <div className="bg-prima-charcoal p-6 text-center">
-                <p className="text-white/60 text-xs font-body uppercase tracking-widest mb-2">Total Investment</p>
-                <p className="font-display text-4xl font-bold text-white mb-4">{formatPrice(course.price)}</p>
-                <p className="text-white/50 text-xs font-body mb-6">Payment plans available on request</p>
-                <button onClick={() => openEnrollModal(course)} className="btn-primary w-full justify-center">
+                <p className="text-white/60 text-sm font-body mb-4">Ready to start your journey?</p>
+                <button onClick={() => openEnrollModal(course)} className="btn-primary w-full justify-center mb-3">
                   Enroll in This Course
                 </button>
-                <Link to="/contact" className="btn-outline-gold w-full justify-center mt-3">
-                  Ask a Question
+                <Link to="/contact" className="btn-outline-gold w-full justify-center">
+                  Contact for Details
                 </Link>
               </div>
             </div>

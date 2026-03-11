@@ -185,12 +185,12 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=400&q=80" alt="" className="w-full aspect-square object-cover" />
-                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&q=80" alt="" className="w-full aspect-[4/3] object-cover" />
+                <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=400&q=80" alt="Culinary training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&q=80" alt="Beauty training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
               </div>
-              <div className="space-y-4 mt-8">
-                <img src="https://images.unsplash.com/photo-1558171813-8ef45e8b02dc?w=400&q=80" alt="" className="w-full aspect-[4/3] object-cover" />
-                <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=400&q=80" alt="" className="w-full aspect-square object-cover" />
+              <div className="space-y-4">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80" alt="Computer training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
+                <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=400&q=80" alt="Coffee training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>

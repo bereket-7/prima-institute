@@ -54,28 +54,20 @@ export default function CourseCard({ course, onEnroll }) {
           </span>
         </div>
 
-        {/* Price + Actions */}
-        <div className="flex items-center justify-between pt-4 border-t border-prima-blush">
-          <div>
-            <span className="font-display text-2xl font-semibold text-prima-charcoal">
-              {formatPrice(course.price)}
-            </span>
-            <span className="text-prima-muted text-xs font-body ml-1">total</span>
-          </div>
-          <div className="flex gap-2">
-            <Link
-              to={`/courses/${course.slug}`}
-              className="btn-outline text-xs py-2 px-4"
-            >
-              Details
-            </Link>
-            <button
-              onClick={() => onEnroll && onEnroll(course)}
-              className="btn-primary text-xs py-2 px-4"
-            >
-              Enroll
-            </button>
-          </div>
+        {/* Actions */}
+        <div className="flex gap-2 pt-4 border-t border-prima-blush">
+          <Link
+            to={`/courses/${course.slug}`}
+            className="btn-outline text-xs py-2 px-4 flex-1 text-center"
+          >
+            Details
+          </Link>
+          <button
+            onClick={() => onEnroll && onEnroll(course)}
+            className="btn-primary text-xs py-2 px-4 flex-1"
+          >
+            Enroll
+          </button>
         </div>
       </div>
     </article>

@@ -47,7 +47,7 @@
     "currency": "ETB",
     "image": "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=600&q=80",
     "instructor": "chef-sophie",
-    "featured": false,
+    "featured": true,
     "badge": "New",
     "description": "Dive deep into the science and artistry of pastry — from laminated doughs to sugar work.",
     "syllabus": [
@@ -164,7 +164,7 @@
     "currency": "ETB",
     "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80",
     "instructor": "artist-nadia",
-    "featured": false,
+    "featured": true,
     "badge": "New",
     "description": "Understand skin biology, active ingredients, facial massage, and create customized skincare routines.",
     "syllabus": [
