@@ -17,10 +17,10 @@ export default function AboutPage() {
   const { t } = useTranslation();
 
   const STATS = [
-    { value: "2000+", label: t("stats.graduates"), icon: Users },
-    { value: "25", label: t("stats.courses"), icon: BookOpen },
-    { value: "10", label: t("stats.instructors"), icon: Award },
-    { value: "5.0", label: t("stats.rating"), icon: TrendingUp },
+    { value: "2019", label: "Founded", icon: Users },
+    { value: "3", label: "Training Categories", icon: BookOpen },
+    { value: "6+", label: "Yrs Avg. Instructor Exp.", icon: Award },
+    { value: "100%", label: "Hands-On Training", icon: TrendingUp },
   ];
 
   const VALUES = [
@@ -47,12 +47,12 @@ export default function AboutPage() {
   ];
 
   const MILESTONES = [
-    { year: "2011", event: t("about.milestone1") },
-    { year: "2013", event: t("about.milestone2") },
-    { year: "2015", event: t("about.milestone3") },
-    { year: "2016", event: t("about.milestone4") },
-    { year: "2017", event: t("about.milestone5") },
-    { year: "2018", event: t("about.milestone6") },
+    { year: "2019", event: t("about.milestone1") },
+    { year: "2020", event: t("about.milestone2") },
+    { year: "2021", event: t("about.milestone3") },
+    { year: "2022", event: t("about.milestone4") },
+    { year: "2023", event: t("about.milestone5") },
+    { year: "2024", event: t("about.milestone6") },
   ];
   return (
     <>
@@ -243,6 +243,51 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="section-padding bg-prima-ivory dark:bg-prima-ivory">
+        <div className="container-prima grid lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1 bg-white dark:bg-prima-charcoal-soft border border-prima-blush dark:border-white/10 rounded-lg p-8 shadow-lg">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-prima-gold/10 flex items-center justify-center shrink-0">
+                <Globe className="text-prima-gold" size={24} />
+              </div>
+              <div>
+                <span className="font-accent text-prima-gold text-sm tracking-widest uppercase">
+                  {t("about.locationEyebrow")}
+                </span>
+                <h3 className="font-display text-2xl font-bold text-prima-charcoal dark:text-prima-cream mt-1">
+                  {t("about.locationTitle")}
+                </h3>
+              </div>
+            </div>
+            <p className="text-prima-muted font-body leading-relaxed mb-6">
+              {t("about.locationDesc")}
+            </p>
+            <div className="flex items-center gap-3 bg-prima-gold/10 rounded-lg px-4 py-3">
+              <div className="w-2 h-2 rounded-full bg-prima-gold animate-pulse" />
+              <span className="text-prima-charcoal dark:text-prima-cream font-body text-sm font-medium">
+                {t("about.locationOnline")}
+              </span>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2">
+            <span className="inline-block w-16 h-1 bg-prima-gold mb-8" />
+            <h2 className="font-display text-4xl lg:text-5xl font-bold text-prima-charcoal dark:text-prima-charcoal mb-6">
+              {t("about.locationTitle")}
+            </h2>
+            <p className="text-prima-muted font-body leading-relaxed text-lg mb-4">
+              Bole Sub-city, Gerji Roba area
+            </p>
+            <p className="text-prima-muted font-body leading-relaxed mb-2">
+              Seada Building, 3rd Floor
+            </p>
+            <p className="text-prima-muted font-body leading-relaxed">
+              Addis Ababa, Ethiopia
+            </p>
           </div>
         </div>
       </section>
