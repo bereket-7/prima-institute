@@ -11,7 +11,7 @@
     "enrollNow": "Enroll Now"
   },
   "hero": {
-    "welcome": "Welcome to Prima Institute",
+    "welcome": "Welcome to PRIMA Institute",
     "title": "Reach Within,",
     "titleAccent": "Shape the Future",
     "subtitle": "Professional training in Culinary Arts, Food & Drinks, Beauty & Makeup, Fashion Design, and Computer Training — taught by world-class practitioners.",
@@ -31,8 +31,8 @@
     "eyebrow": "What We Teach",
     "explore": "Explore",
     "culinary": "Culinary Arts",
-    "foodDrinks": "Food & Drinks",
-    "beauty": "Beauty & Makeup",
+    "foodDrinks": "Bakery & Pastry",
+    "beauty": "Beauty & Hair Dressing",
     "fashion": "Fashion Design",
     "computer": "Computer Training"
   },
@@ -42,7 +42,7 @@
     "viewAll": "View All"
   },
   "whyPrima": {
-    "eyebrow": "Why Prima",
+    "eyebrow": "Why PRIMA",
     "title": "Learning That Transforms Careers",
     "subtitle": "We don't just teach skills — we build professionals. Every course is designed with industry outcomes in mind.",
     "learnMore": "Learn More About Us",
@@ -78,7 +78,7 @@
     "officeHoursTime": "Mon – Fri: 9:00 AM – 6:00 PM\nSat: 10:00 AM – 2:00 PM",
     "subscribe": "Subscribe for new course updates",
     "emailPlaceholder": "Your email",
-    "copyright": "Prima Institute. All rights reserved.",
+    "copyright": "PRIMA Institute. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookies"
@@ -100,7 +100,7 @@
   },
   "enrollment": {
     "title": "Enrollment Application",
-    "eyebrow": "Join Prima",
+    "eyebrow": "Join PRIMA",
     "step1": "Personal Info",
     "step2": "Course Selection",
     "step3": "Review & Submit",
@@ -127,10 +127,10 @@
     "termsLink": "Terms and Conditions",
     "and": "and",
     "privacyLink": "Privacy Policy",
-    "of": "of Prima Institute.",
+    "of": "of PRIMA Institute.",
     "submitApplication": "Submit Application",
     "successTitle": "Application Received!",
-    "successMessage": "Thank you for applying to Prima Institute. Our admissions team will review your application and contact you within 2 business days.",
+    "successMessage": "Thank you for applying to PRIMA Institute. Our admissions team will review your application and contact you within 2 business days.",
     "returnHome": "Return Home"
   },
   "contact": {
@@ -156,7 +156,7 @@
   "instructors": {
     "eyebrow": "Faculty",
     "title": "Our Instructors",
-    "subtitle": "Every instructor at Prima is an active professional in their field — not just a teacher, but a practitioner.",
+    "subtitle": "Every instructor at PRIMA is an active professional in their field — not just a teacher, but a practitioner.",
     "specialties": "Specialties",
     "teaching": "Teaching"
   },
