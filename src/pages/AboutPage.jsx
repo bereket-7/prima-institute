@@ -17,7 +17,7 @@ export default function AboutPage() {
   const { t } = useTranslation();
 
   const STATS = [
-    { value: "2019", label: "Founded", icon: Users },
+    { value: "2018", label: "Founded", icon: Users },
     { value: "3", label: "Training Categories", icon: BookOpen },
     { value: "6+", label: "Yrs Avg. Instructor Exp.", icon: Award },
     { value: "100%", label: "Hands-On Training", icon: TrendingUp },
@@ -47,12 +47,13 @@ export default function AboutPage() {
   ];
 
   const MILESTONES = [
-    { year: "2019", event: t("about.milestone1") },
+    { year: "2018", event: t("about.milestone1") },
     { year: "2020", event: t("about.milestone2") },
     { year: "2021", event: t("about.milestone3") },
     { year: "2022", event: t("about.milestone4") },
     { year: "2023", event: t("about.milestone5") },
     { year: "2024", event: t("about.milestone6") },
+    { year: "2025", event: t("about.milestone7") },
   ];
   return (
     <>
@@ -60,7 +61,7 @@ export default function AboutPage() {
       <div className="relative bg-gradient-to-br from-prima-charcoal via-prima-charcoal to-prima-charcoal-soft dark:from-black dark:via-prima-charcoal dark:to-prima-charcoal-soft pt-28 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1600&q=80"
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -141,24 +142,24 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=400&q=80"
+                src="https://images.unsplash.com/photo-1583394293214-0b3b8e5a8b0e?w=400&q=80"
                 alt="Culinary training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
               <img
-                src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80"
+                src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?w=400&q=80"
                 alt="Beauty training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
             </div>
             <div className="space-y-4 mt-8">
               <img
-                src="https://images.unsplash.com/photo-1558171813-8ef45e8b02dc?w=400&q=80"
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80"
                 alt="Fashion training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
               <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80"
+                src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&q=80"
                 alt="Coffee training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
