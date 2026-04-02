@@ -60,7 +60,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/assets/images/logos/prima_logo.jpg"
-              alt="Prima Institute"
+              alt="PRIMA Institute"
               className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col leading-none">
@@ -71,7 +71,7 @@ export default function Navbar() {
                     : "text-white"
                 }`}
               >
-                Prima
+                PRIMA
               </span>
               <span
                 className={`font-accent text-xs tracking-[0.3em] uppercase transition-colors ${
