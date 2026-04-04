@@ -12,7 +12,7 @@ const GALLERY_ITEMS = [
   { id: 7, category: 'culinary', src: 'https://images.unsplash.com/photo-1571805529673-0f56b922b359?w=800&q=80', label: 'Sauce Preparation' },
   { id: 8, category: 'culinary', src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80', label: 'Gourmet Presentation' },
 
-  // Food & Drinks - 7 images
+  // Bakery & Pastry - 7 images
   { id: 9, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80', label: 'Coffee Artistry' },
   { id: 10, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=800&q=80', label: 'Latte Art Mastery' },
   { id: 11, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80', label: 'Cocktail Mixology' },
@@ -52,7 +52,7 @@ const GALLERY_ITEMS = [
 const FILTERS = [
   { value: 'all', label: 'All', count: 36 },
   { value: 'culinary', label: 'Culinary Arts', count: 8 },
-  { value: 'food-drinks', label: 'Food & Drinks', count: 7 },
+  { value: 'food-drinks', label: 'Bakery & Pastry', count: 7 },
   { value: 'beauty-makeup', label: 'Beauty & Makeup', count: 8 },
   { value: 'fashion', label: 'Fashion Design', count: 7 },
   { value: 'computer', label: 'Computer', count: 6 },

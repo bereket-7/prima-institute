@@ -5,7 +5,7 @@ import CourseCard from '../components/ui/CourseCard'
 import { useStore } from '../store/useStore'
 import { CATEGORY_LABELS } from '../utils/helpers'
 
-const CATEGORIES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion']
+const CATEGORIES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion', 'computer']
 const LEVELS = ['all', 'Beginner', 'Intermediate', 'Beginner to Advanced', 'Beginner to Intermediate']
 const DURATIONS = ['all', 'Short (< 2 months)', 'Medium (2-4 months)', 'Long (5+ months)']
 

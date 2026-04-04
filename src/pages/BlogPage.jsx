@@ -14,7 +14,7 @@ export default function BlogPage() {
   const categories = [
     { value: 'all', label: 'All Posts' },
     { value: 'culinary', label: 'Culinary' },
-    { value: 'food-drinks', label: 'Food & Drinks' },
+    { value: 'food-drinks', label: 'Bakery & Pastry' },
     { value: 'beauty-makeup', label: 'Beauty' },
     { value: 'fashion', label: 'Fashion' },
     { value: 'computer', label: 'Computer' },
