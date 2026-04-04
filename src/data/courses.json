@@ -240,6 +240,37 @@
     ]
   },
   {
+    "id": "bm-003",
+    "slug": "hair-dressing",
+    "title": "Professional Hair Dressing",
+    "subtitle": "Cut, Style & Transform Hair",
+    "category": "beauty-makeup",
+    "level": "Beginner",
+    "duration": "3 Months",
+    "sessions": 24,
+    "price": 1100,
+    "currency": "ETB",
+    "image": "https://images.unsplash.com/photo-1560066984-138daaa0ad8a?w=600&q=80",
+    "instructor": "artist-nadia",
+    "featured": true,
+    "badge": "New",
+    "description": "A comprehensive beginner course in professional hair dressing — covering cutting techniques, styling, braiding, coloring basics, and salon management for a career-ready foundation.",
+    "syllabus": [
+      { "module": 1, "title": "Hair Types, Tools & Salon Safety", "weeks": 1 },
+      { "module": 2, "title": "Cutting Techniques & Shaping", "weeks": 3 },
+      { "module": 3, "title": "Styling, Blowouts & Finishing", "weeks": 2 },
+      { "module": 4, "title": "Braiding & Traditional Hair Arts", "weeks": 2 },
+      { "module": 5, "title": "Color Basics & Chemical Treatments", "weeks": 2 },
+      { "module": 6, "title": "Client Care & Salon Management", "weeks": 2 }
+    ],
+    "outcomes": [
+      "Perform professional cuts and styling",
+      "Master braiding and traditional hair techniques",
+      "Apply basic hair coloring and treatments",
+      "Manage client consultations and salon operations"
+    ]
+  },
+  {
     "id": "fa-001",
     "slug": "fashion-design-fundamentals",
     "title": "Fashion Design Fundamentals",
