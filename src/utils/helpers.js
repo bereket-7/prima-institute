@@ -16,11 +16,11 @@ export const CATEGORY_COLORS = {
 
 // ─── Category labels ──────────────────────────────────────────────
 export const CATEGORY_LABELS = {
-  culinary:      'Culinary Arts',
-  'food-drinks': 'Food & Drinks',
-  'beauty-makeup':'Beauty & Makeup',
-  fashion:       'Fashion Design',
-  computer:      'Computer Training',
+  culinary:       'Culinary Arts',
+  'food-drinks':  'Bakery & Pastry',
+  'beauty-makeup':'Beauty & Hair Dressing',
+  fashion:        'Fashion Design',
+  computer:       'Computer Training',
 }
 
 // ─── Truncate text ────────────────────────────────────────────────
