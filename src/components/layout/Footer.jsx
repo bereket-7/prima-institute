@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-6 group">
-              <span className="font-display font-bold text-3xl text-white block group-hover:text-prima-gold transition-colors duration-300">Prima</span>
+              <span className="font-display font-bold text-3xl text-white block group-hover:text-prima-gold transition-colors duration-300">PRIMA</span>
               <span className="font-accent text-prima-gold text-xs tracking-[0.3em] uppercase">Institute</span>
             </div>
             <p className="text-prima-muted text-sm leading-relaxed mb-8 font-body">

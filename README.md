@@ -1,6 +1,6 @@
 # Prima Institute — Frontend
 
-Premium training & education institute website for Culinary Arts, Food & Drinks, Beauty & Makeup, and Fashion Design.
+Premium training & education institute website for Culinary Arts, Bakery & Pastry, Beauty & Hair Dressing, Fashion Design, and Computer Training.
 
 ## Tech Stack
 
