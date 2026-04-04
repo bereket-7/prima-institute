@@ -18,7 +18,7 @@ export default function AboutPage() {
 
   const STATS = [
     { value: "2018", label: "Founded", icon: Users },
-    { value: "3", label: "Training Categories", icon: BookOpen },
+    { value: "4", label: "Training Categories", icon: BookOpen },
     { value: "6+", label: "Yrs Avg. Instructor Exp.", icon: Award },
     { value: "100%", label: "Hands-On Training", icon: TrendingUp },
   ];
