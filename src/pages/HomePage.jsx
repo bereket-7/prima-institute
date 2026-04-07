@@ -185,12 +185,12 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <img src="https://images.unsplash.com/photo-1583394293214-0b3b8e5a8b0e?w=400&q=80" alt="Culinary training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
-                <img src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?w=400&q=80" alt="Beauty training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
+                <img src="/assets/images/about/photo_2026-04-06_11-17-38.jpg" alt="Culinary training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
+                <img src="/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-22.jpg" alt="Beauty training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
               </div>
               <div className="space-y-4">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80" alt="Computer training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
-                <img src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&q=80" alt="Coffee training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
+                <img src="/assets/images/courses/fashion/photo_2026-04-06_16-16-01.jpg" alt="Fashion training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
+                <img src="/assets/images/about/photo_2026-04-06_11-17-44.jpg" alt="Bakery training" className="w-full aspect-square object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
