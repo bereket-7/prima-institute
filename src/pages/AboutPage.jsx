@@ -61,7 +61,7 @@ export default function AboutPage() {
       <div className="relative bg-gradient-to-br from-prima-charcoal via-prima-charcoal to-prima-charcoal-soft dark:from-black dark:via-prima-charcoal dark:to-prima-charcoal-soft pt-28 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80"
+            src="/assets/images/about/photo_2026-04-06_11-14-57.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -142,24 +142,24 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1583394293214-0b3b8e5a8b0e?w=400&q=80"
+                src="/assets/images/about/photo_2026-04-06_11-11-55.jpg"
                 alt="Culinary training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
               <img
-                src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?w=400&q=80"
+                src="/assets/images/about/photo_2026-04-06_11-12-35.jpg"
                 alt="Beauty training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
             </div>
             <div className="space-y-4 mt-8">
               <img
-                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80"
+                src="/assets/images/about/photo_2026-04-06_11-13-09.jpg"
                 alt="Fashion training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
               <img
-                src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&q=80"
+                src="/assets/images/about/photo_2026-04-06_11-13-15.jpg"
                 alt="Coffee training"
                 className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
               />
