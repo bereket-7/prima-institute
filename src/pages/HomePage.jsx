@@ -29,7 +29,7 @@ export default function HomePage() {
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1600&q=80"
+            src="/assets/images/hero/photo_2026-05-01_07-30-41.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
