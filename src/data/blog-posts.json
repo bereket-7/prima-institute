@@ -9,7 +9,21 @@
     "readTime": "6 min",
     "image": "/assets/images/courses/culinary/photo_2026-04-06_11-14-17.jpg",
     "excerpt": "Master these foundational cuts and your cooking will transform overnight. Our head chef breaks down the five techniques that separate amateurs from professionals.",
-    "tags": ["knife skills", "cooking basics", "culinary tips"]
+    "tags": ["knife skills", "cooking basics", "culinary tips"],
+    "content": [
+      { "type": "paragraph", "text": "A sharp knife and the knowledge to use it correctly is the single most important foundation in any professional kitchen. Before you learn a single recipe, you must learn how to handle your blade safely and efficiently." },
+      { "type": "heading", "text": "1. The Chef's Grip" },
+      { "type": "paragraph", "text": "Pinch the blade between your thumb and the side of your index finger, just above the handle. This gives you maximum control and reduces fatigue during long prep sessions. Most beginners hold the handle — professionals hold the blade." },
+      { "type": "heading", "text": "2. The Claw" },
+      { "type": "paragraph", "text": "Curl your fingertips inward so your knuckles guide the blade. This protects your fingers and creates a consistent cutting surface. Practice this on every vegetable until it becomes automatic." },
+      { "type": "heading", "text": "3. The Julienne Cut" },
+      { "type": "paragraph", "text": "Slice your ingredient into thin planks, stack them, then cut into matchsticks. Uniform julienne cuts cook evenly and present beautifully. This is the foundation of many stir-fry and garnish techniques." },
+      { "type": "heading", "text": "4. The Brunoise" },
+      { "type": "paragraph", "text": "Take your julienne strips and rotate 90 degrees, then cut across to produce tiny, uniform cubes. A proper brunoise is 3mm on each side. It takes patience, but the precision will elevate every dish you make." },
+      { "type": "heading", "text": "5. The Chiffonade" },
+      { "type": "paragraph", "text": "Stack leafy herbs or greens, roll them tightly, and slice across into thin ribbons. This technique is used for basil, mint, and spinach — and it preserves the cell structure better than rough chopping, keeping flavors bright." },
+      { "type": "paragraph", "text": "At PRIMA Institute, every culinary student spends the first two weeks on knife skills alone. We believe that speed and confidence with a knife unlocks everything else in the kitchen. Practice daily, keep your blade sharp, and the rest will follow." }
+    ]
   },
   {
     "id": "blog-002",
@@ -21,7 +35,19 @@
     "readTime": "8 min",
     "image": "/assets/images/courses/culinary/photo_2026-04-06_11-14-39.jpg",
     "excerpt": "From injera fermentation to berbere spice blending — discover the techniques and traditions that make Ethiopian food one of the world's most distinctive cuisines.",
-    "tags": ["Ethiopian food", "traditional cooking", "injera"]
+    "tags": ["Ethiopian food", "traditional cooking", "injera"],
+    "content": [
+      { "type": "paragraph", "text": "Ethiopian cuisine is one of the oldest and most complex culinary traditions in the world. Built on fermentation, slow cooking, and a mastery of spice, it tells the story of a culture through every bite." },
+      { "type": "heading", "text": "The Foundation: Injera" },
+      { "type": "paragraph", "text": "Injera is not just bread — it is the plate, the utensil, and the centerpiece of every Ethiopian meal. Made from teff flour, it requires a 2–3 day fermentation process that develops its signature sour flavor and spongy texture. The batter must be the right consistency, the griddle the right temperature, and the pour smooth and even." },
+      { "type": "heading", "text": "Berbere: The Soul of Ethiopian Spice" },
+      { "type": "paragraph", "text": "Berbere is a complex spice blend that forms the backbone of many Ethiopian dishes. It typically includes dried chili peppers, fenugreek, coriander, black pepper, korarima (Ethiopian cardamom), rue, ajwain, and sacred basil. Each family and region has its own ratio — learning to blend your own berbere is a rite of passage in Ethiopian cooking." },
+      { "type": "heading", "text": "Wot: The Art of the Stew" },
+      { "type": "paragraph", "text": "Wot is the slow-cooked stew that sits atop injera. The key is the base — onions are dry-fried without oil for up to 45 minutes until they caramelize deeply, then niter kibbeh (spiced clarified butter) is added along with berbere. This process, called 'qibe', creates a depth of flavor that cannot be rushed." },
+      { "type": "heading", "text": "Tibs: Quick and Bold" },
+      { "type": "paragraph", "text": "Tibs is sautéed meat — usually beef or lamb — cooked quickly over high heat with onions, tomatoes, jalapeños, and rosemary. Unlike wot, tibs is about speed and freshness. The meat should be seared, not stewed, and served immediately." },
+      { "type": "paragraph", "text": "At PRIMA Institute, our Ethiopian Traditional Food course covers all of these techniques in depth. We believe that mastering your own culinary heritage is just as important as learning international cuisine — and for our students, it is often the most personally meaningful part of their training." }
+    ]
   },
   {
     "id": "blog-003",
@@ -33,7 +59,19 @@
     "readTime": "5 min",
     "image": "/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-56.jpg",
     "excerpt": "Whether you're decorating your first cake or refining your technique, these professional tips will help you create beautiful, bakery-worthy results every time.",
-    "tags": ["cake decoration", "baking", "pastry tips"]
+    "tags": ["cake decoration", "baking", "pastry tips"],
+    "content": [
+      { "type": "paragraph", "text": "Cake decoration is where baking meets art. A perfectly baked cake is only half the work — the finish is what people see first, and it sets expectations for every bite that follows." },
+      { "type": "heading", "text": "Start with a Crumb Coat" },
+      { "type": "paragraph", "text": "Before applying your final layer of buttercream or fondant, always apply a thin crumb coat — a light layer of frosting that seals in loose crumbs. Chill the cake for 20–30 minutes until the crumb coat is firm, then apply your final coat. This is the single most important step beginners skip." },
+      { "type": "heading", "text": "Buttercream Temperature Matters" },
+      { "type": "paragraph", "text": "Buttercream that is too cold will tear the cake surface. Too warm and it will slide. The ideal temperature is around 20°C — soft enough to spread smoothly but firm enough to hold its shape. If your kitchen is warm, work in short sessions and return the cake to the fridge between coats." },
+      { "type": "heading", "text": "Piping Basics: Pressure and Angle" },
+      { "type": "paragraph", "text": "Consistent pressure and a steady angle are the two fundamentals of piping. Practice on parchment paper before touching the cake. For rosettes, hold the bag at 90 degrees and apply even pressure while rotating. For borders, maintain a 45-degree angle and move at a consistent speed." },
+      { "type": "heading", "text": "Fondant: Smooth is Everything" },
+      { "type": "paragraph", "text": "Knead fondant until it is warm and pliable before rolling. Use cornstarch or powdered sugar to prevent sticking. Roll to an even 4–5mm thickness, then drape over the cake and smooth from the top down, working out air bubbles with a fondant smoother. Trim the excess cleanly at the base." },
+      { "type": "paragraph", "text": "Decoration is a skill that improves dramatically with repetition. At PRIMA, our Cake Decoration course gives students hands-on practice from day one — because the only way to learn is to do." }
+    ]
   },
   {
     "id": "blog-004",
@@ -45,7 +83,19 @@
     "readTime": "7 min",
     "image": "/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-47.jpg",
     "excerpt": "Laminated doughs are the pinnacle of pastry craft. Learn the folding technique, butter temperature secrets, and resting times that produce perfectly flaky layers.",
-    "tags": ["croissants", "laminated dough", "pastry technique"]
+    "tags": ["croissants", "laminated dough", "pastry technique"],
+    "content": [
+      { "type": "paragraph", "text": "Laminated dough is the foundation of croissants, pain au chocolat, Danish pastries, and puff pastry. The technique involves folding butter repeatedly into dough to create hundreds of thin, alternating layers that puff and separate during baking." },
+      { "type": "heading", "text": "The Science of Lamination" },
+      { "type": "paragraph", "text": "When laminated dough hits a hot oven, the water in the butter turns to steam. This steam pushes the layers apart, creating the characteristic flaky, honeycomb interior. The more precise your lamination, the more defined and even your layers will be." },
+      { "type": "heading", "text": "Butter Temperature is Everything" },
+      { "type": "paragraph", "text": "The butter must be cold enough to stay solid during folding but pliable enough not to crack and break through the dough. The ideal temperature is 13–15°C — what pastry chefs call 'plastic' butter. If it cracks, warm it slightly. If it smears, chill it immediately." },
+      { "type": "heading", "text": "The Fold Sequence" },
+      { "type": "paragraph", "text": "A standard croissant dough uses a series of 'turns' — typically three double folds (book folds) or four single folds (letter folds). Between each turn, the dough must rest in the refrigerator for at least 30 minutes to relax the gluten and keep the butter cold. Rushing this step destroys the layers." },
+      { "type": "heading", "text": "Shaping and Proofing" },
+      { "type": "paragraph", "text": "Roll the dough to 4mm thickness, cut into triangles, and roll from the wide base to the tip with gentle tension. Proof at 24–26°C for 2–3 hours until the croissants are visibly puffy and jiggle when the tray is shaken. Under-proofed croissants are dense; over-proofed ones collapse." },
+      { "type": "paragraph", "text": "Laminated doughs reward patience and precision above all else. At PRIMA, we dedicate three full weeks to this technique — because once you master it, every other pastry feels achievable." }
+    ]
   },
   {
     "id": "blog-005",
@@ -57,7 +107,19 @@
     "readTime": "7 min",
     "image": "/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-22.jpg",
     "excerpt": "Before you pick up a brush, understand colour. We break down undertones, complementary colours, and the wheel that guides every professional look.",
-    "tags": ["makeup", "colour theory", "beauty education"]
+    "tags": ["makeup", "colour theory", "beauty education"],
+    "content": [
+      { "type": "paragraph", "text": "Colour theory is the invisible framework behind every great makeup look. Without it, you are guessing. With it, you can predict exactly how colours will interact on any skin tone." },
+      { "type": "heading", "text": "Understanding Undertones" },
+      { "type": "paragraph", "text": "Every skin tone has an undertone — warm (yellow, peachy, golden), cool (pink, red, bluish), or neutral (a mix of both). Identifying undertones is the first step in foundation matching, blush selection, and lip colour choice. Look at the veins on the inside of the wrist: green veins suggest warm undertones, blue or purple suggest cool." },
+      { "type": "heading", "text": "The Colour Wheel for Makeup" },
+      { "type": "paragraph", "text": "Complementary colours sit opposite each other on the wheel and cancel each other out. This is why green colour corrector neutralizes redness, and peach corrector cancels dark under-eye circles on deeper skin tones. Understanding this principle lets you correct before you conceal." },
+      { "type": "heading", "text": "Warm vs. Cool Eyeshadow" },
+      { "type": "paragraph", "text": "Warm eyeshadows (copper, bronze, terracotta) enhance warm-toned eyes and skin. Cool shadows (silver, lavender, icy pink) complement cool tones. Neutral looks use both — but the transition shades should always match the client's undertone for a seamless blend." },
+      { "type": "heading", "text": "Lip Colour and Skin Tone" },
+      { "type": "paragraph", "text": "Deep skin tones are flattered by rich berries, deep reds, and warm browns. Medium tones suit corals, mauves, and classic reds. Fair skin tones can carry nudes, pinks, and soft roses. The rule: the lip colour should complement the undertone, not fight it." },
+      { "type": "paragraph", "text": "At PRIMA, colour theory is taught in the first week of every beauty programme. We believe that technical skill without colour knowledge produces inconsistent results — and our students deserve to be consistent from day one." }
+    ]
   },
   {
     "id": "blog-006",
@@ -69,7 +131,19 @@
     "readTime": "6 min",
     "image": "/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-43.jpg",
     "excerpt": "Great hair dressing is more than technique — it's about trust, communication, and consistency. Here's how top stylists build a loyal, returning clientele.",
-    "tags": ["hair dressing", "client care", "salon tips"]
+    "tags": ["hair dressing", "client care", "salon tips"],
+    "content": [
+      { "type": "paragraph", "text": "Technical skill gets clients through the door once. Trust and communication bring them back every time. The most successful hair dressers are not just skilled with scissors — they are skilled with people." },
+      { "type": "heading", "text": "The Consultation is Everything" },
+      { "type": "paragraph", "text": "Before touching a client's hair, spend at least five minutes in consultation. Ask about their lifestyle, how much time they spend on their hair daily, what they love and hate about their current style. Listen more than you talk. The consultation is where trust is built." },
+      { "type": "heading", "text": "Manage Expectations Clearly" },
+      { "type": "paragraph", "text": "If a client brings a reference photo, be honest about what is achievable with their hair type and condition. It is far better to under-promise and over-deliver than to attempt something that will damage the hair or disappoint the client. Honesty builds long-term relationships." },
+      { "type": "heading", "text": "Consistency Builds Loyalty" },
+      { "type": "paragraph", "text": "A client who gets a great result once will return. A client who gets a great result every time will refer their friends. Develop a system for each client — note their preferences, the products used, the techniques applied — so every visit feels personal and consistent." },
+      { "type": "heading", "text": "After-Care Advice" },
+      { "type": "paragraph", "text": "Always send clients home with specific after-care instructions. Which products to use, how to style at home, when to return for a trim. This shows professionalism and keeps the client's hair looking great between appointments — which reflects directly on you." },
+      { "type": "paragraph", "text": "At PRIMA, our Hair Dressing programme dedicates significant time to client communication and salon management — because we train professionals, not just technicians." }
+    ]
   },
   {
     "id": "blog-007",
@@ -81,7 +155,19 @@
     "readTime": "8 min",
     "image": "/assets/images/courses/fashion/photo_2026-04-06_16-16-01.jpg",
     "excerpt": "Fewer pieces, more outfits. Our styling director shares the formula she teaches in the programme — and the 12 items everyone should own.",
-    "tags": ["fashion", "capsule wardrobe", "styling"]
+    "tags": ["fashion", "capsule wardrobe", "styling"],
+    "content": [
+      { "type": "paragraph", "text": "A capsule wardrobe is a curated collection of versatile, high-quality pieces that work together to create a wide range of outfits. The goal is not minimalism for its own sake — it is intentionality. Every item earns its place." },
+      { "type": "heading", "text": "Start with Neutrals" },
+      { "type": "paragraph", "text": "Build your foundation in neutral tones — black, white, navy, grey, camel. These colours work with everything and form the backbone of your wardrobe. Once your neutrals are solid, you can add accent colours through accessories and statement pieces." },
+      { "type": "heading", "text": "The 12 Essential Pieces" },
+      { "type": "paragraph", "text": "A well-built capsule wardrobe typically includes: a white button-down shirt, a well-fitted blazer, dark denim jeans, tailored trousers, a classic trench coat, a simple knit sweater, a little black dress, a striped top, white sneakers, leather loafers, ankle boots, and a structured handbag. These 12 items can create over 50 distinct outfits." },
+      { "type": "heading", "text": "Quality Over Quantity" },
+      { "type": "paragraph", "text": "Invest in fewer, better pieces. A well-made blazer that lasts ten years costs less per wear than a cheap one replaced every season. Focus on fabric quality, construction, and fit. A garment that fits perfectly always looks more expensive than it is." },
+      { "type": "heading", "text": "Fit is Non-Negotiable" },
+      { "type": "paragraph", "text": "The most important factor in any outfit is fit. Clothes that fit your body correctly look polished and intentional. Build a relationship with a good tailor — even inexpensive pieces can look luxurious when properly fitted." },
+      { "type": "paragraph", "text": "In our Personal Styling programme at PRIMA, we teach students to analyse body proportions, understand colour seasonality, and build wardrobes that serve their clients' real lives — not just their aspirations." }
+    ]
   },
   {
     "id": "blog-008",
@@ -93,7 +179,21 @@
     "readTime": "9 min",
     "image": "/assets/images/courses/fashion/photo_2026-04-06_16-16-15.jpg",
     "excerpt": "Understanding how a garment is constructed gives you the power to design with intention. Walk through the key steps from cutting fabric to final finishing.",
-    "tags": ["garment construction", "pattern making", "fashion design"]
+    "tags": ["garment construction", "pattern making", "fashion design"],
+    "content": [
+      { "type": "paragraph", "text": "Every garment begins as a flat pattern and ends as a three-dimensional object that moves with the human body. Understanding the journey between those two states is what separates a fashion designer from a fashion dreamer." },
+      { "type": "heading", "text": "Reading and Preparing the Pattern" },
+      { "type": "paragraph", "text": "Before cutting a single piece of fabric, study the pattern carefully. Understand the grain lines — they determine how the fabric drapes and moves. Pre-wash your fabric to account for shrinkage. Press it flat. Mark all notches, darts, and seam allowances clearly." },
+      { "type": "heading", "text": "Cutting with Precision" },
+      { "type": "paragraph", "text": "Use sharp fabric scissors and cut with long, smooth strokes — never short, choppy ones. Pin the pattern pieces securely to prevent shifting. Cut on a flat, stable surface. Precision at the cutting stage prevents problems at every stage that follows." },
+      { "type": "heading", "text": "Seam Allowances and Pressing" },
+      { "type": "paragraph", "text": "Most patterns use a 1.5cm seam allowance. Sew consistently at this distance using your machine's guide markings. After every seam, press it open or to one side with an iron. Pressing as you go is not optional — it is what gives a garment its professional finish." },
+      { "type": "heading", "text": "Darts and Shaping" },
+      { "type": "paragraph", "text": "Darts are the mechanism that transforms flat fabric into three-dimensional shape. They must be sewn from the wide end to the point, tapering smoothly to nothing. A poorly sewn dart creates a bubble or pucker — a well-sewn dart is invisible and creates beautiful contour." },
+      { "type": "heading", "text": "Finishing: The Detail That Defines Quality" },
+      { "type": "paragraph", "text": "Finishing includes hemming, lining, adding closures, and cleaning up raw edges. These details are what separate a handmade garment from a professionally constructed one. Take time with every finish — it is what the wearer will see and feel every time they put the garment on." },
+      { "type": "paragraph", "text": "At PRIMA, our Fashion Design programme covers every stage of garment construction in hands-on sessions. Students leave with a portfolio of finished pieces — not just sketches." }
+    ]
   },
   {
     "id": "blog-009",
@@ -105,7 +205,19 @@
     "readTime": "7 min",
     "image": "/assets/images/gallery/computer/photo_2026-05-01_07-31-28.jpg",
     "excerpt": "Overwhelmed by the tech landscape? This guide breaks down the essential skills and technologies you need to start your web development journey.",
-    "tags": ["web development", "coding", "beginners"]
+    "tags": ["web development", "coding", "beginners"],
+    "content": [
+      { "type": "paragraph", "text": "Web development is one of the most in-demand skills in the world — and it is also one of the most accessible. You do not need a computer science degree to build websites. You need curiosity, consistency, and the right roadmap." },
+      { "type": "heading", "text": "Start with HTML" },
+      { "type": "paragraph", "text": "HTML (HyperText Markup Language) is the skeleton of every webpage. It defines the structure — headings, paragraphs, images, links, buttons. Before learning anything else, spend two weeks writing HTML until you can build a basic webpage from memory. It is simple, forgiving, and immediately visual." },
+      { "type": "heading", "text": "Then Learn CSS" },
+      { "type": "paragraph", "text": "CSS (Cascading Style Sheets) is what makes HTML look good. It controls colours, fonts, spacing, layout, and animations. Focus on the box model, flexbox, and grid — these three concepts will handle 90% of every layout you will ever need to build." },
+      { "type": "heading", "text": "JavaScript: Making Things Interactive" },
+      { "type": "paragraph", "text": "JavaScript adds behaviour to your pages — responding to clicks, fetching data, updating content without reloading. Start with the fundamentals: variables, functions, loops, and DOM manipulation. Do not rush to frameworks until you are comfortable with plain JavaScript." },
+      { "type": "heading", "text": "Build Projects, Not Just Tutorials" },
+      { "type": "paragraph", "text": "The biggest mistake beginners make is following tutorials without building anything original. After every tutorial, close it and try to build something similar from scratch. The struggle of building without guidance is where real learning happens." },
+      { "type": "paragraph", "text": "At PRIMA, our Web Development course follows exactly this philosophy — structured learning followed by real project work. Students graduate with a portfolio of live websites, not just certificates." }
+    ]
   },
   {
     "id": "blog-010",
@@ -117,6 +229,22 @@
     "readTime": "5 min",
     "image": "/assets/images/gallery/common/photo_2026-05-01_07-37-14.jpg",
     "excerpt": "Most people use only 20% of what Microsoft Office can do. These ten shortcuts and features will transform how you work with Word, Excel, and PowerPoint.",
-    "tags": ["Microsoft Office", "productivity", "Excel tips"]
+    "tags": ["Microsoft Office", "productivity", "Excel tips"],
+    "content": [
+      { "type": "paragraph", "text": "Microsoft Office is the most widely used software suite in the world — and most people use a fraction of its capabilities. These ten tips will immediately change how you work." },
+      { "type": "heading", "text": "1. Excel: VLOOKUP vs XLOOKUP" },
+      { "type": "paragraph", "text": "XLOOKUP is the modern replacement for VLOOKUP. It searches in any direction, returns multiple columns, and handles errors gracefully. If you are still using VLOOKUP, switch today." },
+      { "type": "heading", "text": "2. Excel: Flash Fill" },
+      { "type": "paragraph", "text": "Type a pattern in one cell and press Ctrl+E. Excel will detect the pattern and fill the rest of the column automatically. This works for splitting names, reformatting dates, and extracting data from text." },
+      { "type": "heading", "text": "3. Word: Styles for Instant Formatting" },
+      { "type": "paragraph", "text": "Stop manually formatting headings. Use the built-in Styles panel to apply consistent formatting throughout your document. This also enables automatic table of contents generation with one click." },
+      { "type": "heading", "text": "4. PowerPoint: Slide Master" },
+      { "type": "paragraph", "text": "The Slide Master controls the design of every slide in your presentation. Make changes once in the master and they apply everywhere. This is how professionals maintain consistent branding across large presentations." },
+      { "type": "heading", "text": "5. Excel: Pivot Tables" },
+      { "type": "paragraph", "text": "Pivot tables summarize large datasets in seconds. Select your data, insert a pivot table, and drag fields to rows, columns, and values. What would take hours of manual calculation takes minutes." },
+      { "type": "heading", "text": "6–10: Essential Shortcuts" },
+      { "type": "paragraph", "text": "Ctrl+Shift+L (toggle filters in Excel), Alt+= (AutoSum), Ctrl+D (fill down), F4 (repeat last action), Ctrl+` (show formulas). Memorize these six shortcuts and you will work noticeably faster from day one." },
+      { "type": "paragraph", "text": "Our Advanced Microsoft Office course at PRIMA covers all of these features and more — with hands-on exercises that build real workplace skills, not just theoretical knowledge." }
+    ]
   }
 ]
