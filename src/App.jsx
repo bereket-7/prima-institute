@@ -12,6 +12,7 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import EnrollPage from './pages/EnrollPage'
 import NotFoundPage from './pages/NotFoundPage'
+import BlogDetailPage from './pages/BlogDetailPage'
 import { useStore } from './store/useStore'
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="instructors" element={<InstructorsPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="blog" element={<BlogPage />} />
+          <Route path="blog/:slug" element={<BlogDetailPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="enroll" element={<EnrollPage />} />

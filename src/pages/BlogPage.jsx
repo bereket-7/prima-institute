@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, Clock, Search, Tag, BookOpen } from 'lucide-react'
 import posts from '../data/blog-posts.json'
 import { CATEGORY_LABELS } from '../utils/helpers'
@@ -101,7 +102,9 @@ function PostCard({ post, featured = false }) {
             </div>
           </div>
           <span className="text-prima-gold text-sm font-semibold flex items-center gap-1.5 group-hover:gap-3 transition-all duration-300">
-            Read <ArrowRight size={14} />
+            <Link to={`/blog/${post.slug}`} className="flex items-center gap-1.5">
+              Read <ArrowRight size={14} />
+            </Link>
           </span>
         </div>
       </div>
