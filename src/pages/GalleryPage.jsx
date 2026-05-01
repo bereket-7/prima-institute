@@ -1,208 +1,203 @@
 import { useState } from 'react'
-import { X, ZoomIn } from 'lucide-react'
+import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const GALLERY_ITEMS = [
-  // Culinary Arts - 8 images
-  { id: 1, category: 'culinary', src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80', label: 'Professional Kitchen Training' },
-  { id: 2, category: 'culinary', src: 'https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=800&q=80', label: 'Culinary Masterclass' },
-  { id: 3, category: 'culinary', src: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80', label: 'Plating Techniques' },
-  { id: 4, category: 'culinary', src: 'https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=800&q=80', label: 'Pastry & Baking' },
-  { id: 5, category: 'culinary', src: 'https://images.unsplash.com/photo-1577219491135-ce391730fb4c?w=800&q=80', label: 'Knife Skills Workshop' },
-  { id: 6, category: 'culinary', src: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=80', label: 'International Cuisine' },
-  { id: 7, category: 'culinary', src: 'https://images.unsplash.com/photo-1571805529673-0f56b922b359?w=800&q=80', label: 'Sauce Preparation' },
-  { id: 8, category: 'culinary', src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80', label: 'Gourmet Presentation' },
+  // Culinary Arts
+  { id: 1,  category: 'culinary',      src: '/assets/images/gallery/culinary/photo_2026-04-08_05-03-03.jpg',      label: 'Professional Kitchen Training' },
+  { id: 2,  category: 'culinary',      src: '/assets/images/gallery/culinary/photo_2026-05-01_07-36-01.jpg',      label: 'Culinary Masterclass' },
+  { id: 3,  category: 'culinary',      src: '/assets/images/gallery/culinary/photo_2026-05-01_07-36-31.jpg',      label: 'Plating Techniques' },
+  { id: 4,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-14-17.jpg',      label: 'Knife Skills Workshop' },
+  { id: 5,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-14-39.jpg',      label: 'Ethiopian Traditional Food' },
+  { id: 6,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-14-46.jpg',      label: 'International Cuisine' },
+  { id: 7,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-15-16.jpg',      label: 'Sauce Preparation' },
+  { id: 8,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-05-01_07-38-52.jpg',      label: 'Gourmet Presentation' },
 
-  // Bakery & Pastry - 7 images
-  { id: 9, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80', label: 'Coffee Artistry' },
-  { id: 10, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=800&q=80', label: 'Latte Art Mastery' },
-  { id: 11, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80', label: 'Cocktail Mixology' },
-  { id: 12, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80', label: 'Barista Training' },
-  { id: 13, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80', label: 'Coffee Brewing Techniques' },
-  { id: 14, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80', label: 'Beverage Styling' },
-  { id: 15, category: 'food-drinks', src: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80', label: 'Specialty Drinks' },
+  // Bakery & Pastry
+  { id: 9,  category: 'food-drinks',   src: '/assets/images/gallery/bakery-pastry/photo_2026-05-01_07-31-20.jpg', label: 'Pastry Arts' },
+  { id: 10, category: 'food-drinks',   src: '/assets/images/gallery/bakery-pastry/photo_2026-05-01_07-35-46.jpg', label: 'Cake Decoration' },
+  { id: 11, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-43.jpg', label: 'Baking Techniques' },
+  { id: 12, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-50.jpg', label: 'Artisan Bread' },
+  { id: 13, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-56.jpg', label: 'Pastry Workshop' },
+  { id: 14, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-29.jpg', label: 'Chocolate Work' },
+  { id: 15, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-35.jpg', label: 'Wedding Cakes' },
+  { id: 16, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-47.jpg', label: 'Sugar Arts' },
+  { id: 17, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-58.jpg', label: 'Laminated Doughs' },
+  { id: 18, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-15-33.jpg', label: 'Tarts & Pastries' },
+  { id: 19, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-15-38.jpg', label: 'Baking Mastery' },
+  { id: 20, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-15-43.jpg', label: 'Pastry Finishing' },
+  { id: 21, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-16-00.jpg', label: 'Cake Design' },
+  { id: 22, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-16-12.jpg', label: 'Bakery Session' },
 
-  // Beauty & Makeup - 8 images
-  { id: 16, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80', label: 'Professional Makeup' },
-  { id: 17, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80', label: 'Bridal Makeup Session' },
-  { id: 18, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&q=80', label: 'Beauty Workshop' },
-  { id: 19, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80', label: 'Makeup Artistry' },
-  { id: 20, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80', label: 'Skincare Training' },
-  { id: 21, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=800&q=80', label: 'Editorial Makeup' },
-  { id: 22, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80', label: 'Color Theory Class' },
-  { id: 23, category: 'beauty-makeup', src: 'https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=800&q=80', label: 'Beauty Techniques' },
+  // Beauty & Hair Dressing
+  { id: 23, category: 'beauty-makeup', src: '/assets/images/gallery/beauty-hair/photo_2026-05-01_07-39-21.jpg',   label: 'Beauty Workshop' },
+  { id: 24, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-22.jpg',   label: 'Professional Makeup' },
+  { id: 25, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-28.jpg',   label: 'Bridal Makeup Session' },
+  { id: 26, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-43.jpg',   label: 'Hair Styling' },
+  { id: 27, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-05-01_07-41-26.jpg',   label: 'Hair Dressing Class' },
 
-  // Fashion Design - 7 images
-  { id: 24, category: 'fashion', src: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80', label: 'Fashion Design Studio' },
-  { id: 25, category: 'fashion', src: 'https://images.unsplash.com/photo-1558171813-8ef45e8b02dc?w=800&q=80', label: 'Pattern Making' },
-  { id: 26, category: 'fashion', src: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80', label: 'Styling Workshop' },
-  { id: 27, category: 'fashion', src: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800&q=80', label: 'Garment Construction' },
-  { id: 28, category: 'fashion', src: 'https://images.unsplash.com/photo-1558769132-cb1aea1f1c85?w=800&q=80', label: 'Fashion Sketching' },
-  { id: 29, category: 'fashion', src: 'https://images.unsplash.com/photo-1558769132-92e717d613cd?w=800&q=80', label: 'Textile Design' },
-  { id: 30, category: 'fashion', src: 'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&q=80', label: 'Fashion Portfolio' },
+  // Fashion Design
+  { id: 28, category: 'fashion',       src: '/assets/images/gallery/fashion/photo_2026-05-01_07-42-01.jpg',       label: 'Fashion Design Studio' },
+  { id: 29, category: 'fashion',       src: '/assets/images/courses/fashion/photo_2026-04-06_16-16-01.jpg',       label: 'Garment Construction' },
+  { id: 30, category: 'fashion',       src: '/assets/images/courses/fashion/photo_2026-04-06_16-16-15.jpg',       label: 'Pattern Making' },
+  { id: 31, category: 'fashion',       src: '/assets/images/courses/fashion/photo_2026-05-01_07-42-48.jpg',       label: 'Fashion Portfolio' },
 
-  // Computer Training - 6 images
-  { id: 31, category: 'computer', src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80', label: 'Programming Class' },
-  { id: 32, category: 'computer', src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80', label: 'Web Development' },
-  { id: 33, category: 'computer', src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80', label: 'IT Training Lab' },
-  { id: 34, category: 'computer', src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80', label: 'Team Collaboration' },
-  { id: 35, category: 'computer', src: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80', label: 'Coding Workshop' },
-  { id: 36, category: 'computer', src: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80', label: 'Digital Skills Training' },
+  // General (includes computer training image)
+  { id: 32, category: 'common',        src: '/assets/images/gallery/computer/photo_2026-05-01_07-31-28.jpg',      label: 'Computer Training Lab' },
+  { id: 33, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-37-14.jpg',        label: 'PRIMA Institute' },
+  { id: 34, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-55-54.jpg',        label: 'Student Life' },
+  { id: 35, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-56-01.jpg',        label: 'Training Session' },
 ]
 
 const FILTERS = [
-  { value: 'all', label: 'All', count: 36 },
-  { value: 'culinary', label: 'Culinary Arts', count: 8 },
-  { value: 'food-drinks', label: 'Bakery & Pastry', count: 7 },
-  { value: 'beauty-makeup', label: 'Beauty & Makeup', count: 8 },
-  { value: 'fashion', label: 'Fashion Design', count: 7 },
-  { value: 'computer', label: 'Computer', count: 6 },
+  { value: 'all',           label: 'All',              count: 35 },
+  { value: 'culinary',      label: 'Culinary Arts',    count: 8  },
+  { value: 'food-drinks',   label: 'Bakery & Pastry',  count: 14 },
+  { value: 'beauty-makeup', label: 'Beauty & Hair',    count: 5  },
+  { value: 'fashion',       label: 'Fashion Design',   count: 4  },
+  { value: 'common',        label: 'General',          count: 4  },
 ]
 
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState('all')
   const [lightbox, setLightbox] = useState(null)
 
-  const filtered = activeFilter === 'all' ? GALLERY_ITEMS : GALLERY_ITEMS.filter((g) => g.category === activeFilter)
+  const filtered = activeFilter === 'all'
+    ? GALLERY_ITEMS
+    : GALLERY_ITEMS.filter((g) => g.category === activeFilter)
 
-  const nextImage = () => {
-    const currentIndex = filtered.findIndex(item => item.id === lightbox.id)
-    const nextIndex = (currentIndex + 1) % filtered.length
-    setLightbox(filtered[nextIndex])
-  }
+  const currentIndex = lightbox ? filtered.findIndex(i => i.id === lightbox.id) : -1
 
-  const prevImage = () => {
-    const currentIndex = filtered.findIndex(item => item.id === lightbox.id)
-    const prevIndex = (currentIndex - 1 + filtered.length) % filtered.length
-    setLightbox(filtered[prevIndex])
+  const navigate = (dir) => {
+    const next = (currentIndex + dir + filtered.length) % filtered.length
+    setLightbox(filtered[next])
   }
 
   return (
     <>
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-prima-charcoal via-prima-charcoal to-prima-charcoal-soft dark:from-black dark:via-prima-charcoal dark:to-prima-charcoal-soft pt-28 pb-16 relative overflow-hidden">
+      {/* Hero */}
+      <div className="bg-gradient-to-br from-prima-charcoal via-prima-charcoal to-prima-charcoal-soft pt-28 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,168,76,0.1),transparent_50%)]" />
         </div>
         <div className="container-prima relative z-10">
-          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block animate-fade-in">Behind the Scenes</span>
-          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4 animate-fade-up">Our Gallery</h1>
-          <p className="text-white/70 font-body max-w-2xl text-lg animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Explore the creative journey of our students and witness the transformation happening every day at Prima Institute.
+          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">Behind the Scenes</span>
+          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">Our Gallery</h1>
+          <p className="text-white/70 font-body max-w-2xl text-lg">
+            Explore the creative journey of our students and witness the transformation happening every day at PRIMA Institute.
           </p>
         </div>
       </div>
 
-      <section className="section-padding bg-prima-ivory dark:bg-prima-ivory">
+      <section className="section-padding bg-prima-ivory">
         <div className="container-prima">
+
           {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-3 mb-12 justify-center">
+          <div className="flex flex-wrap gap-2 mb-12 justify-center">
             {FILTERS.map((f) => (
               <button
                 key={f.value}
                 onClick={() => setActiveFilter(f.value)}
-                className={`group relative px-6 py-3 text-sm font-body font-semibold tracking-wide uppercase transition-all duration-300 overflow-hidden ${
+                className={`relative px-5 py-2.5 text-xs font-body font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm overflow-hidden ${
                   activeFilter === f.value
-                    ? 'bg-prima-gold text-prima-charcoal shadow-lg scale-105'
-                    : 'bg-white dark:bg-prima-charcoal-soft border border-prima-blush dark:border-white/10 text-prima-muted dark:text-prima-muted hover:border-prima-gold hover:text-prima-gold dark:hover:text-prima-gold hover:scale-105'
+                    ? 'bg-prima-gold text-prima-charcoal shadow-md'
+                    : 'bg-white border border-prima-blush text-prima-muted hover:border-prima-gold hover:text-prima-gold'
                 }`}
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  {f.label}
-                  <span className={`text-xs ${activeFilter === f.value ? 'opacity-70' : 'opacity-50'}`}>({f.count})</span>
+                {f.label}
+                <span className={`ml-2 text-[10px] ${activeFilter === f.value ? 'opacity-60' : 'opacity-40'}`}>
+                  {f.count}
                 </span>
-                {activeFilter !== f.value && (
-                  <span className="absolute inset-0 bg-prima-gold/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                )}
               </button>
             ))}
           </div>
 
-          {/* Gallery Grid - Masonry Layout */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+          {/* Uniform Grid — 4 cols desktop, 3 tablet, 2 mobile */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {filtered.map((item, index) => (
               <div
                 key={item.id}
-                className="break-inside-avoid group relative overflow-hidden cursor-pointer rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                className="group relative overflow-hidden cursor-pointer rounded-lg shadow-sm hover:shadow-xl transition-all duration-400 bg-prima-charcoal"
+                style={{ animationDelay: `${index * 0.03}s` }}
                 onClick={() => setLightbox(item)}
               >
-                <div className="relative overflow-hidden">
+                {/* Fixed aspect ratio container — all images same size */}
+                <div className="aspect-square overflow-hidden">
                   <img
                     src={item.src}
                     alt={item.label}
-                    className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-prima-charcoal/90 via-prima-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Hover Content */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <div className="flex items-center gap-2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      <ZoomIn size={16} className="text-prima-gold" />
-                      <span className="text-white text-xs font-body font-semibold tracking-wide uppercase">
-                        View Image
-                      </span>
-                    </div>
-                    <p className="text-white text-sm font-body font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
-                      {item.label}
-                    </p>
-                  </div>
                 </div>
+
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-prima-charcoal/85 via-prima-charcoal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-3">
+                  <div className="flex items-center gap-1.5 mb-1 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <ZoomIn size={13} className="text-prima-gold" />
+                    <span className="text-white text-[10px] font-body font-semibold tracking-widest uppercase">View</span>
+                  </div>
+                  <p className="text-white/90 text-xs font-body font-medium leading-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    {item.label}
+                  </p>
+                </div>
+
+                {/* Gold border flash on hover */}
+                <div className="absolute inset-0 rounded-lg ring-0 group-hover:ring-2 group-hover:ring-prima-gold/60 transition-all duration-300 pointer-events-none" />
               </div>
             ))}
           </div>
 
-          {/* Empty State */}
           {filtered.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-prima-muted text-lg font-body">No images found in this category.</p>
+              <p className="text-prima-muted text-lg font-body">No images in this category.</p>
             </div>
           )}
         </div>
       </section>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {lightbox && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setLightbox(null)}
         >
+          {/* Close */}
           <button
-            onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 z-50"
+            onClick={(e) => { e.stopPropagation(); setLightbox(null) }}
+            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all hover:scale-110 z-50"
             aria-label="Close"
           >
-            <X size={24} />
+            <X size={20} />
           </button>
 
-          {/* Navigation Arrows */}
+          {/* Prev */}
           <button
-            onClick={(e) => { e.stopPropagation(); prevImage(); }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 z-50"
+            onClick={(e) => { e.stopPropagation(); navigate(-1) }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-prima-gold flex items-center justify-center text-white hover:text-prima-charcoal transition-all hover:scale-110 z-50"
             aria-label="Previous"
           >
-            ←
-          </button>
-          <button
-            onClick={(e) => { e.stopPropagation(); nextImage(); }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 z-50"
-            aria-label="Next"
-          >
-            →
+            <ChevronLeft size={22} />
           </button>
 
-          {/* Image Container */}
-          <div className="max-w-6xl max-h-[90vh] relative" onClick={(e) => e.stopPropagation()}>
+          {/* Next */}
+          <button
+            onClick={(e) => { e.stopPropagation(); navigate(1) }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-prima-gold flex items-center justify-center text-white hover:text-prima-charcoal transition-all hover:scale-110 z-50"
+            aria-label="Next"
+          >
+            <ChevronRight size={22} />
+          </button>
+
+          {/* Image */}
+          <div className="max-w-5xl w-full max-h-[90vh] flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
             <img
-              src={lightbox.src.replace('w=800', 'w=1600')}
+              src={lightbox.src}
               alt={lightbox.label}
-              className="max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl"
+              className="max-h-[78vh] max-w-full object-contain rounded-lg shadow-2xl"
             />
-            <div className="mt-6 text-center">
-              <p className="text-white text-lg font-display font-semibold mb-1">{lightbox.label}</p>
-              <p className="text-white/50 text-sm font-body">
-                {filtered.findIndex(item => item.id === lightbox.id) + 1} / {filtered.length}
-              </p>
+            <div className="mt-5 text-center">
+              <p className="text-white font-display font-semibold text-lg mb-1">{lightbox.label}</p>
+              <p className="text-white/40 text-sm font-body">{currentIndex + 1} / {filtered.length}</p>
             </div>
           </div>
         </div>
