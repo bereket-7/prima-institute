@@ -13,18 +13,42 @@
   },
   {
     "id": "blog-002",
+    "slug": "ethiopian-traditional-food-secrets",
+    "title": "The Secrets Behind Authentic Ethiopian Cuisine",
+    "category": "culinary",
+    "author": { "name": "Chef Abebe", "title": "Head of Culinary Arts" },
+    "date": "2025-01-10",
+    "readTime": "8 min",
+    "image": "/assets/images/courses/culinary/photo_2026-04-06_11-14-39.jpg",
+    "excerpt": "From injera fermentation to berbere spice blending — discover the techniques and traditions that make Ethiopian food one of the world's most distinctive cuisines.",
+    "tags": ["Ethiopian food", "traditional cooking", "injera"]
+  },
+  {
+    "id": "blog-003",
     "slug": "the-art-of-cake-decoration",
     "title": "The Art of Cake Decoration: From Simple to Stunning",
     "category": "food-drinks",
     "author": { "name": "Chef Sara", "title": "Pastry & Baking Specialist" },
     "date": "2024-11-02",
     "readTime": "5 min",
-    "image": "/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-35.jpg",
+    "image": "/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-56.jpg",
     "excerpt": "Whether you're decorating your first cake or refining your technique, these professional tips will help you create beautiful, bakery-worthy results every time.",
     "tags": ["cake decoration", "baking", "pastry tips"]
   },
   {
-    "id": "blog-003",
+    "id": "blog-004",
+    "slug": "mastering-laminated-doughs",
+    "title": "Mastering Laminated Doughs: Croissants & Beyond",
+    "category": "food-drinks",
+    "author": { "name": "Chef Sara", "title": "Pastry & Baking Specialist" },
+    "date": "2025-02-14",
+    "readTime": "7 min",
+    "image": "/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-47.jpg",
+    "excerpt": "Laminated doughs are the pinnacle of pastry craft. Learn the folding technique, butter temperature secrets, and resting times that produce perfectly flaky layers.",
+    "tags": ["croissants", "laminated dough", "pastry technique"]
+  },
+  {
+    "id": "blog-005",
     "slug": "colour-theory-for-makeup-artists",
     "title": "Colour Theory Every Makeup Artist Must Know",
     "category": "beauty-makeup",
@@ -36,7 +60,19 @@
     "tags": ["makeup", "colour theory", "beauty education"]
   },
   {
-    "id": "blog-004",
+    "id": "blog-006",
+    "slug": "hair-care-tips-for-professionals",
+    "title": "Professional Hair Care: Building a Loyal Client Base",
+    "category": "beauty-makeup",
+    "author": { "name": "Nadia", "title": "Beauty & Hair Lead Artist" },
+    "date": "2025-03-05",
+    "readTime": "6 min",
+    "image": "/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-43.jpg",
+    "excerpt": "Great hair dressing is more than technique — it's about trust, communication, and consistency. Here's how top stylists build a loyal, returning clientele.",
+    "tags": ["hair dressing", "client care", "salon tips"]
+  },
+  {
+    "id": "blog-007",
     "slug": "building-your-first-capsule-wardrobe",
     "title": "How to Build a Capsule Wardrobe That Actually Works",
     "category": "fashion",
@@ -48,7 +84,19 @@
     "tags": ["fashion", "capsule wardrobe", "styling"]
   },
   {
-    "id": "blog-005",
+    "id": "blog-008",
+    "slug": "garment-construction-fundamentals",
+    "title": "Garment Construction: From Pattern to Finished Piece",
+    "category": "fashion",
+    "author": { "name": "Yuki", "title": "Fashion Design & Styling Director" },
+    "date": "2025-02-20",
+    "readTime": "9 min",
+    "image": "/assets/images/courses/fashion/photo_2026-04-06_16-16-15.jpg",
+    "excerpt": "Understanding how a garment is constructed gives you the power to design with intention. Walk through the key steps from cutting fabric to final finishing.",
+    "tags": ["garment construction", "pattern making", "fashion design"]
+  },
+  {
+    "id": "blog-009",
     "slug": "web-development-beginners",
     "title": "Web Development: Where to Start in 2025",
     "category": "computer",
@@ -58,5 +106,17 @@
     "image": "/assets/images/gallery/computer/photo_2026-05-01_07-31-28.jpg",
     "excerpt": "Overwhelmed by the tech landscape? This guide breaks down the essential skills and technologies you need to start your web development journey.",
     "tags": ["web development", "coding", "beginners"]
+  },
+  {
+    "id": "blog-010",
+    "slug": "microsoft-office-productivity-tips",
+    "title": "10 Microsoft Office Tips That Will Save You Hours",
+    "category": "computer",
+    "author": { "name": "David", "title": "Computer Training Specialist" },
+    "date": "2025-01-28",
+    "readTime": "5 min",
+    "image": "/assets/images/gallery/common/photo_2026-05-01_07-37-14.jpg",
+    "excerpt": "Most people use only 20% of what Microsoft Office can do. These ten shortcuts and features will transform how you work with Word, Excel, and PowerPoint.",
+    "tags": ["Microsoft Office", "productivity", "Excel tips"]
   }
 ]
