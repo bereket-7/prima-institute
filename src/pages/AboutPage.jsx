@@ -139,31 +139,30 @@ export default function AboutPage() {
               {t("about.exploreCourses")} <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <img
-                src="/assets/images/about/photo_2026-04-06_11-11-55.jpg"
-                alt="Culinary training"
-                className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
-              />
-              <img
-                src="/assets/images/about/photo_2026-04-06_11-12-35.jpg"
-                alt="Beauty training"
-                className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
-              />
-            </div>
-            <div className="space-y-4 mt-8">
-              <img
-                src="/assets/images/about/photo_2026-04-06_11-13-09.jpg"
-                alt="Fashion training"
-                className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
-              />
-              <img
-                src="/assets/images/about/photo_2026-04-06_11-13-15.jpg"
-                alt="Coffee training"
-                className="w-full aspect-square object-cover rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
-              />
-            </div>
+          {/* Image grid — 2x2 uniform with hover effects */}
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { src: "/assets/images/gallery/culinary/photo_2026-04-08_05-03-03.jpg", label: "Professional Kitchen Training" },
+              { src: "/assets/images/gallery/culinary/photo_2026-05-01_07-36-01.jpg", label: "Culinary Masterclass" },
+              { src: "/assets/images/gallery/culinary/photo_2026-05-01_07-36-31.jpg", label: "Plating Techniques" },
+              { src: "/assets/images/about/photo_2026-04-06_11-13-15.jpg",             label: "Training Session" },
+            ].map(({ src, label }) => (
+              <div key={src} className="group relative overflow-hidden rounded-xl shadow-md aspect-square">
+                <img
+                  src={src}
+                  alt={label}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-prima-charcoal/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                {/* Label */}
+                <span className="absolute bottom-3 left-3 right-3 text-white text-xs font-body font-semibold tracking-wide opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                  {label}
+                </span>
+                {/* Gold corner accent */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-prima-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
