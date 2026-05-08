@@ -110,7 +110,9 @@ export default function CourseDetailPage() {
                 <div className="bg-white border border-prima-blush p-6">
                   <h3 className="font-display text-lg font-semibold text-prima-charcoal mb-5">Your Instructor</h3>
                   <div className="flex items-start gap-4 mb-4">
-                    <img src={instructor.image} alt={instructor.name} className="w-16 h-16 object-cover" />
+                    <div className="w-16 h-16 bg-prima-charcoal flex items-center justify-center text-prima-gold font-display font-bold text-xl uppercase shrink-0">
+                      {instructor.name.split(' ').filter(n => n.toLowerCase() !== 'chef').map(n => n[0]).join('')}
+                    </div>
                     <div>
                       <p className="font-display font-semibold text-prima-charcoal">{instructor.name}</p>
                       <p className="text-prima-gold text-xs font-body">{instructor.title}</p>
