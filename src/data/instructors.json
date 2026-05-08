@@ -12,9 +12,9 @@
   },
   {
     "id": "chef-sophie",
-    "name": "Chef Sophie Laurent",
+    "name": "Chef Tigist Haile",
     "title": "Pastry & Baking Specialist",
-    "bio": "Sophie trained at the École Nationale Supérieure de Pâtisserie and spent a decade perfecting her craft in world-class patisseries. She makes the complex world of pastry approachable and delicious.",
+    "bio": "Chef Tigist Haile is a pioneering pastry chef in Addis Ababa, bringing years of expertise from Ethiopia's leading luxury hotels. A graduate of top culinary institutes, she is celebrated for her ability to fuse traditional Ethiopian flavors with classical pastry techniques, mentoring the next generation of professional bakers.",
     "image": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80",
     "specialties": ["Artisan Bread", "Chocolate Work", "Wedding Cakes"],
     "courses": ["cul-002"],
@@ -45,9 +45,9 @@
   },
   {
     "id": "artist-nadia",
-    "name": "Nadia Khalil",
+    "name": "Meseret Abebe",
     "title": "Beauty & Makeup Lead Artist",
-    "bio": "With credits spanning Vogue Arabia, Dubai Fashion Week, and major film productions, Nadia is one of the region's most respected makeup artists. She teaches the art and business of beauty.",
+    "bio": "Meseret Abebe is one of Ethiopia's most sought-after makeup artists and aesthetic experts. With a career rooted in the high-energy worlds of Addis fashion and bridal beauty, she brings a deep understanding of skincare and artistry tailored for the Ethiopian market, guiding her students toward professional excellence.",
     "image": "https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?w=400&q=80",
     "specialties": ["Bridal Makeup", "Editorial", "Special Effects"],
     "courses": ["bm-001", "bm-002"],
