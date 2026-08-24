@@ -4,21 +4,20 @@ import { useTranslation } from 'react-i18next'
 import courses from '../data/courses.json'
 import categories from '../data/categories.json'
 import testimonials from '../data/testimonials.json'
+import instructors from '../data/instructors.json'
 import CourseCard from '../components/ui/CourseCard'
 import SectionHeader from '../components/ui/SectionHeader'
-import { useStore } from '../store/useStore'
 
 const CATEGORY_ICONS = { culinary: ChefHat, 'food-drinks': Coffee, 'beauty-makeup': Sparkles, fashion: Scissors, computer: Monitor }
 
 export default function HomePage() {
   const { t } = useTranslation()
-  const { openEnrollModal } = useStore()
   const featured = courses.filter((c) => c.featured)
 
   const STATS = [
     { value: '2,000+', label: t('stats.graduates'), icon: Users },
-    { value: '25', label: t('stats.courses'), icon: BookOpen },
-    { value: '10', label: t('stats.instructors'), icon: Award },
+    { value: String(courses.length), label: t('stats.courses'), icon: BookOpen },
+    { value: String(instructors.length), label: t('stats.instructors'), icon: Award },
     { value: '5.0', label: t('stats.rating'), icon: Star },
   ]
 
@@ -142,7 +141,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featured.map((course) => (
-              <CourseCard key={course.id} course={course} onEnroll={openEnrollModal} />
+              <CourseCard key={course.id} course={course} />
             ))}
           </div>
           <div className="mt-8 text-center md:hidden">
