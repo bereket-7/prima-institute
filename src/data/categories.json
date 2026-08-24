@@ -21,7 +21,7 @@
     "color": "#5B6B4A",
     "accent": "#8FAF6E",
     "icon": "Coffee",
-    "stats": { "courses": 3, "students": 210, "instructors": 2 }
+    "stats": { "courses": 2, "students": 210, "instructors": 2 }
   },
   {
     "id": "beauty-makeup",
@@ -33,7 +33,7 @@
     "color": "#9B5E6E",
     "accent": "#D4899A",
     "icon": "Sparkles",
-    "stats": { "courses": 4, "students": 280, "instructors": 1 }
+    "stats": { "courses": 3, "students": 280, "instructors": 1 }
   },
   {
     "id": "fashion",
@@ -45,7 +45,7 @@
     "color": "#4A5568",
     "accent": "#718096",
     "icon": "Scissors",
-    "stats": { "courses": 3, "students": 190, "instructors": 1 }
+    "stats": { "courses": 2, "students": 190, "instructors": 1 }
   },
   {
     "id": "computer",
@@ -53,7 +53,7 @@
     "label": "Computer Training",
     "headline": "Learn. Code. Excel.",
     "description": "From basic computer literacy to advanced programming and IT skills. Build your digital career with hands-on training in software, web development, and technology.",
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    "image": "/assets/images/gallery/computer/photo_2026-05-01_07-31-28.jpg",
     "color": "#2563EB",
     "accent": "#60A5FA",
     "icon": "Monitor",
