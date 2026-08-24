@@ -33,3 +33,15 @@ export const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 // ─── Get instructor by id from array ─────────────────────────────
 export const getInstructor = (instructors, id) =>
   instructors.find((i) => i.id === id) || null
+
+export const getCategoryLabel = (id) => CATEGORY_LABELS[id] ?? id
+
+const CATEGORY_I18N_KEYS = {
+  culinary: 'categories.culinary',
+  'food-drinks': 'categories.foodDrinks',
+  'beauty-makeup': 'categories.beauty',
+  fashion: 'categories.fashion',
+  computer: 'categories.computer',
+}
+
+export const getCategoryLabelT = (t, id) => t(CATEGORY_I18N_KEYS[id] || id)
