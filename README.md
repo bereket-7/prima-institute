@@ -9,9 +9,10 @@ Premium training & education institute website for Culinary Arts, Bakery & Pastr
 | React 18 + Vite | SPA framework + fast builds |
 | Tailwind CSS | Utility-first styling |
 | React Router v6 | Client-side routing |
-| Framer Motion | Animations (ready to integrate) |
 | Zustand | Global UI state |
 | React Hook Form + Zod | Form validation |
+| EmailJS | Contact & enrollment email delivery |
+| i18next | English + Amharic UI translations |
 | Lucide React | Icons |
 
 ## Quick Start
@@ -20,6 +21,12 @@ Premium training & education institute website for Culinary Arts, Bakery & Pastr
 # Install dependencies
 npm install
 
+# Copy environment template and add EmailJS credentials
+cp .env.example .env
+
+# Validate JSON data integrity
+npm run validate
+
 # Start dev server
 npm run dev
 
@@ -27,16 +34,32 @@ npm run dev
 npm run build
 ```
 
+## Environment Variables
+
+Create a `.env` file from `.env.example`:
+
+```
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_CONTACT_TEMPLATE_ID=
+VITE_EMAILJS_ENROLL_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
+
+### EmailJS template fields
+
+**Contact template:** `from_name`, `from_email`, `phone`, `subject`, `message`
+
+**Enrollment template:** `first_name`, `last_name`, `email`, `phone`, `course_title`, `course_price`, `start_date`, `payment_plan`, `notes`
+
 ## Project Structure
 
 ```
 src/
 ├── components/
 │   ├── layout/         # Navbar, Footer, Layout wrapper
-│   ├── sections/       # Page-level sections (extendable)
 │   └── ui/             # Reusable UI: CourseCard, SectionHeader...
 ├── pages/
-│   ├── categories/     # CategoryPage.jsx (used for all 4 categories)
+│   ├── categories/     # CategoryPage.jsx (used for all 5 categories)
 │   ├── HomePage.jsx
 │   ├── CoursesPage.jsx
 │   ├── CourseDetailPage.jsx
@@ -46,12 +69,17 @@ src/
 │   ├── AboutPage.jsx
 │   ├── ContactPage.jsx
 │   ├── EnrollPage.jsx
+│   ├── TermsPage.jsx
+│   ├── PrivacyPage.jsx
 │   └── NotFoundPage.jsx
 ├── data/               # Static JSON data (courses, instructors, etc.)
 ├── store/              # Zustand global store
+├── i18n/               # English + Amharic locale files
 ├── styles/             # globals.css with design tokens
-└── utils/              # helpers.js
+└── utils/              # helpers, schemas, email utilities
 
+scripts/
+└── validate-data.js    # Data cross-reference integrity checks
 ```
 
 ## Pages & Routes
@@ -65,27 +93,24 @@ src/
 | `/instructors` | Faculty |
 | `/gallery` | Photo Gallery |
 | `/blog` | Blog / Tips |
+| `/blog/:slug` | Blog Detail |
 | `/about` | About Us |
 | `/contact` | Contact Form |
 | `/enroll` | 3-Step Enrollment Form |
+| `/enroll?courseId=cul-001` | Enrollment with pre-selected course |
+| `/terms` | Terms of Service |
+| `/privacy` | Privacy Policy |
 
 ## Customization
 
 ### Add a new course
-Edit `src/data/courses.json` and add a new entry following the same schema.
+Edit `src/data/courses.json` and add a new entry following the same schema. Run `npm run validate` to check references.
 
 ### Add an instructor
 Edit `src/data/instructors.json`.
 
-### Connect a contact form to a backend
-The `ContactPage.jsx` and `EnrollPage.jsx` have simulated submission logic. Replace the `setTimeout` with a real API call to **EmailJS**, **Formspree**, or your backend.
-
-### Enable real email sending (no backend needed)
-Install EmailJS:
-```bash
-npm install @emailjs/browser
-```
-Then use `emailjs.sendForm()` in the contact/enroll form handlers.
+### Add UI translations
+Edit `src/i18n/locales/en.json` and `src/i18n/locales/am.json` with matching keys.
 
 ## Design Tokens
 
@@ -103,6 +128,8 @@ All brand colors are defined as CSS variables in `src/styles/globals.css` and as
 npm i -g vercel
 vercel
 ```
+
+Set the EmailJS environment variables in your Vercel project settings.
 
 ### Netlify
 ```bash
