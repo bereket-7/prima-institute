@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useStore } from '../../store/useStore'
+import { sendContactEmail, isEmailConfigured } from '../../utils/email'
 
 // TikTok icon as SVG since it's not in lucide-react
 const TikTokIcon = () => (
@@ -18,7 +21,32 @@ const TelegramIcon = () => (
 
 export default function Footer() {
   const { t } = useTranslation()
-  
+  const { showNotification } = useStore()
+  const [subscribeEmail, setSubscribeEmail] = useState('')
+  const [subscribing, setSubscribing] = useState(false)
+  const handleSubscribe = async (e) => {
+    e.preventDefault()
+    if (!subscribeEmail) return
+    setSubscribing(true)
+    try {
+      if (isEmailConfigured()) {
+        await sendContactEmail({
+          name: 'Newsletter Subscriber',
+          email: subscribeEmail,
+          phone: '',
+          subject: 'Newsletter Subscription',
+          message: 'Please add this email to the newsletter list.',
+        })
+      }
+      showNotification('Thanks for subscribing!', 'success')
+      setSubscribeEmail('')
+    } catch {
+      showNotification('Subscription failed. Please try again.', 'error')
+    } finally {
+      setSubscribing(false)
+    }
+  }
+
   const FOOTER_COURSES = [
     { label: t('categories.culinary'), to: '/categories/culinary' },
     { label: t('categories.foodDrinks'), to: '/categories/food-drinks' },
@@ -34,6 +62,12 @@ export default function Footer() {
     { label: t('nav.blog'), to: '/blog' },
     { label: t('nav.contact'), to: '/contact' },
     { label: t('nav.enrollNow'), to: '/enroll' },
+  ]
+
+  const FOOTER_LEGAL = [
+    { label: t('footer.privacy'), to: '/privacy' },
+    { label: t('footer.terms'), to: '/terms' },
+    { label: t('footer.cookies'), to: '/privacy' },
   ]
 
   return (
@@ -147,16 +181,23 @@ export default function Footer() {
 
             <div className="mt-8 p-5 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-prima-gold/50 transition-all duration-300">
               <p className="text-xs text-white font-semibold font-body mb-4 uppercase tracking-wider">{t('footer.subscribe')}</p>
-              <div className="flex rounded-lg overflow-hidden shadow-lg">
+              <form onSubmit={handleSubscribe} className="flex rounded-lg overflow-hidden shadow-lg">
                 <input
                   type="email"
+                  value={subscribeEmail}
+                  onChange={(e) => setSubscribeEmail(e.target.value)}
                   placeholder={t('footer.emailPlaceholder')}
                   className="flex-1 bg-white/10 text-prima-cream text-sm px-4 py-3 border-0 focus:outline-none focus:bg-white/15 transition-all placeholder:text-prima-muted/70"
+                  required
                 />
-                <button className="bg-prima-gold text-prima-charcoal text-sm font-bold px-6 hover:bg-prima-gold-light hover:scale-105 transition-all duration-200 shadow-lg">
+                <button
+                  type="submit"
+                  disabled={subscribing}
+                  className="bg-prima-gold text-prima-charcoal text-sm font-bold px-6 hover:bg-prima-gold-light hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-60"
+                >
                   →
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -169,11 +210,11 @@ export default function Footer() {
             © {new Date().getFullYear()} {t('footer.copyright')}
           </p>
           <div className="flex gap-8">
-            {[t('footer.privacy'), t('footer.terms'), t('footer.cookies')].map((item) => (
-              <a key={item} href="#" className="text-prima-muted text-xs hover:text-prima-gold transition-all duration-200 font-body relative group">
-                {item}
+            {FOOTER_LEGAL.map((item) => (
+              <Link key={item.to + item.label} to={item.to} className="text-prima-muted text-xs hover:text-prima-gold transition-all duration-200 font-body relative group">
+                {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-prima-gold group-hover:w-full transition-all duration-300" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>
