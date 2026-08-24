@@ -11,6 +11,8 @@ import BlogPage from './pages/BlogPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import EnrollPage from './pages/EnrollPage'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
 import NotFoundPage from './pages/NotFoundPage'
 import BlogDetailPage from './pages/BlogDetailPage'
 import { useStore } from './store/useStore'
@@ -38,6 +40,8 @@ export default function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="enroll" element={<EnrollPage />} />
+          <Route path="terms" element={<TermsPage />} />
+          <Route path="privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
