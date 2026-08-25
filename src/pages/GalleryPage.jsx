@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react'
+import { getCategoryLabelT } from '../utils/helpers'
 
 const GALLERY_ITEMS = [
   // Culinary Arts
@@ -48,22 +50,28 @@ const GALLERY_ITEMS = [
   { id: 35, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-56-01.jpg',        label: 'Training Session' },
 ]
 
-const FILTERS = [
-  { value: 'all',           label: 'All',              count: 35 },
-  { value: 'culinary',      label: 'Culinary Arts',    count: 8  },
-  { value: 'food-drinks',   label: 'Bakery & Pastry',  count: 14 },
-  { value: 'beauty-makeup', label: 'Beauty & Hair',    count: 5  },
-  { value: 'fashion',       label: 'Fashion Design',   count: 4  },
-  { value: 'common',        label: 'General',          count: 4  },
-]
+const FILTER_VALUES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion', 'common']
 
 export default function GalleryPage() {
+  const { t } = useTranslation()
   const [activeFilter, setActiveFilter] = useState('all')
   const [lightbox, setLightbox] = useState(null)
 
   const filtered = activeFilter === 'all'
     ? GALLERY_ITEMS
     : GALLERY_ITEMS.filter((g) => g.category === activeFilter)
+
+  const filterLabel = (value) => {
+    if (value === 'all') return t('galleryPage.filterAll')
+    if (value === 'common') return t('galleryPage.filterGeneral')
+    return getCategoryLabelT(t, value)
+  }
+
+  const filters = FILTER_VALUES.map((value) => ({
+    value,
+    label: filterLabel(value),
+    count: value === 'all' ? GALLERY_ITEMS.length : GALLERY_ITEMS.filter((g) => g.category === value).length,
+  }))
 
   const currentIndex = lightbox ? filtered.findIndex(i => i.id === lightbox.id) : -1
 
@@ -80,10 +88,10 @@ export default function GalleryPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,168,76,0.1),transparent_50%)]" />
         </div>
         <div className="container-prima relative z-10">
-          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">Behind the Scenes</span>
-          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">Our Gallery</h1>
+          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">{t('galleryPage.eyebrow')}</span>
+          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">{t('galleryPage.title')}</h1>
           <p className="text-white/70 font-body max-w-2xl text-lg">
-            Explore the creative journey of our students and witness the transformation happening every day at PRIMA Institute.
+            {t('galleryPage.subtitle')}
           </p>
         </div>
       </div>
@@ -93,7 +101,7 @@ export default function GalleryPage() {
 
           {/* Filter Tabs */}
           <div className="flex flex-wrap gap-2 mb-12 justify-center">
-            {FILTERS.map((f) => (
+            {filters.map((f) => (
               <button
                 key={f.value}
                 onClick={() => setActiveFilter(f.value)}
@@ -134,7 +142,7 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-prima-charcoal/85 via-prima-charcoal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-3">
                   <div className="flex items-center gap-1.5 mb-1 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <ZoomIn size={13} className="text-prima-gold" />
-                    <span className="text-white text-[10px] font-body font-semibold tracking-widest uppercase">View</span>
+                    <span className="text-white text-[10px] font-body font-semibold tracking-widest uppercase">{t('galleryPage.view')}</span>
                   </div>
                   <p className="text-white/90 text-xs font-body font-medium leading-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                     {item.label}
@@ -149,7 +157,7 @@ export default function GalleryPage() {
 
           {filtered.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-prima-muted text-lg font-body">No images in this category.</p>
+              <p className="text-prima-muted text-lg font-body">{t('galleryPage.noImages')}</p>
             </div>
           )}
         </div>
@@ -165,7 +173,7 @@ export default function GalleryPage() {
           <button
             onClick={(e) => { e.stopPropagation(); setLightbox(null) }}
             className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all hover:scale-110 z-50"
-            aria-label="Close"
+            aria-label={t('galleryPage.close')}
           >
             <X size={20} />
           </button>
@@ -174,7 +182,7 @@ export default function GalleryPage() {
           <button
             onClick={(e) => { e.stopPropagation(); navigate(-1) }}
             className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-prima-gold flex items-center justify-center text-white hover:text-prima-charcoal transition-all hover:scale-110 z-50"
-            aria-label="Previous"
+            aria-label={t('galleryPage.previous')}
           >
             <ChevronLeft size={22} />
           </button>
@@ -183,7 +191,7 @@ export default function GalleryPage() {
           <button
             onClick={(e) => { e.stopPropagation(); navigate(1) }}
             className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-prima-gold flex items-center justify-center text-white hover:text-prima-charcoal transition-all hover:scale-110 z-50"
-            aria-label="Next"
+            aria-label={t('galleryPage.next')}
           >
             <ChevronRight size={22} />
           </button>

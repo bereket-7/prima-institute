@@ -26,7 +26,7 @@
     "rating": "Average Rating"
   },
   "categories": {
-    "title": "Four Creative Disciplines",
+    "title": "Five Creative Disciplines",
     "subtitle": "Each programme is built on industry knowledge, hands-on practice, and mentorship from active professionals.",
     "eyebrow": "What We Teach",
     "explore": "Explore",
@@ -96,7 +96,15 @@
     "instructor": "Your Instructor",
     "investment": "Total Investment",
     "paymentPlans": "Payment plans available on request",
-    "relatedCourses": "Related Courses"
+    "relatedCourses": "Related Courses",
+    "notFound": "Course not found",
+    "backToCourses": "Back to Courses",
+    "maxStudents": "Max 12 students",
+    "contactUs": "Contact Us",
+    "readyToStart": "Ready to start your journey?",
+    "enrollInCourse": "Enroll in This Course",
+    "contactForDetails": "Contact for Details",
+    "details": "Details"
   },
   "enrollment": {
     "title": "Enrollment Application",
@@ -131,7 +139,19 @@
     "submitApplication": "Submit Application",
     "successTitle": "Application Received!",
     "successMessage": "Thank you for applying to PRIMA Institute. Our admissions team will review your application and contact you within 2 business days.",
-    "returnHome": "Return Home"
+    "returnHome": "Return Home",
+    "browseCourses": "Browse Courses",
+    "enrollingIn": "Enrolling in:",
+    "trustFree": "Free Application",
+    "trustFreeDesc": "No application fee required",
+    "trustResponse": "2-Day Response",
+    "trustResponseDesc": "Our team replies within 2 business days",
+    "trustPayment": "Flexible Payment",
+    "trustPaymentDesc": "Installment plans available on request",
+    "submitting": "Submitting…",
+    "personalInfoDesc": "Tell us a bit about yourself",
+    "selectCourseDesc": "Choose the programme you would like to enroll in",
+    "reviewDesc": "Please confirm your details before submitting"
   },
   "contact": {
     "eyebrow": "Reach Out",
@@ -142,6 +162,12 @@
     "subject": "Subject",
     "message": "Your Message",
     "send": "Send Message",
+    "sendMessage": "Send a Message",
+    "phoneNumber": "Phone Number",
+    "selectTopic": "Select a topic",
+    "messagePlaceholder": "Tell us how we can help...",
+    "sending": "Sending…",
+    "findUs": "Find Us",
     "address": "Address",
     "phone": "Phone",
     "officeHours": "Office Hours",
@@ -198,5 +224,84 @@
     "ctaSubtitle": "Join the growing number of individuals and professionals who have advanced their skills and careers with PRIMA Institute.",
     "ctaApply": "Apply Now",
     "ctaContact": "Contact Us"
+  },
+  "coursesPage": {
+    "eyebrow": "Browse",
+    "title": "All Courses",
+    "subtitle": "Explore our full range of professional programmes across five creative disciplines.",
+    "searchPlaceholder": "Search courses...",
+    "filterCategory": "Category",
+    "filterLevel": "Level",
+    "filterDuration": "Duration",
+    "allFilter": "All {{label}}s",
+    "showing": "Showing",
+    "course_one": "course",
+    "course_other": "courses",
+    "noResults": "No courses found",
+    "noResultsHint": "Try adjusting your search or filters.",
+    "clearFilters": "Clear Filters"
+  },
+  "categoryPage": {
+    "notFound": "Category not found",
+    "browseAll": "Browse All Courses",
+    "discipline": "Discipline",
+    "studentsEnrolled": "students enrolled",
+    "expertInstructor_one": "expert instructor",
+    "expertInstructor_other": "expert instructors",
+    "enrollToday": "Enroll Today",
+    "coursesTitle": "{{label}} Courses",
+    "coursesSubtitle": "Choose from {{count}} professional programmes designed for real industry outcomes.",
+    "ctaQuestion": "Not sure which course is right for you?",
+    "ctaTitle": "Talk to Our Admissions Team",
+    "bookConsultation": "Book a Free Consultation",
+    "viewAllCourses": "View All Courses"
+  },
+  "galleryPage": {
+    "eyebrow": "Behind the Scenes",
+    "title": "Our Gallery",
+    "subtitle": "Explore the creative journey of our students and witness the transformation happening every day at PRIMA Institute.",
+    "filterAll": "All",
+    "filterGeneral": "General",
+    "view": "View",
+    "noImages": "No images in this category.",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "blogPage": {
+    "eyebrow": "Knowledge Hub",
+    "title": "Tips & Insights",
+    "subtitle": "Practical wisdom from our expert instructors — delivered straight to your feed.",
+    "searchPlaceholder": "Search articles...",
+    "allPosts": "All Posts",
+    "featured": "Featured",
+    "moreArticles": "More Articles",
+    "article_one": "article",
+    "article_other": "articles",
+    "read": "Read",
+    "noArticles": "No articles found",
+    "noArticlesHint": "Try adjusting your search or filter.",
+    "clearFilters": "Clear filters"
+  },
+  "blogDetail": {
+    "notFound": "Article not found.",
+    "backToBlog": "Back to Blog",
+    "back": "Back",
+    "readTime": "read",
+    "comingSoon": "Full article coming soon.",
+    "moreFromCategory": "More from this category",
+    "readLink": "Read",
+    "backToAll": "Back to All Articles"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you're looking for doesn't exist or has been moved.",
+    "returnHome": "Return to Home"
+  },
+  "notifications": {
+    "contactSuccess": "Message sent! We'll get back to you within 24 hours.",
+    "contactError": "Failed to send message. Please try again or call us directly.",
+    "enrollSuccess": "Application submitted! We will contact you within 2 business days.",
+    "enrollError": "Failed to submit application. Please try again or contact us directly."
   }
 }

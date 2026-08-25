@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://prima-institute.example/</loc></url>
+  <url><loc>https://prima-institute.example/courses</loc></url>
+  <url><loc>https://prima-institute.example/instructors</loc></url>
+  <url><loc>https://prima-institute.example/gallery</loc></url>
+  <url><loc>https://prima-institute.example/blog</loc></url>
+  <url><loc>https://prima-institute.example/about</loc></url>
+  <url><loc>https://prima-institute.example/contact</loc></url>
+  <url><loc>https://prima-institute.example/enroll</loc></url>
+  <url><loc>https://prima-institute.example/terms</loc></url>
+  <url><loc>https://prima-institute.example/privacy</loc></url>
+</urlset>

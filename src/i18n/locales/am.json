@@ -26,7 +26,7 @@
     "rating": "አማካይ ደረጃ"
   },
   "categories": {
-    "title": "አራት የፈጠራ ዘርፎች",
+    "title": "አምስት የፈጠራ ዘርፎች",
     "subtitle": "እያንዳንዱ ፕሮግራም በኢንዱስትሪ እውቀት፣ በተግባራዊ ልምምድ እና በንቁ ባለሙያዎች መመሪያ ላይ የተገነባ ነው።",
     "eyebrow": "የምናስተምረው",
     "explore": "ያስሱ",
@@ -90,13 +90,20 @@
     "total": "ጠቅላላ",
     "viewCourse": "ኮርስ ይመልከቱ",
     "enrollNow": "አሁን ይመዝገቡ",
-    "backToCourses": "ተመለስ",
+    "backToCourses": "ወደ ኮርሶች ተመለስ",
     "syllabus": "የኮርስ ሲላበስ",
     "outcomes": "የሚያገኙት",
     "instructor": "አስተማሪዎ",
     "investment": "ጠቅላላ ኢንቨስትመንት",
     "paymentPlans": "የክፍያ እቅዶች በጥያቄ ይገኛሉ",
-    "relatedCourses": "ተዛማጅ ኮርሶች"
+    "relatedCourses": "ተዛማጅ ኮርሶች",
+    "notFound": "ኮርስ አልተገኘም",
+    "maxStudents": "ከፍተኛ 12 ተማሪዎች",
+    "contactUs": "አግኙን",
+    "readyToStart": "ጉዞዎን ለመጀመር ዝግጁ ነዎት?",
+    "enrollInCourse": "በዚህ ኮርስ ይመዝገቡ",
+    "contactForDetails": "ለዝርዝር ያግኙን",
+    "details": "ዝርዝር"
   },
   "enrollment": {
     "title": "የምዝገባ ማመልከቻ",
@@ -131,7 +138,19 @@
     "submitApplication": "ማመልከቻ ያስገቡ",
     "successTitle": "ማመልከቻ ደርሷል!",
     "successMessage": "ወደ ፕሪማ ተቋም ስላመለከቱ እናመሰግናለን። የመቀበያ ቡድናችን ማመልከቻዎን ይገመግማል እና በ2 የስራ ቀናት ውስጥ ያገኙዎታል።",
-    "returnHome": "ወደ መነሻ ተመለስ"
+    "returnHome": "ወደ መነሻ ተመለስ",
+    "browseCourses": "ኮርሶችን ያስሱ",
+    "enrollingIn": "በመመዝገብ ላይ:",
+    "trustFree": "ነፃ ማመልከቻ",
+    "trustFreeDesc": "የማመልከቻ ክፍያ አያስፈልግም",
+    "trustResponse": "2-ቀን መልስ",
+    "trustResponseDesc": "ቡድናችን በ2 የስራ ቀናት ውስጥ ይመልሳል",
+    "trustPayment": "ተለዋዋጭ ክፍያ",
+    "trustPaymentDesc": "የክፍያ እቅዶች በጥያቄ ይገኛሉ",
+    "submitting": "በመላክ ላይ…",
+    "personalInfoDesc": "ስለ እርስዎ ትንሽ ይንገሩን",
+    "selectCourseDesc": "ለመመዝገብ የሚፈልጉትን ፕሮግራም ይምረጡ",
+    "reviewDesc": "ከመላክዎ በፊት ዝርዝሮችዎን ያረጋግጡ"
   },
   "contact": {
     "eyebrow": "ያግኙን",
@@ -142,6 +161,12 @@
     "subject": "ርዕስ",
     "message": "መልእክትዎ",
     "send": "መልእክት ይላኩ",
+    "sendMessage": "መልእክት ይላኩ",
+    "phoneNumber": "ስልክ ቁጥር",
+    "selectTopic": "ርዕስ ይምረጡ",
+    "messagePlaceholder": "እንዴት እንድንረዳዎ ይንገሩን...",
+    "sending": "በመላክ ላይ…",
+    "findUs": "ያግኙን",
     "address": "አድራሻ",
     "phone": "ስልክ",
     "officeHours": "የቢሮ ሰዓታት",
@@ -198,5 +223,84 @@
     "ctaSubtitle": "ክህሎታቸውን እና ሙያቸውን ከፕሪማ ተቋም ጋር ካሳደጉ ግለሰቦች እና ባለሙያዎች ጋር ይቀላቀሉ።",
     "ctaApply": "አሁን ያመልክቱ",
     "ctaContact": "አግኙን"
+  },
+  "coursesPage": {
+    "eyebrow": "ያስሱ",
+    "title": "ሁሉም ኮርሶች",
+    "subtitle": "በአምስት የፈጠራ ዘርፎች ላይ ያሉን ሙያዊ ፕሮግራሞች ያስሱ።",
+    "searchPlaceholder": "ኮርሶችን ይፈልጉ...",
+    "filterCategory": "ምድብ",
+    "filterLevel": "ደረጃ",
+    "filterDuration": "ጊዜ",
+    "allFilter": "ሁሉም {{label}}",
+    "showing": "በማሳየት ላይ",
+    "course_one": "ኮርስ",
+    "course_other": "ኮርሶች",
+    "noResults": "ኮርስ አልተገኘም",
+    "noResultsHint": "ፍለጋዎን ወይም ማጣሪያዎችዎን ይለውጡ።",
+    "clearFilters": "ማጣሪያዎችን ያጽዱ"
+  },
+  "categoryPage": {
+    "notFound": "ምድብ አልተገኘም",
+    "browseAll": "ሁሉም ኮርሶችን ያስሱ",
+    "discipline": "ዘርፍ",
+    "studentsEnrolled": "ተማሪዎች ተመዝግበዋል",
+    "expertInstructor_one": "ባለሙያ አስተማሪ",
+    "expertInstructor_other": "ባለሙያ አስተማሪዎች",
+    "enrollToday": "ዛሬ ይመዝገቡ",
+    "coursesTitle": "{{label}} ኮርሶች",
+    "coursesSubtitle": "ከ{{count}} ሙያዊ ፕሮግራሞች ይምረጡ።",
+    "ctaQuestion": "የትኛው ኮርስ ትክክለኛ እንደሆነ ነዎት?",
+    "ctaTitle": "ከመቀበያ ቡድናችን ጋር ይነጋገሩ",
+    "bookConsultation": "ነፃ ምክክር ይዘዙ",
+    "viewAllCourses": "ሁሉም ኮርሶችን ይመልከቱ"
+  },
+  "galleryPage": {
+    "eyebrow": "ከ በስተጀርባ",
+    "title": "ጋለሪያችን",
+    "subtitle": "የተማሪዎቻችን የፈጠራ ጉዞን ያስሱ እና በፕሪማ ተቋም በየቀኑ የሚከሰትን ለውጥ ይመልከቱ።",
+    "filterAll": "ሁሉም",
+    "filterGeneral": "ጠቅላላ",
+    "view": "ይመልከቱ",
+    "noImages": "በዚህ ምድብ ምስል የለም።",
+    "close": "ዝጋ",
+    "previous": "ቀዳሚ",
+    "next": "ቀጣይ"
+  },
+  "blogPage": {
+    "eyebrow": "የእውቀት ማዕከል",
+    "title": "መረጃዎች እና ግንዛቤዎች",
+    "subtitle": "ከባለሙያ አስተማሪዎቻችን ተግባራዊ ጥበቃ — በቀጥታ ወደ ፊድዎ።",
+    "searchPlaceholder": "ልጥፎችን ይፈልጉ...",
+    "allPosts": "ሁሉም ልጥፎች",
+    "featured": "ተመራጭ",
+    "moreArticles": "ተጨማሪ ልጥፎች",
+    "article_one": "ልጥፍ",
+    "article_other": "ልጥፎች",
+    "read": "ያንብቡ",
+    "noArticles": "ልጥፍ አልተገኘም",
+    "noArticlesHint": "ፍለጋዎን ወይም ማጣሪያዎችዎን ይለውጡ።",
+    "clearFilters": "ማጣሪያዎችን ያጽዱ"
+  },
+  "blogDetail": {
+    "notFound": "ልጥፍ አልተገኘም።",
+    "backToBlog": "ወደ ብሎግ ተመለስ",
+    "back": "ተመለስ",
+    "readTime": "קריאה",
+    "comingSoon": "ሙሉ ልጥፍ በቅርቡ ይገኛል።",
+    "moreFromCategory": "ከዚህ ምድብ ተጨማሪ",
+    "readLink": "ያንብቡ",
+    "backToAll": "ወደ ሁሉም ልጥፎች ተመለስ"
+  },
+  "notFound": {
+    "title": "ገጽ አልተገኘም",
+    "message": "የሚፈልጉት ገጽ የለም ወይም ተዛውሯል።",
+    "returnHome": "ወደ መነሻ ተመለስ"
+  },
+  "notifications": {
+    "contactSuccess": "መልእክት ተልኳል! በ24 ሰዓታት ውስጥ እንመለስልዎታለን።",
+    "contactError": "መልእክት መላክ አልተሳካም። እባክዎ እንደገና ይሞክሩ ወይም በቀጥታ ይደውሉልን።",
+    "enrollSuccess": "ማመልከቻ ተልኳል! በ2 የስራ ቀናት ውስጥ እንያገኝዎታለን።",
+    "enrollError": "ማመልከቻ መላክ አልተሳካም። እባክዎ እንደገና ይሞክሩ ወይም በቀጥታ ያግኙን።"
   }
 }

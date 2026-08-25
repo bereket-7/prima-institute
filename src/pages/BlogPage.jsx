@@ -1,17 +1,11 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { ArrowRight, Clock, Search, Tag, BookOpen } from 'lucide-react'
 import posts from '../data/blog-posts.json'
-import { CATEGORY_LABELS } from '../utils/helpers'
+import { getCategoryLabelT } from '../utils/helpers'
 
-const CATEGORIES = [
-  { value: 'all',           label: 'All Posts' },
-  { value: 'culinary',      label: 'Culinary' },
-  { value: 'food-drinks',   label: 'Bakery & Pastry' },
-  { value: 'beauty-makeup', label: 'Beauty & Hair' },
-  { value: 'fashion',       label: 'Fashion' },
-  { value: 'computer',      label: 'Computer' },
-]
+const CATEGORY_VALUES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion', 'computer']
 
 const CATEGORY_ACCENT = {
   culinary:       'bg-amber-100 text-amber-800',
@@ -31,7 +25,8 @@ function AuthorAvatar({ name }) {
 }
 
 function CategoryBadge({ category }) {
-  const label = CATEGORY_LABELS[category] || category
+  const { t } = useTranslation()
+  const label = getCategoryLabelT(t, category)
   const accent = CATEGORY_ACCENT[category] || 'bg-gray-100 text-gray-800'
   return (
     <span className={`inline-block px-2.5 py-1 text-[10px] font-bold tracking-widest uppercase rounded-full ${accent}`}>
@@ -41,6 +36,7 @@ function CategoryBadge({ category }) {
 }
 
 function PostCard({ post, featured = false }) {
+  const { t } = useTranslation()
   return (
     <article className={`group bg-white border border-prima-blush rounded-xl overflow-hidden hover:shadow-2xl hover:border-prima-gold/50 transition-all duration-500 flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
       {/* Image */}
@@ -103,7 +99,7 @@ function PostCard({ post, featured = false }) {
           </div>
           <span className="text-prima-gold text-sm font-semibold flex items-center gap-1.5 group-hover:gap-3 transition-all duration-300">
             <Link to={`/blog/${post.slug}`} className="flex items-center gap-1.5">
-              Read <ArrowRight size={14} />
+              {t('blogPage.read')} <ArrowRight size={14} />
             </Link>
           </span>
         </div>
@@ -113,8 +109,14 @@ function PostCard({ post, featured = false }) {
 }
 
 export default function BlogPage() {
+  const { t } = useTranslation()
   const [searchQuery, setSearchQuery]       = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
+
+  const categories = CATEGORY_VALUES.map((value) => ({
+    value,
+    label: value === 'all' ? t('blogPage.allPosts') : getCategoryLabelT(t, value),
+  }))
 
   const filteredPosts = useMemo(() => posts.filter((post) => {
     const matchesSearch =
@@ -134,10 +136,10 @@ export default function BlogPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,168,76,0.1),transparent_50%)]" />
         </div>
         <div className="container-prima relative z-10">
-          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">Knowledge Hub</span>
-          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">Tips & Insights</h1>
+          <span className="font-accent text-prima-gold text-sm tracking-[0.25em] uppercase mb-4 block">{t('blogPage.eyebrow')}</span>
+          <h1 className="font-display text-4xl lg:text-6xl font-bold text-white mb-4">{t('blogPage.title')}</h1>
           <p className="text-white/70 font-body max-w-2xl text-lg">
-            Practical wisdom from our expert instructors — delivered straight to your feed.
+            {t('blogPage.subtitle')}
           </p>
         </div>
       </div>
@@ -151,14 +153,14 @@ export default function BlogPage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-prima-muted" size={17} />
               <input
                 type="text"
-                placeholder="Search articles..."
+                placeholder={t('blogPage.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-11 pr-4 py-3 bg-white border border-prima-blush text-prima-charcoal placeholder:text-prima-muted focus:outline-none focus:border-prima-gold transition-colors shadow-sm rounded-lg text-sm font-body"
               />
             </div>
             <div className="flex flex-wrap gap-2 justify-center">
-              {CATEGORIES.map((cat) => (
+              {categories.map((cat) => (
                 <button
                   key={cat.value}
                   onClick={() => setActiveCategory(cat.value)}
@@ -181,7 +183,7 @@ export default function BlogPage() {
                 <div className="animate-fade-up">
                   <div className="flex items-center gap-3 mb-5">
                     <BookOpen size={16} className="text-prima-gold" />
-                    <span className="font-accent text-prima-gold text-xs tracking-widest uppercase">Featured</span>
+                    <span className="font-accent text-prima-gold text-xs tracking-widest uppercase">{t('blogPage.featured')}</span>
                     <div className="flex-1 h-px bg-prima-blush" />
                   </div>
                   <PostCard post={featured} featured />
@@ -192,9 +194,9 @@ export default function BlogPage() {
               {rest.length > 0 && (
                 <div>
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="font-accent text-prima-muted text-xs tracking-widest uppercase">More Articles</span>
+                    <span className="font-accent text-prima-muted text-xs tracking-widest uppercase">{t('blogPage.moreArticles')}</span>
                     <div className="flex-1 h-px bg-prima-blush" />
-                    <span className="text-prima-muted text-xs font-body">{rest.length} article{rest.length !== 1 ? 's' : ''}</span>
+                    <span className="text-prima-muted text-xs font-body">{rest.length} {t(rest.length === 1 ? 'blogPage.article_one' : 'blogPage.article_other')}</span>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {rest.map((post, i) => (
@@ -211,13 +213,13 @@ export default function BlogPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-prima-cream mb-5">
                 <Search className="text-prima-muted" size={22} />
               </div>
-              <h3 className="font-display text-xl font-semibold text-prima-charcoal mb-2">No articles found</h3>
-              <p className="text-prima-muted font-body text-sm">Try adjusting your search or filter.</p>
+              <h3 className="font-display text-xl font-semibold text-prima-charcoal mb-2">{t('blogPage.noArticles')}</h3>
+              <p className="text-prima-muted font-body text-sm">{t('blogPage.noArticlesHint')}</p>
               <button
                 onClick={() => { setSearchQuery(''); setActiveCategory('all') }}
                 className="btn-outline mt-6"
               >
-                Clear filters
+                {t('blogPage.clearFilters')}
               </button>
             </div>
           )}

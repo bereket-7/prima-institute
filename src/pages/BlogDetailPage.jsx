@@ -1,7 +1,8 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { ArrowLeft, Clock, Tag, ArrowRight } from 'lucide-react'
 import posts from '../data/blog-posts.json'
-import { CATEGORY_LABELS } from '../utils/helpers'
+import { getCategoryLabelT } from '../utils/helpers'
 
 const CATEGORY_ACCENT = {
   culinary:        'bg-amber-100 text-amber-800',
@@ -40,14 +41,15 @@ function renderContent(blocks) {
 export default function BlogDetailPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   const post = posts.find((p) => p.slug === slug)
 
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-prima-ivory pt-28">
-        <p className="font-display text-2xl text-prima-charcoal mb-4">Article not found.</p>
-        <Link to="/blog" className="btn-primary">Back to Blog</Link>
+        <p className="font-display text-2xl text-prima-charcoal mb-4">{t('blogDetail.notFound')}</p>
+        <Link to="/blog" className="btn-primary">{t('blogDetail.backToBlog')}</Link>
       </div>
     )
   }
@@ -72,13 +74,13 @@ export default function BlogDetailPage() {
           className="absolute top-24 left-6 lg:left-12 flex items-center gap-2 text-white/80 hover:text-white text-sm font-body transition-colors group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-          Back
+          {t('blogDetail.back')}
         </button>
 
         {/* Category badge */}
         <div className="absolute bottom-8 left-6 lg:left-12">
           <span className={`inline-block px-3 py-1 text-[10px] font-bold tracking-widest uppercase rounded-full ${CATEGORY_ACCENT[post.category] || 'bg-gray-100 text-gray-800'}`}>
-            {CATEGORY_LABELS[post.category] || post.category}
+            {getCategoryLabelT(t, post.category)}
           </span>
         </div>
       </div>
@@ -104,7 +106,7 @@ export default function BlogDetailPage() {
               </div>
               <div className="flex items-center gap-3 text-prima-muted text-xs font-body ml-auto">
                 <span className="flex items-center gap-1.5">
-                  <Clock size={13} /> {post.readTime} read
+                  <Clock size={13} /> {post.readTime} {t('blogDetail.readTime')}
                 </span>
                 <span className="w-1 h-1 rounded-full bg-prima-blush" />
                 <time dateTime={post.date}>
@@ -121,7 +123,7 @@ export default function BlogDetailPage() {
             {/* Body content */}
             <div className="prose-custom">
               {post.content ? renderContent(post.content) : (
-                <p className="text-prima-muted font-body">Full article coming soon.</p>
+                <p className="text-prima-muted font-body">{t('blogDetail.comingSoon')}</p>
               )}
             </div>
 
@@ -139,7 +141,7 @@ export default function BlogDetailPage() {
           {related.length > 0 && (
             <div className="max-w-3xl mx-auto mt-16">
               <div className="flex items-center gap-3 mb-6">
-                <span className="font-accent text-prima-gold text-xs tracking-widest uppercase">More from this category</span>
+                <span className="font-accent text-prima-gold text-xs tracking-widest uppercase">{t('blogDetail.moreFromCategory')}</span>
                 <div className="flex-1 h-px bg-prima-blush" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -159,7 +161,7 @@ export default function BlogDetailPage() {
                         {r.title}
                       </p>
                       <span className="text-prima-gold text-xs font-semibold flex items-center gap-1 mt-2 group-hover:gap-2 transition-all">
-                        Read <ArrowRight size={12} />
+                        {t('blogDetail.readLink')} <ArrowRight size={12} />
                       </span>
                     </div>
                   </Link>
@@ -171,7 +173,7 @@ export default function BlogDetailPage() {
           {/* Back to blog */}
           <div className="max-w-3xl mx-auto mt-12 text-center">
             <Link to="/blog" className="btn-outline inline-flex items-center gap-2">
-              <ArrowLeft size={15} /> Back to All Articles
+              <ArrowLeft size={15} /> {t('blogDetail.backToAll')}
             </Link>
           </div>
         </div>
