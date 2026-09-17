@@ -5,6 +5,7 @@ import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 import { useStore } from '../store/useStore'
 import { contactSchema } from '../utils/schemas'
 import { isEmailConfigured, sendContactEmail } from '../utils/email'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const SUBJECT_OPTIONS = [
   'Course Enquiry',
@@ -21,6 +22,7 @@ const errorClass = 'text-red-600 text-xs font-body mt-1'
 
 export default function ContactPage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('contact.title'), description: t('contact.subtitle') })
   const { showNotification } = useStore()
   const {
     register,
@@ -193,7 +195,7 @@ export default function ContactPage() {
 
               <div className="rounded-lg overflow-hidden shadow-lg border border-prima-blush">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5577!2d38.7633!3d9.0192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnMDkuMSJOIDM4wrA0NSc0Ny45IkU!5e0!3m2!1sen!2set!4v1234567890"
+                  src="https://www.google.com/maps?q=Gerji+Roba+Seada+Building+Bole+Addis+Ababa&output=embed"
                   width="100%"
                   height="350"
                   style={{ border: 0 }}
