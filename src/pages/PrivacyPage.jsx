@@ -4,32 +4,46 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function PrivacyPage() {
   const { t } = useTranslation()
-  usePageMeta({ title: t('footer.privacy') })
+  usePageMeta({ title: t('footer.privacy'), description: t('legal.privacy.collectBody') })
+
+  const sections = [
+    { title: t('legal.privacy.collectTitle'), body: t('legal.privacy.collectBody') },
+    { title: t('legal.privacy.useTitle'), body: t('legal.privacy.useBody') },
+    { title: t('legal.privacy.rightsTitle'), body: t('legal.privacy.rightsBody') },
+  ]
 
   return (
     <>
       <div className="bg-prima-charcoal pt-28 pb-16">
         <div className="container-prima max-w-3xl">
           <h1 className="font-display text-4xl lg:text-5xl font-bold text-white mb-4">{t('footer.privacy')}</h1>
-          <p className="text-white/60 font-body">Last updated: January 2026</p>
+          <p className="text-white/60 font-body">{t('legal.lastUpdated')}</p>
         </div>
       </div>
       <section className="section-padding bg-prima-ivory">
-        <div className="container-prima max-w-3xl prose-custom space-y-6 text-prima-charcoal font-body leading-relaxed">
+        <div className="container-prima max-w-3xl prose-custom space-y-8 text-prima-charcoal font-body leading-relaxed">
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h2 className="font-display text-xl font-semibold text-prima-charcoal mb-3">{section.title}</h2>
+              <p>{section.body}</p>
+            </div>
+          ))}
+
+          <div id="cookies">
+            <h2 className="font-display text-xl font-semibold text-prima-charcoal mb-3">
+              {t('legal.privacy.cookiesTitle')}
+            </h2>
+            <p>{t('legal.privacy.cookiesBody')}</p>
+          </div>
+
           <p>
-            PRIMA Institute collects personal information you submit through contact and enrollment forms, including your
-            name, email, phone number, and course preferences. We use this information to respond to inquiries and process applications.
+            {t('legal.privacy.termsLink')}{' '}
+            <Link to="/terms" className="text-prima-gold underline">{t('footer.terms')}</Link>
           </p>
           <p>
-            We do not sell your personal data. Information may be shared with admissions staff and service providers
-            (such as email delivery services) solely to operate our programmes.
-          </p>
-          <p>
-            You may request correction or deletion of your data by emailing{' '}
-            <a href="mailto:Ethioprima@gmail.com" className="text-prima-gold underline">Ethioprima@gmail.com</a>.
-          </p>
-          <p>
-            Read our <Link to="/terms" className="text-prima-gold underline">{t('footer.terms')}</Link> for enrollment conditions.
+            <a href="mailto:Ethioprima@gmail.com" className="text-prima-gold underline">
+              Ethioprima@gmail.com
+            </a>
           </p>
         </div>
       </section>
