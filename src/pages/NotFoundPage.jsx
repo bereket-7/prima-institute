@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function NotFoundPage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('notFound.title'), description: t('notFound.message') })
 
   return (
     <div className="min-h-screen bg-prima-ivory flex items-center justify-center">
