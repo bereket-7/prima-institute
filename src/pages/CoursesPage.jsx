@@ -4,6 +4,7 @@ import { Search, SlidersHorizontal } from 'lucide-react'
 import courses from '../data/courses.json'
 import CourseCard from '../components/ui/CourseCard'
 import { getCategoryLabelT } from '../utils/helpers'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const CATEGORIES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion', 'computer']
 const LEVELS = ['all', 'Beginner', 'Intermediate', 'Beginner to Advanced', 'Beginner to Intermediate']
@@ -22,6 +23,7 @@ function matchDuration(course, filter) {
 
 export default function CoursesPage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('coursesPage.title'), description: t('coursesPage.subtitle') })
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('all')
   const [level, setLevel] = useState('all')
