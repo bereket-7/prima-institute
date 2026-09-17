@@ -9,6 +9,7 @@ import { formatPrice, CATEGORY_LABELS } from '../utils/helpers'
 import { useStore } from '../store/useStore'
 import { enrollSchema } from '../utils/schemas'
 import { isEmailConfigured, sendEnrollEmail } from '../utils/email'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const STEPS = [
   { labelKey: 'enrollment.step1', icon: User },
@@ -42,6 +43,7 @@ function FieldError({ message }) {
 
 export default function EnrollPage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('enrollment.title'), description: t('enrollment.subtitle') })
   const { showNotification } = useStore()
   const [searchParams] = useSearchParams()
   const [step, setStep] = useState(0)
