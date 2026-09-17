@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-sitemap.js",
     "build": "vite build",
     "preview": "vite preview",
     "validate": "node scripts/validate-data.js",
+    "sitemap": "node scripts/generate-sitemap.js",
     "lint": "eslint .",
     "format": "prettier --write src",
     "test": "vitest run"
