@@ -2,64 +2,20 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react'
 import { getCategoryLabelT } from '../utils/helpers'
-
-const GALLERY_ITEMS = [
-  // Culinary Arts
-  { id: 1,  category: 'culinary',      src: '/assets/images/gallery/culinary/photo_2026-04-08_05-03-03.jpg',      label: 'Professional Kitchen Training' },
-  { id: 2,  category: 'culinary',      src: '/assets/images/gallery/culinary/photo_2026-05-01_07-36-01.jpg',      label: 'Culinary Masterclass' },
-  { id: 3,  category: 'culinary',      src: '/assets/images/gallery/culinary/photo_2026-05-01_07-36-31.jpg',      label: 'Plating Techniques' },
-  { id: 4,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-14-17.jpg',      label: 'Knife Skills Workshop' },
-  { id: 5,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-14-39.jpg',      label: 'Ethiopian Traditional Food' },
-  { id: 6,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-14-46.jpg',      label: 'International Cuisine' },
-  { id: 7,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-04-06_11-15-16.jpg',      label: 'Sauce Preparation' },
-  { id: 8,  category: 'culinary',      src: '/assets/images/courses/culinary/photo_2026-05-01_07-38-52.jpg',      label: 'Gourmet Presentation' },
-
-  // Bakery & Pastry
-  { id: 9,  category: 'food-drinks',   src: '/assets/images/gallery/bakery-pastry/photo_2026-05-01_07-31-20.jpg', label: 'Pastry Arts' },
-  { id: 10, category: 'food-drinks',   src: '/assets/images/gallery/bakery-pastry/photo_2026-05-01_07-35-46.jpg', label: 'Cake Decoration' },
-  { id: 11, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-43.jpg', label: 'Baking Techniques' },
-  { id: 12, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-50.jpg', label: 'Artisan Bread' },
-  { id: 13, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-12-56.jpg', label: 'Pastry Workshop' },
-  { id: 14, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-29.jpg', label: 'Chocolate Work' },
-  { id: 15, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-35.jpg', label: 'Wedding Cakes' },
-  { id: 16, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-47.jpg', label: 'Sugar Arts' },
-  { id: 17, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-13-58.jpg', label: 'Laminated Doughs' },
-  { id: 18, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-15-33.jpg', label: 'Tarts & Pastries' },
-  { id: 19, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-15-38.jpg', label: 'Baking Mastery' },
-  { id: 20, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-15-43.jpg', label: 'Pastry Finishing' },
-  { id: 21, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-16-00.jpg', label: 'Cake Design' },
-  { id: 22, category: 'food-drinks',   src: '/assets/images/courses/bakery-pastry/photo_2026-04-06_11-16-12.jpg', label: 'Bakery Session' },
-
-  // Beauty & Hair Dressing
-  { id: 23, category: 'beauty-makeup', src: '/assets/images/gallery/beauty-hair/photo_2026-05-01_07-39-21.jpg',   label: 'Beauty Workshop' },
-  { id: 24, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-22.jpg',   label: 'Professional Makeup' },
-  { id: 25, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-28.jpg',   label: 'Bridal Makeup Session' },
-  { id: 26, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-04-06_16-17-43.jpg',   label: 'Hair Styling' },
-  { id: 27, category: 'beauty-makeup', src: '/assets/images/courses/beauty-hair/photo_2026-05-01_07-41-26.jpg',   label: 'Hair Dressing Class' },
-
-  // Fashion Design
-  { id: 28, category: 'fashion',       src: '/assets/images/gallery/fashion/photo_2026-05-01_07-42-01.jpg',       label: 'Fashion Design Studio' },
-  { id: 29, category: 'fashion',       src: '/assets/images/courses/fashion/photo_2026-04-06_16-16-01.jpg',       label: 'Garment Construction' },
-  { id: 30, category: 'fashion',       src: '/assets/images/courses/fashion/photo_2026-04-06_16-16-15.jpg',       label: 'Pattern Making' },
-  { id: 31, category: 'fashion',       src: '/assets/images/courses/fashion/photo_2026-05-01_07-42-48.jpg',       label: 'Fashion Portfolio' },
-
-  // General (includes computer training image)
-  { id: 32, category: 'common',        src: '/assets/images/gallery/computer/photo_2026-05-01_07-31-28.jpg',      label: 'Computer Training Lab' },
-  { id: 33, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-37-14.jpg',        label: 'PRIMA Institute' },
-  { id: 34, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-55-54.jpg',        label: 'Student Life' },
-  { id: 35, category: 'common',        src: '/assets/images/gallery/common/photo_2026-05-01_07-56-01.jpg',        label: 'Training Session' },
-]
+import galleryItems from '../data/gallery.json'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const FILTER_VALUES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion', 'common']
 
 export default function GalleryPage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('galleryPage.title'), description: t('galleryPage.subtitle') })
   const [activeFilter, setActiveFilter] = useState('all')
   const [lightbox, setLightbox] = useState(null)
 
   const filtered = activeFilter === 'all'
-    ? GALLERY_ITEMS
-    : GALLERY_ITEMS.filter((g) => g.category === activeFilter)
+    ? galleryItems
+    : galleryItems.filter((g) => g.category === activeFilter)
 
   const filterLabel = (value) => {
     if (value === 'all') return t('galleryPage.filterAll')
@@ -70,7 +26,7 @@ export default function GalleryPage() {
   const filters = FILTER_VALUES.map((value) => ({
     value,
     label: filterLabel(value),
-    count: value === 'all' ? GALLERY_ITEMS.length : GALLERY_ITEMS.filter((g) => g.category === value).length,
+    count: value === 'all' ? galleryItems.length : galleryItems.filter((g) => g.category === value).length,
   }))
 
   const currentIndex = lightbox ? filtered.findIndex(i => i.id === lightbox.id) : -1
