@@ -108,6 +108,7 @@
   },
   "enrollment": {
     "title": "Enrollment Application",
+    "subtitle": "Apply in three steps. Our admissions team will follow up within two business days.",
     "eyebrow": "Join PRIMA",
     "step1": "Personal Info",
     "step2": "Course Selection",
@@ -184,7 +185,40 @@
     "title": "Our Instructors",
     "subtitle": "Every instructor at PRIMA is an active professional in their field — not just a teacher, but a practitioner.",
     "specialties": "Specialties",
-    "teaching": "Teaching"
+    "teaching": "Teaching",
+    "statInstructors": "Expert Instructors",
+    "statYears": "Years Combined",
+    "statStudents": "Students Taught",
+    "statCourses": "Courses Offered",
+    "credentialsHeading": "Instructor Credentials",
+    "specialtiesHeading": "Teaching Specialties",
+    "viewCourses": "View {{count}} Courses",
+    "ctaTitle": "Learn from Industry Professionals",
+    "ctaSubtitle": "Our instructors bring real-world experience and passion to every class. Start your journey with Prima Institute today.",
+    "ctaBrowse": "Browse All Courses",
+    "ctaContact": "Contact Us",
+    "areas": {
+      "culinary": {
+        "credentials": ["International Culinary Certifications", "15+ Years Industry Experience", "Award-Winning Chefs"],
+        "highlights": ["Fine Dining Expertise", "Traditional Ethiopian Cuisine", "Modern Fusion Techniques"]
+      },
+      "food-drinks": {
+        "credentials": ["Certified Sommeliers & Baristas", "International Competition Winners", "Beverage Industry Veterans"],
+        "highlights": ["Coffee Roasting & Brewing", "Mixology & Bartending", "Wine & Spirits Knowledge"]
+      },
+      "beauty-makeup": {
+        "credentials": ["Licensed Cosmetologists", "Celebrity Makeup Artists", "Skincare Specialists"],
+        "highlights": ["Bridal & Special Events", "Film & Fashion Makeup", "Skincare & Aesthetics"]
+      },
+      "fashion": {
+        "credentials": ["Fashion Design Degrees", "Runway Show Experience", "Textile & Pattern Experts"],
+        "highlights": ["Traditional Ethiopian Fashion", "Contemporary Design", "Sustainable Fashion"]
+      },
+      "computer": {
+        "credentials": ["IT Professionals", "Software Development Experts", "Digital Marketing Specialists"],
+        "highlights": ["Web Development", "Graphic Design", "Digital Marketing"]
+      }
+    }
   },
   "about": {
     "eyebrow": "Our Story",
@@ -302,6 +336,33 @@
     "contactSuccess": "Message sent! We'll get back to you within 24 hours.",
     "contactError": "Failed to send message. Please try again or call us directly.",
     "enrollSuccess": "Application submitted! We will contact you within 2 business days.",
-    "enrollError": "Failed to submit application. Please try again or contact us directly."
+    "enrollError": "Failed to submit application. Please try again or contact us directly.",
+    "subscribeSuccess": "Thanks for subscribing!",
+    "subscribeError": "Subscription failed. Please try again.",
+    "subscribeUnavailable": "Newsletter is temporarily unavailable. Please contact us instead."
+  },
+  "legal": {
+    "lastUpdated": "Last updated: January 2026",
+    "terms": {
+      "enrollmentTitle": "Enrollment & Fees",
+      "enrollmentBody": "By applying to or enrolling in PRIMA Institute programmes, you agree to these terms. Course fees, schedules, and materials may change with reasonable notice. Payment schedules and refunds follow the admissions policy communicated at enrollment.",
+      "conductTitle": "Student Conduct",
+      "conductBody": "Students are expected to attend classes regularly, follow safety guidelines in workshops and labs, and treat staff and peers with respect. PRIMA Institute reserves the right to dismiss students who violate institute policies.",
+      "liabilityTitle": "Programme Changes",
+      "liabilityBody": "PRIMA may adjust course content, instructors, or schedules when needed to maintain quality or comply with regulations. We will notify enrolled students of material changes.",
+      "contactTitle": "Questions",
+      "contactBody": "For questions about these terms, please contact us. Our admissions team will help clarify fees, schedules, and enrolment conditions."
+    },
+    "privacy": {
+      "collectTitle": "Information We Collect",
+      "collectBody": "PRIMA Institute collects personal information you submit through contact, enrollment, and newsletter forms, including your name, email, phone number, and course preferences. We use this information to respond to inquiries and process applications.",
+      "useTitle": "How We Use Data",
+      "useBody": "We do not sell your personal data. Information may be shared with admissions staff and service providers (such as email delivery services) solely to operate our programmes and communicate with you.",
+      "rightsTitle": "Your Rights",
+      "rightsBody": "You may request correction or deletion of your data by emailing Ethioprima@gmail.com. We will respond within a reasonable time.",
+      "cookiesTitle": "Cookies",
+      "cookiesBody": "This website may use essential cookies and similar storage (for example theme preference) to keep the site working. We do not use advertising trackers by default. You can clear site data in your browser settings at any time.",
+      "termsLink": "Read our Terms of Service for enrollment conditions."
+    }
   }
 }
