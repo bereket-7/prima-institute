@@ -5,12 +5,17 @@ import categories from '../../data/categories.json'
 import courses from '../../data/courses.json'
 import CourseCard from '../../components/ui/CourseCard'
 import SectionHeader from '../../components/ui/SectionHeader'
+import { usePageMeta } from '../../hooks/usePageMeta'
 
 export default function CategoryPage() {
   const { slug } = useParams()
   const { t } = useTranslation()
 
   const category = categories.find((c) => c.slug === slug)
+  usePageMeta({
+    title: category?.label || t('categoryPage.notFound'),
+    description: category?.description || t('coursesPage.subtitle'),
+  })
   if (!category) return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
