@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowRight, Clock, Search, Tag, BookOpen } from 'lucide-react'
 import posts from '../data/blog-posts.json'
 import { getCategoryLabelT } from '../utils/helpers'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const CATEGORY_VALUES = ['all', 'culinary', 'food-drinks', 'beauty-makeup', 'fashion', 'computer']
 
@@ -110,6 +111,7 @@ function PostCard({ post, featured = false }) {
 
 export default function BlogPage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('blogPage.title'), description: t('blogPage.subtitle') })
   const [searchQuery, setSearchQuery]       = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
 
