@@ -27,21 +27,23 @@ export default function Footer() {
   const handleSubscribe = async (e) => {
     e.preventDefault()
     if (!subscribeEmail) return
+    if (!isEmailConfigured()) {
+      showNotification(t('notifications.subscribeUnavailable'), 'error')
+      return
+    }
     setSubscribing(true)
     try {
-      if (isEmailConfigured()) {
-        await sendContactEmail({
-          name: 'Newsletter Subscriber',
-          email: subscribeEmail,
-          phone: '',
-          subject: 'Newsletter Subscription',
-          message: 'Please add this email to the newsletter list.',
-        })
-      }
-      showNotification('Thanks for subscribing!', 'success')
+      await sendContactEmail({
+        name: 'Newsletter Subscriber',
+        email: subscribeEmail,
+        phone: '',
+        subject: 'Newsletter Subscription',
+        message: 'Please add this email to the newsletter list.',
+      })
+      showNotification(t('notifications.subscribeSuccess'), 'success')
       setSubscribeEmail('')
     } catch {
-      showNotification('Subscription failed. Please try again.', 'error')
+      showNotification(t('notifications.subscribeError'), 'error')
     } finally {
       setSubscribing(false)
     }
@@ -67,8 +69,16 @@ export default function Footer() {
   const FOOTER_LEGAL = [
     { label: t('footer.privacy'), to: '/privacy' },
     { label: t('footer.terms'), to: '/terms' },
-    { label: t('footer.cookies'), to: '/privacy' },
+    { label: t('footer.cookies'), to: '/privacy#cookies' },
   ]
+
+  const SOCIAL_LINKS = [
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: TikTokIcon, href: 'https://www.tiktok.com/@primaaddis', label: 'TikTok' },
+    { icon: TelegramIcon, href: 'https://t.me/Yihee', label: 'Telegram' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/1C8dbmNpXk/?mibextid=wwXIfr', label: 'Facebook' },
+    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  ].filter(({ href }) => /^https?:\/\//i.test(href))
 
   return (
     <footer className="bg-gradient-to-b from-prima-charcoal to-black dark:from-prima-charcoal dark:to-black text-prima-cream relative overflow-hidden">
@@ -89,19 +99,13 @@ export default function Footer() {
               {t('footer.tagline')}
             </p>
             <div className="flex gap-3">
-              {[
-                { icon: Instagram, href: '#', label: 'Instagram' },
-                { icon: TikTokIcon, href: 'https://www.tiktok.com/@primaaddis', label: 'TikTok' },
-                { icon: TelegramIcon, href: 'https://t.me/Yihee', label: 'Telegram' },
-                { icon: Facebook, href: 'https://www.facebook.com/share/1C8dbmNpXk/?mibextid=wwXIfr', label: 'Facebook' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              ].map(({ icon: Icon, href, label }) => (
+              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
-                  target={['Telegram', 'Facebook', 'TikTok'].includes(label) ? '_blank' : undefined}
-                  rel={['Telegram', 'Facebook', 'TikTok'].includes(label) ? 'noopener noreferrer' : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-prima-muted hover:text-prima-charcoal hover:bg-prima-gold hover:border-prima-gold hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-prima-gold/20"
                 >
                   <Icon size={18} />
