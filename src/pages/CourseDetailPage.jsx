@@ -4,6 +4,7 @@ import { Clock, BookOpen, Users, CheckCircle, ChevronLeft, ArrowRight } from 'lu
 import courses from '../data/courses.json'
 import instructors from '../data/instructors.json'
 import { getInstructor } from '../utils/helpers'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function CourseDetailPage() {
   const { slug } = useParams()
@@ -11,6 +12,10 @@ export default function CourseDetailPage() {
   const { t } = useTranslation()
 
   const course = courses.find((c) => c.slug === slug)
+  usePageMeta({
+    title: course?.title || t('course.notFound'),
+    description: course?.description || t('coursesPage.subtitle'),
+  })
   if (!course) return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
