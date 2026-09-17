@@ -39,17 +39,24 @@ npm run build
 Create a `.env` file from `.env.example`:
 
 ```
+VITE_SITE_URL=https://your-domain.com
 VITE_EMAILJS_SERVICE_ID=
 VITE_EMAILJS_CONTACT_TEMPLATE_ID=
 VITE_EMAILJS_ENROLL_TEMPLATE_ID=
 VITE_EMAILJS_PUBLIC_KEY=
 ```
 
+`VITE_SITE_URL` is used at build time for `sitemap.xml` and `robots.txt`. Set it to your production origin (no trailing slash).
+
+Without EmailJS credentials, contact, enroll, and newsletter forms show an error instead of a false success.
+
 ### EmailJS template fields
 
 **Contact template:** `from_name`, `from_email`, `phone`, `subject`, `message`
 
 **Enrollment template:** `first_name`, `last_name`, `email`, `phone`, `course_title`, `course_price`, `start_date`, `payment_plan`, `notes`
+
+Newsletter subscriptions reuse the contact template with subject `Newsletter Subscription`.
 
 ## Project Structure
 
