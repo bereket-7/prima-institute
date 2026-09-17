@@ -12,9 +12,11 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import SectionHeader from "../components/ui/SectionHeader";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function AboutPage() {
   const { t } = useTranslation();
+  usePageMeta({ title: t("about.eyebrow"), description: t("about.heroSubtitle") });
 
   const STATS = [
     { value: "2018", label: "Founded", icon: Users },
