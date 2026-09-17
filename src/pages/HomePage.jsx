@@ -7,11 +7,13 @@ import testimonials from '../data/testimonials.json'
 import instructors from '../data/instructors.json'
 import CourseCard from '../components/ui/CourseCard'
 import SectionHeader from '../components/ui/SectionHeader'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const CATEGORY_ICONS = { culinary: ChefHat, 'food-drinks': Coffee, 'beauty-makeup': Sparkles, fashion: Scissors, computer: Monitor }
 
 export default function HomePage() {
   const { t } = useTranslation()
+  usePageMeta({ title: t('hero.welcome'), description: t('hero.subtitle') })
   const featured = courses.filter((c) => c.featured)
 
   const STATS = [
