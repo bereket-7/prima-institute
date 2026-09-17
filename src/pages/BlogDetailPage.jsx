@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ArrowLeft, Clock, Tag, ArrowRight } from 'lucide-react'
 import posts from '../data/blog-posts.json'
 import { getCategoryLabelT } from '../utils/helpers'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const CATEGORY_ACCENT = {
   culinary:        'bg-amber-100 text-amber-800',
@@ -44,6 +45,10 @@ export default function BlogDetailPage() {
   const { t } = useTranslation()
 
   const post = posts.find((p) => p.slug === slug)
+  usePageMeta({
+    title: post?.title || t('blogDetail.notFound'),
+    description: post?.excerpt || t('blogPage.subtitle'),
+  })
 
   if (!post) {
     return (
